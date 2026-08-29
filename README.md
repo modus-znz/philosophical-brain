@@ -279,6 +279,49 @@ Three deliberate limits:
 - **It is never run by the hook.** Auto-syncing on commit would silently defeat
   the gate. You run it, you read what changed, you commit.
 
+### Measured hook payloads (Phase 0)
+
+`engine/probe.py` observes hook events and changes nothing. It exists so the
+enforcement design rests on measurement rather than inference. Wired on
+`PostToolUse` and `Stop`, it appends shape-only rows to
+`graphify-out/engine/probe.jsonl` — never file contents, never message text.
+
+Three findings from the first session of real rows, all of which simplify the
+design they were meant to test:
+
+- **`PostToolUse` for the last tool call of a turn completes before `Stop`
+  fires.** Measured 14.2 s apart, in that order, on a turn ending in a tool
+  call. This was the open question that decided whether the integrity gate was
+  buildable at all: had the two raced, a turn whose final act was *running the
+  tests* would carry no record of it when `Stop` read the ledger, and the check
+  would have blocked precisely the honest case it exists to reward.
+
+- **Both events carry `prompt_id`.** A turn key, handed over directly. The
+  design had scoped turns by parsing `transcript_path` for
+  `origin.kind == "human"` — a file measured to be written asynchronously and
+  to lag the live turn.
+
+- **`Stop` carries `last_assistant_message`.** The completion claim itself, in
+  the payload. The design had read claims from the transcript too.
+
+Together the last two remove *both* of the integrity gate's dependencies on a
+file that may not have caught up yet. The gate reads its own ledger, filtered
+by `prompt_id`, and gets the claim from the event.
+
+`Stop` also carries `stop_hook_active` (the loop guard), `session_id`, `cwd`,
+`permission_mode`, `background_tasks` and `session_crons`.
+
+The probe records `last_assistant_message_len`, never the message. Recording
+what the assistant said would put every answer this machine gives into a plain
+unencrypted log.
+
+**Kill switch**, honored by the probe and by everything wired after it:
+
+```bash
+BRAIN_ENGINE_OFF=1 <command>        # one command
+touch ~/.claude/brain-engine-off    # this machine, until removed
+```
+
 ### Rendering the persona library
 
 `render_persona.py` turns the vault into one flat browsable file grouped by

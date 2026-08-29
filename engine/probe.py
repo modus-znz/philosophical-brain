@@ -121,6 +121,15 @@ def main():
     if tr is not None:
         row["tool_response_shape"] = summarize(tr)
 
+    # Length only, never the text. Stop delivers the assistant's final message
+    # in the payload -- the completion claim the integrity gate has to read,
+    # without going near the lagging transcript. Recording how long it is
+    # confirms the field is substantive; recording what it says would put every
+    # answer this machine gives into a plain unencrypted log.
+    lam = payload.get("last_assistant_message")
+    if isinstance(lam, str):
+        row["last_assistant_message_len"] = len(lam)
+
     os.makedirs(OUT_DIR, exist_ok=True)
     with open(OUT, "a", encoding="utf-8") as fh:
         fh.write(json.dumps(row) + "\n")
