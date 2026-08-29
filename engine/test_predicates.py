@@ -331,5 +331,110 @@ class Dispatch(unittest.TestCase):
                                 "dispatch exceeded budgets.dispatch_ms")
 
 
+class ShadowReport(unittest.TestCase):
+    """The report is the only thing that makes mode: "log" mean anything."""
+
+    CID = "prudence.unrecoverable-bash"
+
+    def setUp(self):
+        self.sid = "report-%d" % os.getpid()
+        self.path = ledger.path_for(self.sid)
+
+    def tearDown(self):
+        try:
+            os.remove(self.path)
+        except OSError:
+            pass
+
+    def write(self, verdicts_per_row):
+        os.makedirs(os.path.dirname(self.path), exist_ok=True)
+        with open(self.path, "w", encoding="utf-8") as fh:
+            for verdicts in verdicts_per_row:
+                fh.write(json.dumps({"kind": "tool", "dispatch_ms": 3.0,
+                                     "verdicts": verdicts}) + "\n")
+
+    def report(self):
+        p = subprocess.run(
+            [sys.executable, os.path.join(HERE, "report_shadow.py"), "--json"],
+            capture_output=True, text=True)
+        self.assertEqual(p.returncode, 0, p.stderr)
+        return json.loads(p.stdout)["checks"].get(self.CID)
+
+    def fire(self, **extra):
+        v = {"id": self.CID, "mode": "log", "reason": "recursive force delete"}
+        v.update(extra)
+        return [v]
+
+    def test_unlabelled_fires_block_promotion_however_many(self):
+        # Volume is not evidence. A tool that promoted on counts alone would
+        # turn an unverified number into a claim -- inside the enforcer of the
+        # principle against doing exactly that.
+        self.write([self.fire() for _ in range(50)])
+        got = self.report()
+        self.assertEqual(got["fires"], 50)
+        self.assertEqual(got["unlabelled"], 50)
+        self.assertTrue(any("nobody has judged" in b for b in got["blockers"]))
+
+    def test_a_labelled_false_positive_blocks(self):
+        rows = [self.fire(correct=True) for _ in range(30)]
+        rows.append(self.fire(false_positive=True))
+        self.write(rows)
+        got = self.report()
+        self.assertEqual(got["false_positives"], 1)
+        self.assertTrue(any("false positive" in b for b in got["blockers"]))
+
+    def test_too_few_fires_is_named_as_the_reason(self):
+        self.write([self.fire(correct=True)])
+        got = self.report()
+        self.assertTrue(any("needs" in b for b in got["blockers"]))
+
+    def test_clean_evidence_leaves_no_blockers(self):
+        # One session, 30 fires, all judged correct. The per-session cap is
+        # the one threshold this fixture cannot satisfy honestly, so assert
+        # what it does clear rather than pretending it clears everything.
+        self.write([self.fire(correct=True) for _ in range(30)])
+        got = self.report()
+        self.assertEqual(got["unlabelled"], 0)
+        self.assertEqual(got["false_positives"], 0)
+        self.assertFalse(any("nobody has judged" in b for b in got["blockers"]))
+        self.assertFalse(any("needs" in b for b in got["blockers"]))
+
+
+class StampDomains(unittest.TestCase):
+    """The commit trailer's matcher, shared with first_touch_of_domain."""
+
+    def stamp(self, paths):
+        p = subprocess.run(
+            [sys.executable, os.path.join(HERE, "stamp_domains.py")],
+            input="\n".join(paths), capture_output=True, text=True)
+        self.assertEqual(p.returncode, 0, p.stderr)
+        return p.stdout
+
+    def test_stamps_a_matching_path(self):
+        out = self.stamp(["src/auth/session.py", "README.md"])
+        self.assertIn("Brain-Domain: security-hardening", out)
+        self.assertIn("tech-mappings/security-hardening.md", out)
+
+    def test_silent_when_nothing_matches(self):
+        # A trailer on every commit is a trailer nobody reads.
+        self.assertEqual(self.stamp(["README.md", "src/ui/Button.tsx"]), "")
+
+    def test_silent_on_empty_input(self):
+        self.assertEqual(self.stamp([]), "")
+
+    def test_one_line_per_domain_however_many_files_match(self):
+        out = self.stamp(["src/auth/a.py", "src/auth/b.py", "app/login.ts"])
+        self.assertEqual(out.count("Brain-Domain:"), 1)
+
+    def test_agrees_with_the_tier_two_trigger(self):
+        # Two matchers would drift, and the one inside a git hook would drift
+        # unnoticed. Same patterns, same answer.
+        path = "src/auth/session.py"
+        self.assertIn("security-hardening", self.stamp([path]))
+        self.assertIsNotNone(predicates.first_touch_of_domain(
+            {"tool_input": {"file_path": path}}, DOMAIN,
+            {"domains": DOMAINS, "seen_domains": set(), "root": None}))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

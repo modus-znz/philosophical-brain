@@ -3,7 +3,7 @@
   "multigraph": false,
   "graph": {
     "generator": "build_graph.py",
-    "generated_at": "2026-08-29T23:10:18+00:00",
+    "generated_at": "2026-08-29T23:15:24+00:00",
     "vault_root": "philosophical-brain",
     "source_files": 71
   },

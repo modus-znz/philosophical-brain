@@ -413,6 +413,56 @@ its cost grows with session length. At the sizes seen so far this is noise
 against interpreter startup; a very long session is the thing to measure before
 assuming it stays that way.
 
+### Reading the shadow data
+
+```bash
+python3 engine/report_shadow.py          # per check: fires, sessions, blockers
+python3 engine/report_shadow.py --json   # same numbers, machine-shaped
+```
+
+Without this, `mode: "log"` is a way of writing to a file nobody opens.
+
+**It never says "promote."** It cannot: a false positive is a fire a human
+looked at and judged wrong, and no count of fires contains that judgement. A
+tool that promoted a check on volume alone would be turning an unverified
+number into a claim — inside the enforcer of the principle against exactly
+that. So fires read `unlabelled` until someone labels them, and a check with
+unlabelled fires reports NOT READY however clean it looks. Label one by adding
+`"false_positive": true` or `"correct": true` to its verdict in the ledger row.
+
+It is also loud about the failure that looks like success: if no check has
+fired in any session, it says so and warns that a quiet corpus and a rule that
+*cannot* fire are indistinguishable from the outside.
+
+### Commit trailers
+
+`hooks/prepare-commit-msg` stamps a commit with the vault domain its changed
+files belong to, installed by the same `git config core.hooksPath hooks`
+opt-in as the pre-commit hook — so it also covers commits made outside Claude
+Code, which a model-written trailer never could.
+
+```
+fix(auth): validate token audience at the boundary
+
+Brain-Domain: security-hardening (tech-mappings/security-hardening.md)
+```
+
+**It deliberately does not write `Principle: prudence`.** That would assert a
+principle guided the change, and a git hook sees paths, not intent. A trailer
+claiming otherwise because a filename matched a regex is a small falsification
+printed into permanent history, written by the engine whose flagship check
+exists to catch falsified status reports. So it stamps only what re-running the
+matcher can verify. The *why* stays the author's to write, and is worth more
+precisely because nothing generates it automatically.
+
+Silent when nothing matches — a trailer on every commit is a trailer nobody
+reads — and idempotent by inspection: verified against a matching path, a
+non-matching path, an already-stamped message, and `--amend`.
+
+`engine/stamp_domains.py` holds the matcher, shared with the Tier 2 trigger
+rather than reimplemented. Two matchers would drift, and the copy inside a git
+hook would drift unnoticed.
+
 ### Rendering the persona library
 
 `render_persona.py` turns the vault into one flat browsable file grouped by
