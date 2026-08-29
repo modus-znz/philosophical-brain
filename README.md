@@ -256,6 +256,29 @@ after the attribution gate. It re-resolves every binding in `policy/checks.json`
 against the freshly built graph, because `policy/checks.json` can change with
 no `.md` in the commit at all.
 
+### Rewording a bound directive
+
+Four directives are quoted verbatim by `policy/checks.json`. Rewording one of
+them **fails that commit** until the policy quotes the new wording — that is the
+gate doing its job, not a bug. The recovery is one command:
+
+```bash
+python3 engine/verify_policy.py --sync
+```
+
+It re-quotes `binding.text` from the freshly built graph, touching only the
+changed line, and then re-verifies so you see the result rather than a promise.
+Three deliberate limits:
+
+- **It never touches `binding.match`.** If your rewording also changed the match
+  phrase, the binding no longer resolves and only you know which directive was
+  meant. `--sync` says so and stops.
+- **It refuses to run against a stale graph.** Syncing before `build_graph.py`
+  would re-quote the *old* wording and report success — the drift would survive
+  the command that claims to cure it.
+- **It is never run by the hook.** Auto-syncing on commit would silently defeat
+  the gate. You run it, you read what changed, you commit.
+
 ### Rendering the persona library
 
 `render_persona.py` turns the vault into one flat browsable file grouped by
