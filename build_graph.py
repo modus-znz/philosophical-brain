@@ -35,6 +35,7 @@ Usage:
   python3 build_graph.py <vault-root> [OUT.json] [--force] [--dry-run]
 """
 import glob
+import io
 import json
 import os
 import re
@@ -82,9 +83,44 @@ if os.path.exists(OUT) and not FORCE and not DRY_RUN:
 # so dropping them costs no reachability and buys back the top of every result.
 META_FILES = {"README.md", "authors.md"}
 
+def _vault_root(root):
+    """Stable vault name, independent of which checkout produced the build.
+
+    Falls back to the directory name outside a git repo.
+    """
+    common = os.path.join(root, ".git")
+    if os.path.isfile(common):          # a worktree: .git is a file, not a dir
+        try:
+            with io.open(common, encoding="utf-8") as fh:
+                line = fh.read().strip()
+            # "gitdir: /abs/path/to/main/.git/worktrees/<name>"
+            gitdir = line.split("gitdir:", 1)[1].strip()
+            marker = os.path.join(".git", "worktrees")
+            if marker in gitdir:
+                return os.path.basename(gitdir.split(marker)[0].rstrip(os.sep))
+        except Exception:
+            pass
+    return os.path.basename(root)
+
+
+def _hidden(rel):
+    """True if any path component is a dot-directory.
+
+    Belt-and-braces, not a bug fix: glob() already skips dot-directories
+    unless the pattern spells the dot out, so .claude/worktrees/<name>/ --
+    which holds a full second copy of the vault -- is invisible here today.
+    That behaviour is implicit and one refactor away from changing (pathlib,
+    os.walk, or include_hidden=True all descend into it), and the failure is
+    silent: every node doubles. lint_attributions.py DID walk into it, and is
+    fixed there. Stating the invariant is cheaper than rediscovering it.
+    """
+    return any(part.startswith(".") for part in rel.split(os.sep)[:-1])
+
+
 FILES = sorted(glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True))
 FILES = [f for f in FILES
          if not f.startswith(os.path.join(ROOT, "graphify-out"))
+         and not _hidden(os.path.relpath(f, ROOT))
          and os.path.relpath(f, ROOT) not in META_FILES]
 
 LINK_RE = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]+)?\]\]")
@@ -355,7 +391,11 @@ graph = {
     "graph": {
         "generator": GENERATOR,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "vault_root": os.path.basename(ROOT),
+        # Not basename(ROOT): a git worktree lives at
+        # .claude/worktrees/<name>/, so building from one would stamp the
+        # worktree's name into a TRACKED artifact -- and hooks/pre-commit
+        # git-adds this file automatically, so it would ship silently.
+        "vault_root": _vault_root(ROOT),
         "source_files": len(FILES),
     },
     "nodes": nodes,

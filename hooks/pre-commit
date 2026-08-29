@@ -21,3 +21,10 @@ if git diff --cached --name-only --diff-filter=ACMR | grep -q '\.md$'; then
 fi
 
 python3 lint_attributions.py --gate
+
+# The policy layer quotes vault directives verbatim back to the model. If the
+# prose is reworded and the policy keeps the old text, the engine starts lying
+# about its own source of truth -- so bindings are re-resolved against the
+# graph that was just rebuilt above. Runs unconditionally: policy/checks.json
+# can change on its own, with no .md in the commit at all.
+python3 engine/verify_policy.py

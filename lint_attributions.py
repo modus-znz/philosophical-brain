@@ -158,8 +158,11 @@ def classify(tail, authors=()):
 def scan(root):
     findings = []
     for dirpath, dirnames, filenames in os.walk(root):
+        # Skip dot-directories wholesale: .claude/worktrees/<name>/ holds a
+        # full second copy of the vault, and linting it doubles every defect.
         dirnames[:] = [d for d in dirnames
-                       if d not in {"graphify-out", ".git", "__pycache__"}]
+                       if not d.startswith(".")
+                       and d not in {"graphify-out", "__pycache__"}]
         for fn in sorted(filenames):
             if not fn.endswith(".md") or fn == "README.md":
                 continue

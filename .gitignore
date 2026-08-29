@@ -14,3 +14,8 @@ graphify-out/*
 
 # Default in-repo render target when .persona-target is absent.
 persona/wisdom-quotes.generated.md
+
+# Git worktrees (superpowers:using-git-worktrees creates them here). They hold
+# a full second copy of the vault; lint_attributions.py is taught to skip every
+# dot-directory so they cannot double the defect count.
+.claude/

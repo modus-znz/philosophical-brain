@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "_comment": "Policy for the principle engine. JSON, not Markdown, on purpose: build_graph.py globs ROOT/**/*.md and lint_attributions.py walks the same tree, so any .md placed here would become a graph node, gain serves_moment/directs edges, pollute ask.py retrieval, and have its prose dragged before the attribution linter. verify_policy.py asserts this directory stays free of .md.",
+  "enabled": true,
+  "kill_switch_env": "BRAIN_ENGINE_OFF",
+  "kill_switch_file": "~/.claude/brain-engine-off",
+  "budgets": {
+    "tier2_per_session": 3,
+    "tier2_cooldown_s": 600,
+    "reason_max_chars": 220,
+    "dispatch_ms": 80
+  },
+  "promotion": {
+    "_comment": "A check leaves shadow mode only on evidence from real work. Same ratchet shape as .attribution-baseline.json: shrink it by earning promotions, never widen it to make something pass.",
+    "min_fires": 20,
+    "max_false_positives": 0,
+    "max_fires_per_session": 1.0,
+    "demote_after_false_positives": 3
+  },
+  "checks": [
+    {
+      "id": "prudence.unrecoverable-bash",
+      "tier": 1,
+      "principle": "prudence",
+      "binding": {
+        "source": "principles/prudence.md",
+        "match": "Back up before destructive operations",
+        "text": "Back up before destructive operations; snapshot before migration."
+      },
+      "event": "PreToolUse",
+      "tools": ["Bash"],
+      "predicate": "unrecoverable_bash",
+      "params": {
+        "patterns": [
+          {"name": "recursive force delete", "re": "^rm\\b(?=[^|;&]*\\s-[a-zA-Z]*r)(?=[^|;&]*\\s-[a-zA-Z]*f)"},
+          {"name": "git clean -fd", "re": "^git\\s+clean\\b[^|;&]*-[a-zA-Z]*[fd]"},
+          {"name": "force push", "re": "^git\\s+push\\b[^|;&]*(--force(?!-with-lease)|\\s-f(\\s|$))"},
+          {"name": "destructive DDL", "re": "\\b(DROP\\s+(TABLE|DATABASE|SCHEMA)|TRUNCATE\\s+TABLE)\\b", "flags": "i"},
+          {"name": "dd to a block device", "re": "^dd\\b[^|;&]*\\bof=/dev/"},
+          {"name": "mkfs", "re": "^mkfs(\\.|\\b)"}
+        ],
+        "path_allowlist": ["node_modules", "dist", "build", ".next", "__pycache__", ".venv", "target", "/tmp/", ".pytest_cache", "coverage"],
+        "segment_allowlist": ["^echo\\b", "^printf\\b", "^cat\\b", "^grep\\b", "^rg\\b", "^man\\b", "^history\\b", "--dry-run", "--force-with-lease"]
+      },
+      "mode": "log",
+      "severity": "high",
+      "moment": "running-a-command",
+      "determinism": "String match on the exact bytes about to be executed, per shell segment. No inference. `git reset --hard` and `git stash drop` are deliberately absent: both are reflog-recoverable, both fire constantly in normal work, and settings.json already allows Bash(git stash *). Every false ask spends trust the engine needs for the cases that matter."
+    },
+    {
+      "id": "truth-and-integrity.unverified-completion-claim",
+      "tier": 1,
+      "principle": "truth-and-integrity",
+      "binding": {
+        "source": "principles/truth-and-integrity.md",
+        "match": "Never falsify a green build",
+        "text": "Never falsify a green build, a coverage number, or a status report."
+      },
+      "event": "Stop",
+      "tools": null,
+      "predicate": "completion_claim_without_evidence",
+      "params": {
+        "claim_patterns": [
+          "\\btests?\\s+(are\\s+)?(all\\s+)?(now\\s+)?pass(ing|ed|es)\\b",
+          "\\ball\\s+(tests|checks)\\s+(are\\s+)?(green|passing)\\b",
+          "\\bbuild\\s+(is\\s+)?(now\\s+)?(green|clean|passing)\\b",
+          "\\blint(ing)?\\s+(is\\s+)?clean\\b",
+          "\\bno\\s+(errors|failures|regressions)\\b"
+        ],
+        "hedge_patterns": [
+          "\\bshould\\b",
+          "\\blikely\\b",
+          "\\bexpect(ed)?\\s+to\\b",
+          "\\bnot\\s+(yet\\s+)?(run|verified|tested)\\b",
+          "\\bhave\\s+not\\s+run\\b",
+          "\\bplease\\s+run\\b",
+          "\\b(cannot|unable\\s+to|could\\s+not)\\s+run\\b",
+          "\\bper\\s+(their|your)\\s+report\\b",
+          "\\bonce\\s+you\\s+run\\b"
+        ],
+        "evidence_bash": ["pytest", "unittest", "npm test", "npm run test", "yarn test", "pnpm test", "jest", "vitest", "go test", "cargo test", "tox", "nox", "make test", "npm run lint", "ruff", "eslint", "mypy"],
+        "arm_if_test_infra": ["pytest.ini", "tox.ini", "pyproject.toml", "package.json", "Cargo.toml", "go.mod", "Makefile", "tests", "test", "__tests__"]
+      },
+      "mode": "log",
+      "severity": "high",
+      "moment": "task-complete",
+      "determinism": "The claim is a regex over the final assistant text; the evidence is the presence of a matching tool_use in the same turn. Both sides are literal transcript facts. The judgement it does NOT make is whether the tests were adequate. Disarms entirely when the cwd has no test infrastructure -- a demand the model cannot satisfy invites it to fabricate a test run, which is the very violation this check exists to catch."
+    },
+    {
+      "id": "truth-and-integrity.disabled-or-vacuous-test",
+      "tier": 1,
+      "principle": "truth-and-integrity",
+      "binding": {
+        "source": "principles/truth-and-integrity.md",
+        "match": "Test the real behavior",
+        "text": "Test the real behavior, not the convenient mock."
+      },
+      "event": "PreToolUse",
+      "tools": ["Write", "Edit", "MultiEdit", "NotebookEdit"],
+      "predicate": "disabled_or_vacuous_test",
+      "params": {
+        "path_re": "(^|/)(tests?|__tests__|spec)/|(^|/)test_[^/]+\\.py$|[._](test|spec)\\.[jt]sx?$|_test\\.(py|go|rb)$",
+        "vacuous_re": [
+          "^\\s*assert\\s+True\\s*$",
+          "^\\s*assert\\s+1\\s*==\\s*1\\s*$",
+          "^\\s*expect\\(true\\)\\.toBe\\(true\\)",
+          "^\\s*self\\.assertTrue\\(True\\)\\s*$"
+        ],
+        "skip_re": [
+          "@pytest\\.mark\\.skip(?!if)\\s*(\\(\\s*\\))?\\s*$",
+          "@unittest\\.skip\\s*\\(\\s*\\)",
+          "\\b(it|test|describe)\\.skip\\s*\\(",
+          "@pytest\\.mark\\.xfail(?![^\\n]*strict\\s*=\\s*True)"
+        ],
+        "reason_kw": ["reason=", "reason:"],
+        "new_content_only": true
+      },
+      "mode": "log",
+      "severity": "medium",
+      "moment": "tests-failing",
+      "determinism": "An unconditional skip with no reason=, or a test body whose only statement is a tautology, is a syntactic fact about the string being written. skipif(...) and xfail(strict=True) are excluded because they are correct practice -- `skip` matches the `skipif` prefix, which is the single easiest way to get this wrong. Inspects new_string only, never old_string: deleting an `assert True` must not fire the check that celebrates deleting it."
+    },
+    {
+      "id": "prudence.security-domain-touch",
+      "tier": 2,
+      "principle": "prudence",
+      "binding": {
+        "source": "tech-mappings/security-hardening.md",
+        "match": "Trust, but verify.",
+        "text": "Trust, but verify. Never assume a dependency, a layer, or an upstream behaves — validate at every trust boundary — prudence · reliability."
+      },
+      "event": "PostToolUse",
+      "tools": ["Write", "Edit", "MultiEdit"],
+      "predicate": "first_touch_of_domain",
+      "params": {"domain": "security-hardening"},
+      "mode": "log",
+      "severity": "medium",
+      "moment": "security-hardening",
+      "determinism": "NOT a check. Fires once per domain per session on the first write to a matching path and injects text only; it cannot block anything. Delivered via PostToolUse.additionalContext, which is a real member of the hookSpecificOutput union (Stop is not)."
+    }
+  ],
+  "unmechanized": {
+    "_comment": "Named here so the engine never pretends to measure them. Tier-2 injection only, forever.",
+    "principles": ["patience", "kaizen", "humility-and-learning", "collaboration", "resilience"],
+    "rationale": "There is no predicate for 'was I patient?'. Mechanizing one produces a lie dressed as a metric -- itself a truth-and-integrity violation."
+  },
+  "deferred_to_tier3": {
+    "mocking-the-unit-under-test": "Deciding whether a mocked symbol IS the unit under test requires knowing what the file is testing. The cheap heuristic -- test_foo.py patches a path containing foo -- false-positives on mocking foo's collaborators (foo.requests.get, foo.db), which is most of a well-written test_foo.py. Belongs to the reviewer subagent, which can read the file.",
+    "secret-in-code": "security-guidance's patterns.py already implements this properly. Do not reimplement entropy-based secret detection."
+  }
+}
