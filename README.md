@@ -230,11 +230,18 @@ python3 lint_attributions.py --gate    # pre-commit mode: fail on NEW defects
 ```
 
 `hooks/pre-commit` rebuilds the graph when markdown changes and runs the gate.
-Install it with:
+Git never installs a cloned repository's hooks by itself — running code from a
+clone silently would be a security hole — so this is a deliberate opt-in, one
+command per clone:
 
 ```bash
-ln -s ../../hooks/pre-commit .git/hooks/pre-commit
+git config core.hooksPath hooks
 ```
+
+That points git at the tracked `hooks/` directory, so any hook added there
+later is picked up without a second install step. Bypass a single commit with
+`git commit --no-verify`; if you skip the install entirely, run
+`python3 lint_attributions.py --gate` yourself before committing.
 
 ## License
 
