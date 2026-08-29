@@ -137,15 +137,34 @@ def check_shape(chk, principles, predicate_names, errors):
             "words what makes it mechanical -- or admit that it is not."
             % cid)
 
+    params = chk.get("params") or {}
+
     for key in ("patterns", "vacuous_re", "skip_re", "claim_patterns",
                 "hedge_patterns", "segment_allowlist"):
-        for item in (chk.get("params") or {}).get(key, []):
+        for item in params.get(key, []):
             pat = item["re"] if isinstance(item, dict) else item
             try:
                 re.compile(pat)
             except re.error as exc:
                 errors.append("%s: params.%s pattern %r does not compile (%s)"
                               % (cid, key, pat, exc))
+
+    # Scalar regex params, checked separately: iterating a bare string with the
+    # loop above would compile it one character at a time and pass trivially.
+    # A gate whose own patterns go unvalidated is the failure it exists to stop.
+    for key in ("path_re",):
+        pat = params.get(key)
+        if pat is None:
+            continue
+        if not isinstance(pat, str):
+            errors.append("%s: params.%s must be a string, got %s"
+                          % (cid, key, type(pat).__name__))
+            continue
+        try:
+            re.compile(pat)
+        except re.error as exc:
+            errors.append("%s: params.%s pattern %r does not compile (%s)"
+                          % (cid, key, pat, exc))
 
 
 def main():
