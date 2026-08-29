@@ -17,12 +17,12 @@ the product improves as a byproduct.
 
 ## Supporting Quotes
 
-- [[quotes/progress]] — "It does not matter how slowly you go as long as you do not stop." — [[Confucius]]
+- [[quotes/progress]] — "It does not matter how slowly you go as long as you do not stop." — modern coinage; widely misattributed to [[Confucius]]
 - [[quotes/progress]] — "A little progress each day adds up to big results." — anonymous
-- [[quotes/progress]] — "Continuous improvement is better than delayed perfection." — [[Mark Twain]]
+- [[quotes/progress]] — "Continuous improvement is better than delayed perfection." — modern coinage; widely misattributed to [[Mark Twain]]
 - [[quotes/progress]] — "Step by step walk the thousand-mile road." — [[Miyamoto Musashi]]
 - [[quotes/progress]] — "Great things are done by a series of small things brought together." — [[Vincent van Gogh]]
-- [[quotes/progress]] — "The man who moves a mountain begins by carrying away small stones." — [[Confucius]]
+- [[quotes/progress]] — "The man who moves a mountain begins by carrying away small stones." — modern coinage; widely misattributed to [[Confucius]]
 
 ## Code Directives
 

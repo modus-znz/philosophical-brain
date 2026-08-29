@@ -14,7 +14,7 @@
 
 > "He who fails to plan, plans to fail." — proverb, after [[Benjamin Franklin]]
 
-> "Strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat." — attributed to [[Sun Tzu]]
+> "Strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat." — modern coinage; widely misattributed to [[Sun Tzu]] — not in *The Art of War*
 
 > "Look before, or you'll find yourself behind." — [[Benjamin Franklin]] (*Poor Richard's Almanack*)
 
@@ -24,7 +24,7 @@
 
 > "Kuuliza si ujinga." (Asking is not stupidity.) — Swahili proverb
 
-> "Give me six hours to chop down a tree and I will spend the first four sharpening the axe." — attributed to [[Abraham Lincoln]]
+> "Give me six hours to chop down a tree and I will spend the first four sharpening the axe." — modern coinage; widely misattributed to [[Abraham Lincoln]]; unattested before the 1950s
 
 > "Before enlightenment: chop wood, carry water. After enlightenment: chop wood, carry water." — Zen proverb
 

@@ -18,7 +18,7 @@ wisdom.
 
 - [[quotes/humility]] — "Anyone who has never made a mistake has never tried anything new." — attributed to [[Albert Einstein]]
 - [[quotes/humility]] — "To make no mistakes is not in the power of man; but from their errors the wise and good learn wisdom for the future." — [[Plutarch]]
-- [[quotes/humility]] — "Kosa la kwanza ni funzo." (The first mistake is a lesson.) — Swahili saying
+- [[quotes/humility]] — "Kosa la kwanza ni funzo." (The first mistake is a lesson.) — Swahili phrasing composed for this vault; not an attested proverb
 - [[quotes/learning]] — "Tell me and I forget. Teach me and I remember. Involve me and I learn." — attributed to [[Benjamin Franklin]]
 
 ## Code Directives

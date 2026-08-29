@@ -16,7 +16,7 @@
 
 > "Speak the truth, even if your voice shakes." — [[Maggie Kuhn]]
 
-> "Ukweli haujifichi." (Truth does not hide itself.) — Swahili saying
+> "Ukweli haujifichi." (Truth does not hide itself.) — Swahili phrasing composed for this vault; not an attested proverb
 
 > "If you tell the truth, you don't have to remember anything." — [[Mark Twain]]
 

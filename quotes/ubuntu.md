@@ -10,7 +10,7 @@
 
 > "Harambee" (let us all pull together) — Kenyan/East African communal-effort principle
 
-> "Utu ni jamii." (Humanity is community.) — Swahili saying reflecting Ubuntu thought
+> "Utu ni jamii." (Humanity is community.) — Swahili phrasing composed for this vault, reflecting Ubuntu thought; not an attested proverb
 
 > "A person is a person because of other people." — [[Desmond Tutu]], on Ubuntu
 

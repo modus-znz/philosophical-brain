@@ -52,7 +52,7 @@
 
 > "Every adversity carries with it the seed of an equal or greater benefit." — [[Napoleon Hill]]
 
-> "The bamboo that bends is stronger than the oak that resists." — Japanese proverb
+> "The bamboo that bends is stronger than the oak that resists." — modern saying, commonly labelled a Japanese proverb; the attested form is 柳に雪折れなし ("snow never breaks the willow")
 
 > "Failure is simply the opportunity to begin again, this time more intelligently." — [[Henry Ford]]
 

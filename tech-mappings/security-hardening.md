@@ -4,6 +4,7 @@
 
 - **Governing Principles**: [[prudence]] · [[reliability]] · [[truth-and-integrity]]
 - **Supporting Quotes**: [[quotes/security]] · [[quotes/preparation]]
+- **Session Moments**: security-hardening · prudence
 - **Application:** Security is a state of mind, not a gadget — designed in by
   default, anticipated before impact, and never left to a final pass.
 

@@ -14,11 +14,11 @@
 
 > "Man is condemned to be free." — [[Jean-Paul Sartre]]
 
-> "Uhuru ni jukumu." (Freedom is a responsibility.) — Swahili saying
+> "Uhuru ni jukumu." (Freedom is a responsibility.) — Swahili phrasing composed for this vault; not an attested proverb
 
 > "Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravings, and passions." — [[Eliud Kipchoge]]
 
-> "He is a free man whom the truth makes free, and he is a slave who commits sin." — [[Epictetus]]
+> "He is a free man whom the truth makes free, and he is a slave who commits sin." — attributed to [[Epictetus]]; the phrasing follows John 8:32–34
 
 ## Code Directive
 

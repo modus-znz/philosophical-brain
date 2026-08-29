@@ -20,9 +20,9 @@ War*) root discipline in self-cultivation rather than reward.
 
 ## Signature Sayings
 
-- "The man who moves a mountain begins by carrying away small stones." — [[Confucius]] → see [[progress]]
+- "The man who moves a mountain begins by carrying away small stones." — modern coinage; widely misattributed to [[Confucius]] → see [[progress]]
 - "He who deliberates fully before taking a step will spend his entire life on one leg." — Chinese proverb → see [[action]]
-- "Wherever you go, go with all your heart." — attributed to [[Confucius]] → see [[general-wisdom]]
+- "Wherever you go, go with all your heart." — modern coinage; widely misattributed to [[Confucius]] → see [[general-wisdom]]
 
 > "Knowing others is intelligence; knowing yourself is true wisdom." — [[Lao Tzu]] (*Tao Te Ching* 33)
 

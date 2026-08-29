@@ -1,6 +1,6 @@
 # Patience
 
-> "Nature does not hurry, yet everything is accomplished." — [[Lao Tzu]]
+> "Nature does not hurry, yet everything is accomplished." — modern rendering after [[Lao Tzu]], *Tao Te Ching* 37; not a literal translation
 > "Pole pole ndiyo mwendo." (Slowly, slowly is indeed the way.) — Swahili proverb
 
 **Definition:** Endure the slow, incremental path without desperation. Trust

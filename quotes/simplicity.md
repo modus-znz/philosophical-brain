@@ -12,7 +12,7 @@
 
 > "It is not a daily increase, but a daily decrease. Hack away at the inessentials." — [[Bruce Lee]]
 
-> "Manifest plainness, embrace simplicity." — [[Lao Tzu]]
+> "Manifest plainness, embrace simplicity." — [[Lao Tzu]], *Tao Te Ching* 19
 
 > "Besides the noble art of getting things done, there is the noble art of leaving things undone." — [[Lin Yutang]]
 

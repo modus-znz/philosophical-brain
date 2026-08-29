@@ -1,6 +1,6 @@
 # Preparation
 
-> "Give me six hours to chop down a tree and I will spend the first four sharpening the axe." — attributed to [[Abraham Lincoln]]
+> "Give me six hours to chop down a tree and I will spend the first four sharpening the axe." — modern coinage; widely misattributed to [[Abraham Lincoln]]; unattested before the 1950s
 > "Luck is what happens when preparation meets opportunity." — modern aphorism; no locus in [[Seneca]]
 
 **Definition:** Do the invisible work before the visible work. Plan, gather

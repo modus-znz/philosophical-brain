@@ -20,7 +20,7 @@
 
 > "Kidole kimoja hakivunji chawa." (One finger cannot crush a louse.) — Swahili proverb
 
-> "What is the essence of life? To serve others and to do good." — [[Aristotle]]
+> "What is the essence of life? To serve others and to do good." — modern coinage; widely misattributed to [[Aristotle]]
 
 > "We rise by lifting others." — [[Robert G. Ingersoll]]
 

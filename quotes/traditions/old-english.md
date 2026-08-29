@@ -25,11 +25,11 @@ that engineering now speaks.
 
 > "Wyrd oft nereð unfægne eorl þonne his ellen deah." (Fate often saves the undoomed man when his courage holds.) — *Beowulf* v. 572
 
-> "Few words, well weighed, hang longer than great ones." — old English saying
+> "Few words, well weighed, hang longer than great ones." — composed for this vault in the old English proverb style; not an attested saying
 
-> "The good name is the only treasure a man buries that still breathes." — after the Hávamál
+> "The good name is the only treasure a man buries that still breathes." — after the *Hávamál* 76–77
 
-> "Every storm is worth facing, for after it the sun stands higher." — old English folk saying
+> "Every storm is worth facing, for after it the sun stands higher." — composed for this vault in the old English proverb style; not an attested saying
 
 ## Code Directive
 

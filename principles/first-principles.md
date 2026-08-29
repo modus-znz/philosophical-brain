@@ -1,6 +1,6 @@
 # First Principles
 
-> "To find yourself, think for yourself." — [[Socrates]]
+> "To find yourself, think for yourself." — modern coinage; widely misattributed to [[Socrates]]
 > "When you have eliminated the impossible, whatever remains, however improbable, must be the truth." — [[Arthur Conan Doyle]]
 
 **Definition:** Reason from the ground up. Strip every claim down to what is

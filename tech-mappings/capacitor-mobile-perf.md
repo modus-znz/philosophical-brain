@@ -5,6 +5,7 @@ JS + native bridge, mobile-first and performance-sensitive.
 
 - **Governing Principles**: [[simplicity]] · [[kaizen]] · [[focus]] · [[reliability]]
 - **Supporting Quotes**: [[quotes/simplicity]] · [[quotes/craft]] · [[quotes/action]]
+- **Session Moments**: building · craft
 - **Application:** A snappy, native-feeling app on constrained device resources.
   Performance is a property of removing waste, not of adding machinery.
 

@@ -10,7 +10,7 @@
 
 > "Count your blessings, not your problems." — anonymous
 
-> "When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love." — [[Marcus Aurelius]]
+> "When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love." — modern rendering after [[Marcus Aurelius]], *Meditations* 5.1
 
 > "Enjoy the little things, for one day you may look back and realize they were the big things." — [[Robert Brault]]
 

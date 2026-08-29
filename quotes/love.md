@@ -14,7 +14,7 @@
 
 > "To love and be loved is to feel the sun from both sides." — [[David Viscott]]
 
-> "Upendo hauna kikomo." (Love has no limit.) — Swahili saying
+> "Upendo hauna kikomo." (Love has no limit.) — Swahili phrasing composed for this vault; not an attested proverb
 
 ## Code Directive
 

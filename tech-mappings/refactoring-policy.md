@@ -4,6 +4,7 @@
 
 - **Governing Principles**: [[kaizen]] · [[simplicity]] · [[reliability]] · [[humility-and-learning]]
 - **Supporting Quotes**: [[quotes/refactoring]] · [[quotes/simplicity]] · [[quotes/resilience]]
+- **Session Moments**: refactoring/renewal · dead-code-removed
 - **Application:** Change is the only constant in code [[quotes/refactoring]].
   Refactor in small, tested, behavior-preserving slices — never a big-bang
   rewrite.

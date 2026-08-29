@@ -32,7 +32,7 @@ the careful path, and let the work outlast you.
 
 > "You have the right to your actions, but never to their fruits." — [[Bhagavad Gita]] (Krishna to Arjuna)
 
-> "I slept and dreamt that life was joy. I woke and saw that life was service. I acted, and behold, service was joy." — [[Rabindranath Tagore]]
+> "I slept and dreamt that life was joy. I woke and saw that life was service. I acted, and behold, service was joy." — attributed to [[Rabindranath Tagore]]; no located source
 
 > "Work is love made visible." — [[Khalil Gibran]] (*The Prophet*)
 

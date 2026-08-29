@@ -22,7 +22,7 @@
 
 > "The greatest of faults, I should say, is to be conscious of none." — [[Thomas Carlyle]]
 
-> "Kosa la kwanza ni funzo." (The first mistake is a lesson.) — Swahili saying
+> "Kosa la kwanza ni funzo." (The first mistake is a lesson.) — Swahili phrasing composed for this vault; not an attested proverb
 
 ## Code Directive
 

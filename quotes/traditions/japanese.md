@@ -24,7 +24,7 @@ the present, and the bushido code of the warrior (see [[bushido]]).
 ## Signature Sayings
 
 - "Fall seven times, stand up eight." — Japanese proverb (Nana korobi ya oki) → see [[resilience]]
-- "The bamboo that bends is stronger than the oak that resists." — Japanese proverb → see [[resilience]]
+- "The bamboo that bends is stronger than the oak that resists." — modern saying, commonly labelled a Japanese proverb; the attested form is 柳に雪折れなし ("snow never breaks the willow") → see [[resilience]]
 - "A single arrow is easily broken, but not ten in a bundle." — Japanese proverb → see [[teamwork]]
 
 > "To study the Way is to study the self. To study the self is to forget the self." — [[Dōgen]] (*Genjōkōan*)

@@ -10,7 +10,7 @@
 
 > "Rivers know this: there is no hurry. We shall get there some day." — [[A.A. Milne]]
 
-> "Nature does not hurry, yet everything is accomplished." — [[Lao Tzu]]
+> "Nature does not hurry, yet everything is accomplished." — modern rendering after [[Lao Tzu]], *Tao Te Ching* 37; not a literal translation
 
 > "He who can have patience can have what he will." — [[Benjamin Franklin]]
 

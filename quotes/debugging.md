@@ -14,7 +14,7 @@
 
 > "Nothing in life is to be feared, it is only to be understood." — [[Marie Curie]]
 
-> "To find yourself, think for yourself." — [[Socrates]]
+> "To find yourself, think for yourself." — modern coinage; widely misattributed to [[Socrates]]
 
 > "When you have eliminated the impossible, whatever remains, however improbable, must be the truth." — [[Arthur Conan Doyle]] (Sherlock Holmes)
 

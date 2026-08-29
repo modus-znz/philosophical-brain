@@ -6,7 +6,7 @@
 
 > "Success is the sum of small efforts, repeated day in and day out." — [[Robert Collier]]
 
-> "It does not matter how slowly you go as long as you do not stop." — [[Confucius]]
+> "It does not matter how slowly you go as long as you do not stop." — modern coinage; widely misattributed to [[Confucius]]
 
 > "A little progress each day adds up to big results." — anonymous
 
@@ -20,9 +20,9 @@
 
 > "Step by step walk the thousand-mile road." — [[Miyamoto Musashi]] (*The Book of Five Rings*)
 
-> "The man who moves a mountain begins by carrying away small stones." — [[Confucius]]
+> "The man who moves a mountain begins by carrying away small stones." — modern coinage; widely misattributed to [[Confucius]]
 
-> "Continuous improvement is better than delayed perfection." — [[Mark Twain]]
+> "Continuous improvement is better than delayed perfection." — modern coinage; widely misattributed to [[Mark Twain]]
 
 > "Little strokes fell great oaks." — [[Benjamin Franklin]]
 
@@ -46,7 +46,7 @@
 
 > "We must find time to stop and thank the people who make a difference in our lives." — [[John F. Kennedy]]
 
-> "What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others." — [[Pericles]]
+> "What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others." — modern paraphrase of [[Pericles]]' funeral oration ([[Thucydides]], *History* 2.43)
 
 ## Code Directive
 

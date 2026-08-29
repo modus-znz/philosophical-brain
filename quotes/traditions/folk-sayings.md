@@ -53,7 +53,7 @@ the way you build.
 
 > "When spider webs unite, they can tie up a lion." — Ethiopian proverb
 
-> "Even a sheet of paper has two sides." — Korean proverb
+> "백지장도 맞들면 낫다." (Even a sheet of paper is lighter when two lift it.) — Korean proverb
 
 > "Nie mój cyrk, nie moje małpy." (Not my circus, not my monkeys.) — Polish proverb, on scope
 

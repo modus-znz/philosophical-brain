@@ -4,6 +4,7 @@
 
 - **Governing Principles**: [[simplicity]] · [[yagni]] · [[first-principles]] · [[reliability]]
 - **Supporting Quotes**: [[quotes/simplicity]] · [[quotes/craft]] · [[quotes/refactoring]]
+- **Session Moments**: building · craft
 - **Application:** Custom features carved cleanly onto the Odoo ORM without
   fighting the framework's grain. Add the smallest model/view/action that meets
   the real requirement.

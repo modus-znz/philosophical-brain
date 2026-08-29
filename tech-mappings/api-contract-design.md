@@ -5,6 +5,7 @@ plus any service-to-service boundary.
 
 - **Governing Principles**: [[first-principles]] · [[simplicity]] · [[reliability]] · [[prudence]]
 - **Supporting Quotes**: [[quotes/debugging]] · [[quotes/preparation]] · [[quotes/integrity]]
+- **Session Moments**: planning · building
 - **Application:** The contract is the single source of truth both sides agree
   to before any implementation. Design it on paper first — a contract well
   stated is a problem half solved [[quotes/debugging]].

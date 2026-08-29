@@ -29,7 +29,7 @@ courage to question authority with a polite smile.
 - "Perfection is achieved when there is nothing left to take away." — [[Antoine de Saint-Exupéry]] → see [[simplicity]]
 - "The real voyage of discovery consists not in seeking new landscapes, but in having new eyes." — [[Marcel Proust]] → see [[exploration]]
 
-> "The correct word is the sharpest tool in the shop." — French craft saying (*le mot juste*)
+> "The correct word is the sharpest tool in the shop." — composed for this vault in the French craft idiom (*le mot juste*); not an attested saying
 
 > "Petit à petit, l'oiseau fait son nid." (Little by little, the bird builds its nest.) — French proverb
 

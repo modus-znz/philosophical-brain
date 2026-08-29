@@ -6,13 +6,13 @@
 
 > "In solitude, the mind gains strength and learns to lean upon itself." — [[Laurence Sterne]]
 
-> "Silence is a source of great strength." — [[Lao Tzu]]
+> "Silence is a source of great strength." — modern coinage; widely misattributed to [[Lao Tzu]]
 
 > "Within you there is a stillness and a sanctuary to which you can retreat at any time." — [[Hermann Hesse]]
 
 > "Speak only if it improves upon the silence." — attributed to [[Mahatma Gandhi]]
 
-> "Ukimya ni dhahabu." (Silence is gold.) — Swahili proverb
+> "Ukimya ni dhahabu." (Silence is gold.) — Swahili rendering of the European saying "silence is golden"; not a traditional proverb
 
 > "He who guards his mouth and his tongue keeps himself from calamity." — Proverbs 21:23
 

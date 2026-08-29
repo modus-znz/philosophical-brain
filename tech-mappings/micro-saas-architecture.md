@@ -4,6 +4,7 @@
 
 - **Governing Principles**: [[simplicity]] · [[yagni]] · [[reliability]] · [[first-principles]] · [[kaizen]]
 - **Supporting Quotes**: [[quotes/simplicity]] · [[quotes/action]] · [[quotes/validation]]
+- **Session Moments**: planning · strategy
 - **Application:** A tiny, focused product held together by the smallest
   defensible stack. Each decision must trace to a first principle, and no
   component exists unless a real requirement or a real user demands it.

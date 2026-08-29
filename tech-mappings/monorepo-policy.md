@@ -5,6 +5,7 @@ addons, tooling).
 
 - **Governing Principles**: [[collaboration]] · [[kaizen]] · [[simplicity]] · [[yagni]]
 - **Supporting Quotes**: [[quotes/teamwork]] · [[quotes/progress]] · [[quotes/simplicity]]
+- **Session Moments**: git/git-commit · push
 - **Application:** One project, one coherent change set where practical;
   independent, versioned units where boundaries genuinely differ.
 

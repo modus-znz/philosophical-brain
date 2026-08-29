@@ -5,6 +5,7 @@ levels across Modus Labs projects.
 
 - **Governing Principles**: [[truth-and-integrity]] · [[preparation]] · [[resilience]] · [[kaizen]]
 - **Supporting Quotes**: [[quotes/validation]] · [[quotes/preparation]] · [[quotes/resilience]]
+- **Session Moments**: tests-failing · tests-passing · validation
 - **Application:** The test is the honest contract that code must satisfy. It is
   written before or with the code and proves the real behavior — not a
   convenient fiction.

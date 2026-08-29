@@ -6,17 +6,17 @@
 
 > "The unexamined life is not worth living." — [[Socrates]]
 
-> "You have power over your mind — not outside events. Realize this, and you will find strength." — [[Marcus Aurelius]]
+> "You have power over your mind — not outside events. Realize this, and you will find strength." — modern condensation after [[Marcus Aurelius]]; not a passage in *Meditations*
 
 > "He who knows others is wise; he who knows himself is enlightened." — [[Lao Tzu]] (*Tao Te Ching* 33)
 
 > "The mind is everything. What you think you become." — attributed to the [[Buddha]]
 
-> "Wherever you go, go with all your heart." — attributed to [[Confucius]]
+> "Wherever you go, go with all your heart." — modern coinage; widely misattributed to [[Confucius]]
 
 > "Very little is needed to make a happy life; it is all within yourself, in your way of thinking." — [[Marcus Aurelius]]
 
-> "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself." — [[Rumi]]
+> "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself." — modern rendering circulated as [[Rumi]]; no located source in the *Masnavi*
 
 > "Knowing yourself is the beginning of all wisdom." — [[Aristotle]]
 

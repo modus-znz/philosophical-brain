@@ -37,7 +37,7 @@ defense, endurance is pride.
 
 > "Cine se scoală de dimineață, departe ajunge." (He who rises early travels far.) — Romanian proverb
 
-> "Viața trebuie trăită înainte de a fi înțeleasă." (Life must be lived before it can be understood.) — after [[Emil Cioran]]
+> "Viața trebuie trăită înainte de a fi înțeleasă." (Life must be lived before it can be understood.) — Romanian rendering of [[Søren Kierkegaard]], *Journals* IV A 164 (1843)
 
 ## Code Directive
 

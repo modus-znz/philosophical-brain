@@ -16,7 +16,7 @@
 
 > "The best way to find yourself is to lose yourself in the service of others." — attributed to [[Mahatma Gandhi]]
 
-> "Huruma haiuzwi." (Compassion is not for sale.) — Swahili saying
+> "Huruma haiuzwi." (Compassion is not for sale.) — Swahili phrasing composed for this vault; not an attested proverb
 
 ## Code Directive
 

@@ -3,7 +3,7 @@
   "multigraph": false,
   "graph": {
     "generator": "build_graph.py",
-    "generated_at": "2026-08-29T17:21:16+00:00",
+    "generated_at": "2026-08-29T17:34:15+00:00",
     "vault_root": "philosophical-brain",
     "source_files": 70
   },
@@ -1030,9 +1030,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "api contract design",
-      "text": "1. Is this shape the minimal flat form that serves the client? simplicity 2. Is every field validated and every failure mode explicit? prudence 3. Is the contract doc truthful and current? truth-and-integrity 4. Is the version clear and the change non-breaking? reliability 5. Was the shape agreed before implementation? preparation",
-      "rationale": "1. Is this shape the minimal flat form that serves the client? simplicity 2. Is every field validated and every failure mode explicit? prudence 3. Is the contract doc truthful and current? truth-and-integrity 4. Is the version clear and the change non-breaking? reliability 5. Was the shape agreed before implementation? preparation",
-      "moments": [],
+      "text": "1. Is this shape the minimal flat form that serves the client? simplicity 2. Is every field validated and every failure mode explicit? prudence 3. Is the contract doc truthful and current? truth-and-integrity 4. Is the version clear and the change non-breaking? reliability 5. Was the shape agreed before implementation? preparation  Applies at: planning, building.",
+      "rationale": "1. Is this shape the minimal flat form that serves the client? simplicity 2. Is every field validated and every failure mode explicit? prudence 3. Is the contract doc truthful and current? truth-and-integrity 4. Is the version clear and the change non-breaking? reliability 5. Was the shape agreed before implementation? preparation  Applies at: planning, building.",
+      "moments": [
+        "planning",
+        "building"
+      ],
       "source_file": "tech-mappings/api-contract-design.md"
     },
     {
@@ -1043,9 +1046,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "capacitor mobile performance",
-      "text": "1. Is this render/bridge call necessary, or removable? simplicity 2. Have I measured the hotspot before optimizing? kaizen 3. Does the change ship as a landable increment? kaizen 4. Has it passed an emulator smoke test? preparation 5. Does it degrade gracefully on a low-end device? resilience",
-      "rationale": "1. Is this render/bridge call necessary, or removable? simplicity 2. Have I measured the hotspot before optimizing? kaizen 3. Does the change ship as a landable increment? kaizen 4. Has it passed an emulator smoke test? preparation 5. Does it degrade gracefully on a low-end device? resilience",
-      "moments": [],
+      "text": "1. Is this render/bridge call necessary, or removable? simplicity 2. Have I measured the hotspot before optimizing? kaizen 3. Does the change ship as a landable increment? kaizen 4. Has it passed an emulator smoke test? preparation 5. Does it degrade gracefully on a low-end device? resilience  Applies at: building, craft.",
+      "rationale": "1. Is this render/bridge call necessary, or removable? simplicity 2. Have I measured the hotspot before optimizing? kaizen 3. Does the change ship as a landable increment? kaizen 4. Has it passed an emulator smoke test? preparation 5. Does it degrade gracefully on a low-end device? resilience  Applies at: building, craft.",
+      "moments": [
+        "building",
+        "craft"
+      ],
       "source_file": "tech-mappings/capacitor-mobile-perf.md"
     },
     {
@@ -1056,9 +1062,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "micro saas architecture",
-      "text": "1. Does this component answer a first-principles question? first-principles 2. Is there a real user or requirement demanding it now? yagni 3. Is this the simplest structure that works? simplicity 4. What failure mode does it introduce, and is it anticipated? prudence 5. Can it ship incrementally this week? kaizen",
-      "rationale": "1. Does this component answer a first-principles question? first-principles 2. Is there a real user or requirement demanding it now? yagni 3. Is this the simplest structure that works? simplicity 4. What failure mode does it introduce, and is it anticipated? prudence 5. Can it ship incrementally this week? kaizen",
-      "moments": [],
+      "text": "1. Does this component answer a first-principles question? first-principles 2. Is there a real user or requirement demanding it now? yagni 3. Is this the simplest structure that works? simplicity 4. What failure mode does it introduce, and is it anticipated? prudence 5. Can it ship incrementally this week? kaizen  Applies at: planning, strategy.",
+      "rationale": "1. Does this component answer a first-principles question? first-principles 2. Is there a real user or requirement demanding it now? yagni 3. Is this the simplest structure that works? simplicity 4. What failure mode does it introduce, and is it anticipated? prudence 5. Can it ship incrementally this week? kaizen  Applies at: planning, strategy.",
+      "moments": [
+        "planning",
+        "strategy"
+      ],
       "source_file": "tech-mappings/micro-saas-architecture.md"
     },
     {
@@ -1069,9 +1078,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "monorepo policy",
-      "text": "1. Can this change land atomically with its deps? collaboration 2. Is it one commit / one logical change? kaizen 3. Is the \"why\" recorded for the next reader? collaboration 4. Is this a premature shared-package, or a real second consumer? yagni 5. Does it pass review and the test gate? reliability",
-      "rationale": "1. Can this change land atomically with its deps? collaboration 2. Is it one commit / one logical change? kaizen 3. Is the \"why\" recorded for the next reader? collaboration 4. Is this a premature shared-package, or a real second consumer? yagni 5. Does it pass review and the test gate? reliability",
-      "moments": [],
+      "text": "1. Can this change land atomically with its deps? collaboration 2. Is it one commit / one logical change? kaizen 3. Is the \"why\" recorded for the next reader? collaboration 4. Is this a premature shared-package, or a real second consumer? yagni 5. Does it pass review and the test gate? reliability  Applies at: git, git-commit, push.",
+      "rationale": "1. Can this change land atomically with its deps? collaboration 2. Is it one commit / one logical change? kaizen 3. Is the \"why\" recorded for the next reader? collaboration 4. Is this a premature shared-package, or a real second consumer? yagni 5. Does it pass review and the test gate? reliability  Applies at: git, git-commit, push.",
+      "moments": [
+        "git",
+        "git-commit",
+        "push"
+      ],
       "source_file": "tech-mappings/monorepo-policy.md"
     },
     {
@@ -1082,9 +1095,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "odoo module design",
-      "text": "1. Is this on the ORM the idiomatic way — no fighting the framework? first-principles 2. Is the model the minimal field set for the requirement? simplicity 3. Is every field/workflow consumed by a real path? yagni 4. Are invariants enforced in the model, not the view? reliability 5. Does it restart clean and pass a smoke test before handoff? preparation",
-      "rationale": "1. Is this on the ORM the idiomatic way — no fighting the framework? first-principles 2. Is the model the minimal field set for the requirement? simplicity 3. Is every field/workflow consumed by a real path? yagni 4. Are invariants enforced in the model, not the view? reliability 5. Does it restart clean and pass a smoke test before handoff? preparation",
-      "moments": [],
+      "text": "1. Is this on the ORM the idiomatic way — no fighting the framework? first-principles 2. Is the model the minimal field set for the requirement? simplicity 3. Is every field/workflow consumed by a real path? yagni 4. Are invariants enforced in the model, not the view? reliability 5. Does it restart clean and pass a smoke test before handoff? preparation  Applies at: building, craft.",
+      "rationale": "1. Is this on the ORM the idiomatic way — no fighting the framework? first-principles 2. Is the model the minimal field set for the requirement? simplicity 3. Is every field/workflow consumed by a real path? yagni 4. Are invariants enforced in the model, not the view? reliability 5. Does it restart clean and pass a smoke test before handoff? preparation  Applies at: building, craft.",
+      "moments": [
+        "building",
+        "craft"
+      ],
       "source_file": "tech-mappings/odoo-module-design.md"
     },
     {
@@ -1095,9 +1111,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "refactoring policy",
-      "text": "1. Is this one behavior-preserving slice, mergeable now? kaizen 2. Does the existing suite prove the behavior before and after? reliability 3. Is dead code removed before simplifying? simplicity 4. Have I understood why the complexity arose? humility-and-learning 5. Does it stay green and landable? kaizen",
-      "rationale": "1. Is this one behavior-preserving slice, mergeable now? kaizen 2. Does the existing suite prove the behavior before and after? reliability 3. Is dead code removed before simplifying? simplicity 4. Have I understood why the complexity arose? humility-and-learning 5. Does it stay green and landable? kaizen",
-      "moments": [],
+      "text": "1. Is this one behavior-preserving slice, mergeable now? kaizen 2. Does the existing suite prove the behavior before and after? reliability 3. Is dead code removed before simplifying? simplicity 4. Have I understood why the complexity arose? humility-and-learning 5. Does it stay green and landable? kaizen  Applies at: refactoring, renewal, dead-code-removed.",
+      "rationale": "1. Is this one behavior-preserving slice, mergeable now? kaizen 2. Does the existing suite prove the behavior before and after? reliability 3. Is dead code removed before simplifying? simplicity 4. Have I understood why the complexity arose? humility-and-learning 5. Does it stay green and landable? kaizen  Applies at: refactoring, renewal, dead-code-removed.",
+      "moments": [
+        "refactoring",
+        "renewal",
+        "dead-code-removed"
+      ],
       "source_file": "tech-mappings/refactoring-policy.md"
     },
     {
@@ -1108,9 +1128,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "security hardening",
-      "text": "1. Is every input validated at its trust boundary? prudence 2. Are all secrets externalized and access least-privileged? integrity 3. Does it fail closed, not open, on ambiguity? prudence 4. Is the failure mode anticipated before impact? preparation 5. Is behavior observable (logged/altered) so abuse surfaces? reliability",
-      "rationale": "1. Is every input validated at its trust boundary? prudence 2. Are all secrets externalized and access least-privileged? integrity 3. Does it fail closed, not open, on ambiguity? prudence 4. Is the failure mode anticipated before impact? preparation 5. Is behavior observable (logged/altered) so abuse surfaces? reliability",
-      "moments": [],
+      "text": "1. Is every input validated at its trust boundary? prudence 2. Are all secrets externalized and access least-privileged? integrity 3. Does it fail closed, not open, on ambiguity? prudence 4. Is the failure mode anticipated before impact? preparation 5. Is behavior observable (logged/altered) so abuse surfaces? reliability  Applies at: security-hardening, prudence.",
+      "rationale": "1. Is every input validated at its trust boundary? prudence 2. Are all secrets externalized and access least-privileged? integrity 3. Does it fail closed, not open, on ambiguity? prudence 4. Is the failure mode anticipated before impact? preparation 5. Is behavior observable (logged/altered) so abuse surfaces? reliability  Applies at: security-hardening, prudence.",
+      "moments": [
+        "security-hardening",
+        "prudence"
+      ],
       "source_file": "tech-mappings/security-hardening.md"
     },
     {
@@ -1121,9 +1144,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "testing strategy",
-      "text": "1. Does this test prove real, observable behavior? truth-and-integrity 2. Was it written to reproduce a real failure? preparation 3. Is it fast, deterministic, and run on every change? kaizen 4. Does it fail loudly and recoverably? resilience 5. Does passing it actually mean the requirement is met? truth-and-integrity",
-      "rationale": "1. Does this test prove real, observable behavior? truth-and-integrity 2. Was it written to reproduce a real failure? preparation 3. Is it fast, deterministic, and run on every change? kaizen 4. Does it fail loudly and recoverably? resilience 5. Does passing it actually mean the requirement is met? truth-and-integrity",
-      "moments": [],
+      "text": "1. Does this test prove real, observable behavior? truth-and-integrity 2. Was it written to reproduce a real failure? preparation 3. Is it fast, deterministic, and run on every change? kaizen 4. Does it fail loudly and recoverably? resilience 5. Does passing it actually mean the requirement is met? truth-and-integrity  Applies at: tests-failing, tests-passing, validation.",
+      "rationale": "1. Does this test prove real, observable behavior? truth-and-integrity 2. Was it written to reproduce a real failure? preparation 3. Is it fast, deterministic, and run on every change? kaizen 4. Does it fail loudly and recoverably? resilience 5. Does passing it actually mean the requirement is met? truth-and-integrity  Applies at: tests-failing, tests-passing, validation.",
+      "moments": [
+        "tests-failing",
+        "tests-passing",
+        "validation"
+      ],
       "source_file": "tech-mappings/testing-strategy.md"
     },
     {
@@ -2795,6 +2822,18 @@
       "source_file": null
     },
     {
+      "id": "obj_thucydides",
+      "label": "Thucydides",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "thucydides",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
       "id": "obj_friedrich_nietzsche",
       "label": "Friedrich Nietzsche",
       "community": 2,
@@ -3083,13 +3122,13 @@
       "source_file": null
     },
     {
-      "id": "obj_emil_cioran",
-      "label": "Emil Cioran",
+      "id": "obj_s_ren_kierkegaard",
+      "label": "Søren Kierkegaard",
       "community": 2,
       "community_name": "concepts",
       "file_type": "concept",
       "node_kind": "concept",
-      "norm_label": "emil cioran",
+      "norm_label": "søren kierkegaard",
       "text": "",
       "rationale": "",
       "source_file": null
@@ -4028,10 +4067,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "to find yourself, think for yourself.",
-      "text": "\"To find yourself, think for yourself.\" — Socrates",
-      "rationale": "\"To find yourself, think for yourself.\" — Socrates",
+      "text": "\"To find yourself, think for yourself.\" — modern coinage; widely misattributed to Socrates",
+      "rationale": "\"To find yourself, think for yourself.\" — modern coinage; widely misattributed to Socrates",
       "quote": "To find yourself, think for yourself.",
-      "author": "Socrates",
+      "author": "modern coinage; widely misattributed to Socrates",
       "source_file": "principles/first-principles.md"
     },
     {
@@ -4294,10 +4333,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "it does not matter how slowly you go as long as you do not stop.",
-      "text": "\"It does not matter how slowly you go as long as you do not stop.\" — Confucius",
-      "rationale": "\"It does not matter how slowly you go as long as you do not stop.\" — Confucius",
+      "text": "\"It does not matter how slowly you go as long as you do not stop.\" — modern coinage; widely misattributed to Confucius",
+      "rationale": "\"It does not matter how slowly you go as long as you do not stop.\" — modern coinage; widely misattributed to Confucius",
       "quote": "It does not matter how slowly you go as long as you do not stop.",
-      "author": "Confucius",
+      "author": "modern coinage; widely misattributed to Confucius",
       "source_file": "principles/kaizen.md"
     },
     {
@@ -4322,10 +4361,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "continuous improvement is better than delayed perfection.",
-      "text": "\"Continuous improvement is better than delayed perfection.\" — Mark Twain",
-      "rationale": "\"Continuous improvement is better than delayed perfection.\" — Mark Twain",
+      "text": "\"Continuous improvement is better than delayed perfection.\" — modern coinage; widely misattributed to Mark Twain",
+      "rationale": "\"Continuous improvement is better than delayed perfection.\" — modern coinage; widely misattributed to Mark Twain",
       "quote": "Continuous improvement is better than delayed perfection.",
-      "author": "Mark Twain",
+      "author": "modern coinage; widely misattributed to Mark Twain",
       "source_file": "principles/kaizen.md"
     },
     {
@@ -4364,10 +4403,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "the man who moves a mountain begins by carrying away small stones.",
-      "text": "\"The man who moves a mountain begins by carrying away small stones.\" — Confucius",
-      "rationale": "\"The man who moves a mountain begins by carrying away small stones.\" — Confucius",
+      "text": "\"The man who moves a mountain begins by carrying away small stones.\" — modern coinage; widely misattributed to Confucius",
+      "rationale": "\"The man who moves a mountain begins by carrying away small stones.\" — modern coinage; widely misattributed to Confucius",
       "quote": "The man who moves a mountain begins by carrying away small stones.",
-      "author": "Confucius",
+      "author": "modern coinage; widely misattributed to Confucius",
       "source_file": "principles/kaizen.md"
     },
     {
@@ -4378,10 +4417,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "nature does not hurry, yet everything is accomplished.",
-      "text": "\"Nature does not hurry, yet everything is accomplished.\" — Lao Tzu",
-      "rationale": "\"Nature does not hurry, yet everything is accomplished.\" — Lao Tzu",
+      "text": "\"Nature does not hurry, yet everything is accomplished.\" — modern rendering after Lao Tzu, *Tao Te Ching* 37; not a literal translation",
+      "rationale": "\"Nature does not hurry, yet everything is accomplished.\" — modern rendering after Lao Tzu, *Tao Te Ching* 37; not a literal translation",
       "quote": "Nature does not hurry, yet everything is accomplished.",
-      "author": "Lao Tzu",
+      "author": "modern rendering after Lao Tzu, *Tao Te Ching* 37; not a literal translation",
       "source_file": "principles/patience.md"
     },
     {
@@ -4448,10 +4487,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "give me six hours to chop down a tree and i will spend the first four sharpening the axe.",
-      "text": "\"Give me six hours to chop down a tree and I will spend the first four sharpening the axe.\" — attributed to Abraham Lincoln",
-      "rationale": "\"Give me six hours to chop down a tree and I will spend the first four sharpening the axe.\" — attributed to Abraham Lincoln",
+      "text": "\"Give me six hours to chop down a tree and I will spend the first four sharpening the axe.\" — modern coinage; widely misattributed to Abraham Lincoln; unattested before the 1950s",
+      "rationale": "\"Give me six hours to chop down a tree and I will spend the first four sharpening the axe.\" — modern coinage; widely misattributed to Abraham Lincoln; unattested before the 1950s",
       "quote": "Give me six hours to chop down a tree and I will spend the first four sharpening the axe.",
-      "author": "attributed to Abraham Lincoln",
+      "author": "modern coinage; widely misattributed to Abraham Lincoln; unattested before the 1950s",
       "source_file": "principles/preparation.md"
     },
     {
@@ -5694,10 +5733,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "he is richest who is content with the least, for content is the wealth of nature.",
-      "text": "\"He is richest who is content with the least, for content is the wealth of nature.\" — Socrates",
-      "rationale": "\"He is richest who is content with the least, for content is the wealth of nature.\" — Socrates",
+      "text": "\"He is richest who is content with the least, for content is the wealth of nature.\" — attributed to Socrates in later florilegia; no primary source",
+      "rationale": "\"He is richest who is content with the least, for content is the wealth of nature.\" — attributed to Socrates in later florilegia; no primary source",
       "quote": "He is richest who is content with the least, for content is the wealth of nature.",
-      "author": "Socrates",
+      "author": "attributed to Socrates in later florilegia; no primary source",
       "source_file": "quotes/contentment.md"
     },
     {
@@ -5722,10 +5761,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "contentment is natural wealth; luxury is artificial poverty.",
-      "text": "\"Contentment is natural wealth; luxury is artificial poverty.\" — Socrates",
-      "rationale": "\"Contentment is natural wealth; luxury is artificial poverty.\" — Socrates",
+      "text": "\"Contentment is natural wealth; luxury is artificial poverty.\" — attributed to Socrates in later florilegia; no primary source",
+      "rationale": "\"Contentment is natural wealth; luxury is artificial poverty.\" — attributed to Socrates in later florilegia; no primary source",
       "quote": "Contentment is natural wealth; luxury is artificial poverty.",
-      "author": "Socrates",
+      "author": "attributed to Socrates in later florilegia; no primary source",
       "source_file": "quotes/contentment.md"
     },
     {
@@ -6604,10 +6643,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "he is a free man whom the truth makes free, and he is a slave who commits sin.",
-      "text": "\"He is a free man whom the truth makes free, and he is a slave who commits sin.\" — Epictetus",
-      "rationale": "\"He is a free man whom the truth makes free, and he is a slave who commits sin.\" — Epictetus",
+      "text": "\"He is a free man whom the truth makes free, and he is a slave who commits sin.\" — attributed to Epictetus; the phrasing follows John 8:32–34",
+      "rationale": "\"He is a free man whom the truth makes free, and he is a slave who commits sin.\" — attributed to Epictetus; the phrasing follows John 8:32–34",
       "quote": "He is a free man whom the truth makes free, and he is a slave who commits sin.",
-      "author": "Epictetus",
+      "author": "attributed to Epictetus; the phrasing follows John 8:32–34",
       "source_file": "quotes/freedom.md"
     },
     {
@@ -6618,10 +6657,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "you have power over your mind — not outside events. realize this, and you will find strength.",
-      "text": "\"You have power over your mind — not outside events. Realize this, and you will find strength.\" — Marcus Aurelius",
-      "rationale": "\"You have power over your mind — not outside events. Realize this, and you will find strength.\" — Marcus Aurelius",
+      "text": "\"You have power over your mind — not outside events. Realize this, and you will find strength.\" — modern condensation after Marcus Aurelius; not a passage in *Meditations",
+      "rationale": "\"You have power over your mind — not outside events. Realize this, and you will find strength.\" — modern condensation after Marcus Aurelius; not a passage in *Meditations",
       "quote": "You have power over your mind — not outside events. Realize this, and you will find strength.",
-      "author": "Marcus Aurelius",
+      "author": "modern condensation after Marcus Aurelius; not a passage in *Meditations",
       "source_file": "quotes/general-wisdom.md"
     },
     {
@@ -6660,10 +6699,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "wherever you go, go with all your heart.",
-      "text": "\"Wherever you go, go with all your heart.\" — attributed to Confucius",
-      "rationale": "\"Wherever you go, go with all your heart.\" — attributed to Confucius",
+      "text": "\"Wherever you go, go with all your heart.\" — modern coinage; widely misattributed to Confucius",
+      "rationale": "\"Wherever you go, go with all your heart.\" — modern coinage; widely misattributed to Confucius",
       "quote": "Wherever you go, go with all your heart.",
-      "author": "attributed to Confucius",
+      "author": "modern coinage; widely misattributed to Confucius",
       "source_file": "quotes/general-wisdom.md"
     },
     {
@@ -6688,10 +6727,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "yesterday i was clever, so i wanted to change the world. today i am wise, so i am changing myself.",
-      "text": "\"Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.\" — Rumi",
-      "rationale": "\"Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.\" — Rumi",
+      "text": "\"Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.\" — modern rendering circulated as Rumi; no located source in the *Masnavi",
+      "rationale": "\"Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.\" — modern rendering circulated as Rumi; no located source in the *Masnavi",
       "quote": "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.",
-      "author": "Rumi",
+      "author": "modern rendering circulated as Rumi; no located source in the *Masnavi",
       "source_file": "quotes/general-wisdom.md"
     },
     {
@@ -7066,10 +7105,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "when you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.",
-      "text": "\"When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.\" — Marcus Aurelius",
-      "rationale": "\"When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.\" — Marcus Aurelius",
+      "text": "\"When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.\" — modern rendering after Marcus Aurelius, *Meditations* 5.1",
+      "rationale": "\"When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.\" — modern rendering after Marcus Aurelius, *Meditations* 5.1",
       "quote": "When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.",
-      "author": "Marcus Aurelius",
+      "author": "modern rendering after Marcus Aurelius, *Meditations* 5.1",
       "source_file": "quotes/gratitude.md"
     },
     {
@@ -8004,10 +8043,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat.",
-      "text": "\"Strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat.\" — attributed to Sun Tzu",
-      "rationale": "\"Strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat.\" — attributed to Sun Tzu",
+      "text": "\"Strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat.\" — modern coinage; widely misattributed to Sun Tzu — not in *The Art of War",
+      "rationale": "\"Strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat.\" — modern coinage; widely misattributed to Sun Tzu — not in *The Art of War",
       "quote": "Strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat.",
-      "author": "attributed to Sun Tzu",
+      "author": "modern coinage; widely misattributed to Sun Tzu — not in *The Art of War",
       "source_file": "quotes/preparation.md"
     },
     {
@@ -8256,10 +8295,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "what you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others.",
-      "text": "\"What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others.\" — Pericles",
-      "rationale": "\"What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others.\" — Pericles",
+      "text": "\"What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others.\" — modern paraphrase of Pericles' funeral oration (Thucydides, *History* 2.43)",
+      "rationale": "\"What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others.\" — modern paraphrase of Pericles' funeral oration (Thucydides, *History* 2.43)",
       "quote": "What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others.",
-      "author": "Pericles",
+      "author": "modern paraphrase of Pericles' funeral oration (Thucydides, *History* 2.43)",
       "source_file": "quotes/progress.md"
     },
     {
@@ -8340,10 +8379,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "every new beginning comes from some other beginning's end.",
-      "text": "\"Every new beginning comes from some other beginning's end.\" — Seneca",
-      "rationale": "\"Every new beginning comes from some other beginning's end.\" — Seneca",
+      "text": "\"Every new beginning comes from some other beginning's end.\" — modern coinage; widely misattributed to Seneca",
+      "rationale": "\"Every new beginning comes from some other beginning's end.\" — modern coinage; widely misattributed to Seneca",
       "quote": "Every new beginning comes from some other beginning's end.",
-      "author": "Seneca",
+      "author": "modern coinage; widely misattributed to Seneca",
       "source_file": "quotes/refactoring.md"
     },
     {
@@ -8354,10 +8393,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "no man ever steps in the same river twice, for it's not the same river and he's not the same man.",
-      "text": "\"No man ever steps in the same river twice, for it's not the same river and he's not the same man.\" — Heraclitus",
-      "rationale": "\"No man ever steps in the same river twice, for it's not the same river and he's not the same man.\" — Heraclitus",
+      "text": "\"No man ever steps in the same river twice, for it's not the same river and he's not the same man.\" — Heraclitus, fragments DK B12/B49a, as commonly rendered",
+      "rationale": "\"No man ever steps in the same river twice, for it's not the same river and he's not the same man.\" — Heraclitus, fragments DK B12/B49a, as commonly rendered",
       "quote": "No man ever steps in the same river twice, for it's not the same river and he's not the same man.",
-      "author": "Heraclitus",
+      "author": "Heraclitus, fragments DK B12/B49a, as commonly rendered",
       "source_file": "quotes/refactoring.md"
     },
     {
@@ -8424,10 +8463,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "change is the only constant in life.",
-      "text": "\"Change is the only constant in life.\" — Heraclitus",
-      "rationale": "\"Change is the only constant in life.\" — Heraclitus",
+      "text": "\"Change is the only constant in life.\" — modern aphorism summarising Heraclitus; not a surviving fragment",
+      "rationale": "\"Change is the only constant in life.\" — modern aphorism summarising Heraclitus; not a surviving fragment",
       "quote": "Change is the only constant in life.",
-      "author": "Heraclitus",
+      "author": "modern aphorism summarising Heraclitus; not a surviving fragment",
       "source_file": "quotes/refactoring.md"
     },
     {
@@ -8452,10 +8491,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "there is nothing permanent except change.",
-      "text": "\"There is nothing permanent except change.\" — Heraclitus",
-      "rationale": "\"There is nothing permanent except change.\" — Heraclitus",
+      "text": "\"There is nothing permanent except change.\" — Heraclitus, as paraphrased in later doxography; not a surviving fragment",
+      "rationale": "\"There is nothing permanent except change.\" — Heraclitus, as paraphrased in later doxography; not a surviving fragment",
       "quote": "There is nothing permanent except change.",
-      "author": "Heraclitus",
+      "author": "Heraclitus, as paraphrased in later doxography; not a surviving fragment",
       "source_file": "quotes/refactoring.md"
     },
     {
@@ -8718,10 +8757,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "the bamboo that bends is stronger than the oak that resists.",
-      "text": "\"The bamboo that bends is stronger than the oak that resists.\" — Japanese proverb",
-      "rationale": "\"The bamboo that bends is stronger than the oak that resists.\" — Japanese proverb",
+      "text": "\"The bamboo that bends is stronger than the oak that resists.\" — modern saying, commonly labelled a Japanese proverb; the attested form is 柳に雪折れなし (\"snow never breaks the willow\")",
+      "rationale": "\"The bamboo that bends is stronger than the oak that resists.\" — modern saying, commonly labelled a Japanese proverb; the attested form is 柳に雪折れなし (\"snow never breaks the willow\")",
       "quote": "The bamboo that bends is stronger than the oak that resists.",
-      "author": "Japanese proverb",
+      "author": "modern saying, commonly labelled a Japanese proverb; the attested form is 柳に雪折れなし (\"snow never breaks the willow\")",
       "source_file": "quotes/resilience.md"
     },
     {
@@ -8942,10 +8981,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "manifest plainness, embrace simplicity.",
-      "text": "\"Manifest plainness, embrace simplicity.\" — Lao Tzu",
-      "rationale": "\"Manifest plainness, embrace simplicity.\" — Lao Tzu",
+      "text": "\"Manifest plainness, embrace simplicity.\" — Lao Tzu, *Tao Te Ching* 19",
+      "rationale": "\"Manifest plainness, embrace simplicity.\" — Lao Tzu, *Tao Te Ching* 19",
       "quote": "Manifest plainness, embrace simplicity.",
-      "author": "Lao Tzu",
+      "author": "Lao Tzu, *Tao Te Ching* 19",
       "source_file": "quotes/simplicity.md"
     },
     {
@@ -8984,10 +9023,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "silence is a source of great strength.",
-      "text": "\"Silence is a source of great strength.\" — Lao Tzu",
-      "rationale": "\"Silence is a source of great strength.\" — Lao Tzu",
+      "text": "\"Silence is a source of great strength.\" — modern coinage; widely misattributed to Lao Tzu",
+      "rationale": "\"Silence is a source of great strength.\" — modern coinage; widely misattributed to Lao Tzu",
       "quote": "Silence is a source of great strength.",
-      "author": "Lao Tzu",
+      "author": "modern coinage; widely misattributed to Lao Tzu",
       "source_file": "quotes/solitude.md"
     },
     {
@@ -9068,10 +9107,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "what is the essence of life? to serve others and to do good.",
-      "text": "\"What is the essence of life? To serve others and to do good.\" — Aristotle",
-      "rationale": "\"What is the essence of life? To serve others and to do good.\" — Aristotle",
+      "text": "\"What is the essence of life? To serve others and to do good.\" — modern coinage; widely misattributed to Aristotle",
+      "rationale": "\"What is the essence of life? To serve others and to do good.\" — modern coinage; widely misattributed to Aristotle",
       "quote": "What is the essence of life? To serve others and to do good.",
-      "author": "Aristotle",
+      "author": "modern coinage; widely misattributed to Aristotle",
       "source_file": "quotes/teamwork.md"
     },
     {
@@ -9145,20 +9184,6 @@
       "source_file": "quotes/traditions/folk-sayings.md"
     },
     {
-      "id": "quote_even_a_sheet_of_paper_has_two_sides",
-      "label": "Even a sheet of paper has two sides.",
-      "community": 4,
-      "community_name": "quotes",
-      "file_type": "quote",
-      "node_kind": "quote",
-      "norm_label": "even a sheet of paper has two sides.",
-      "text": "\"Even a sheet of paper has two sides.\" — Korean proverb",
-      "rationale": "\"Even a sheet of paper has two sides.\" — Korean proverb",
-      "quote": "Even a sheet of paper has two sides.",
-      "author": "Korean proverb",
-      "source_file": "quotes/traditions/folk-sayings.md"
-    },
-    {
       "id": "quote_he_who_drinks_the_water_must_remember_the_one_wh",
       "label": "He who drinks the water must remember the one who dug the well.",
       "community": 4,
@@ -9222,10 +9247,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "the correct word is the sharpest tool in the shop.",
-      "text": "\"The correct word is the sharpest tool in the shop.\" — French craft saying (*le mot juste*)",
-      "rationale": "\"The correct word is the sharpest tool in the shop.\" — French craft saying (*le mot juste*)",
+      "text": "\"The correct word is the sharpest tool in the shop.\" — composed for this vault in the French craft idiom (*le mot juste*); not an attested saying",
+      "rationale": "\"The correct word is the sharpest tool in the shop.\" — composed for this vault in the French craft idiom (*le mot juste*); not an attested saying",
       "quote": "The correct word is the sharpest tool in the shop.",
-      "author": "French craft saying (*le mot juste*)",
+      "author": "composed for this vault in the French craft idiom (*le mot juste*); not an attested saying",
       "source_file": "quotes/traditions/french.md"
     },
     {
@@ -9320,10 +9345,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "few words, well weighed, hang longer than great ones.",
-      "text": "\"Few words, well weighed, hang longer than great ones.\" — old English saying",
-      "rationale": "\"Few words, well weighed, hang longer than great ones.\" — old English saying",
+      "text": "\"Few words, well weighed, hang longer than great ones.\" — composed for this vault in the old English proverb style; not an attested saying",
+      "rationale": "\"Few words, well weighed, hang longer than great ones.\" — composed for this vault in the old English proverb style; not an attested saying",
       "quote": "Few words, well weighed, hang longer than great ones.",
-      "author": "old English saying",
+      "author": "composed for this vault in the old English proverb style; not an attested saying",
       "source_file": "quotes/traditions/old-english.md"
     },
     {
@@ -9334,10 +9359,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "the good name is the only treasure a man buries that still breathes.",
-      "text": "\"The good name is the only treasure a man buries that still breathes.\" — after the Hávamál",
-      "rationale": "\"The good name is the only treasure a man buries that still breathes.\" — after the Hávamál",
+      "text": "\"The good name is the only treasure a man buries that still breathes.\" — after the *Hávamál* 76–77",
+      "rationale": "\"The good name is the only treasure a man buries that still breathes.\" — after the *Hávamál* 76–77",
       "quote": "The good name is the only treasure a man buries that still breathes.",
-      "author": "after the Hávamál",
+      "author": "after the *Hávamál* 76–77",
       "source_file": "quotes/traditions/old-english.md"
     },
     {
@@ -9348,10 +9373,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "every storm is worth facing, for after it the sun stands higher.",
-      "text": "\"Every storm is worth facing, for after it the sun stands higher.\" — old English folk saying",
-      "rationale": "\"Every storm is worth facing, for after it the sun stands higher.\" — old English folk saying",
+      "text": "\"Every storm is worth facing, for after it the sun stands higher.\" — composed for this vault in the old English proverb style; not an attested saying",
+      "rationale": "\"Every storm is worth facing, for after it the sun stands higher.\" — composed for this vault in the old English proverb style; not an attested saying",
       "quote": "Every storm is worth facing, for after it the sun stands higher.",
-      "author": "old English folk saying",
+      "author": "composed for this vault in the old English proverb style; not an attested saying",
       "source_file": "quotes/traditions/old-english.md"
     },
     {
@@ -9404,10 +9429,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "i slept and dreamt that life was joy. i woke and saw that life was service. i acted, and behold, service was joy.",
-      "text": "\"I slept and dreamt that life was joy. I woke and saw that life was service. I acted, and behold, service was joy.\" — Rabindranath Tagore",
-      "rationale": "\"I slept and dreamt that life was joy. I woke and saw that life was service. I acted, and behold, service was joy.\" — Rabindranath Tagore",
+      "text": "\"I slept and dreamt that life was joy. I woke and saw that life was service. I acted, and behold, service was joy.\" — attributed to Rabindranath Tagore; no located source",
+      "rationale": "\"I slept and dreamt that life was joy. I woke and saw that life was service. I acted, and behold, service was joy.\" — attributed to Rabindranath Tagore; no located source",
       "quote": "I slept and dreamt that life was joy. I woke and saw that life was service. I acted, and behold, service was joy.",
-      "author": "Rabindranath Tagore",
+      "author": "attributed to Rabindranath Tagore; no located source",
       "source_file": "quotes/traditions/world-philosophers.md"
     },
     {
@@ -14787,6 +14812,14 @@
       "source_file": "quotes/progress.md"
     },
     {
+      "source": "quotes_progress",
+      "target": "obj_thucydides",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/progress.md"
+    },
+    {
       "source": "quotes_purpose",
       "target": "quotes_focus",
       "relation": "cites",
@@ -16708,7 +16741,7 @@
     },
     {
       "source": "quotes_traditions_romanian",
-      "target": "obj_emil_cioran",
+      "target": "obj_s_ren_kierkegaard",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -19305,6 +19338,158 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "quotes/words.md"
+    },
+    {
+      "source": "tech_mappings_api_contract_design",
+      "target": "moment_planning",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/api-contract-design.md"
+    },
+    {
+      "source": "tech_mappings_api_contract_design",
+      "target": "moment_building",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/api-contract-design.md"
+    },
+    {
+      "source": "tech_mappings_capacitor_mobile_perf",
+      "target": "moment_building",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/capacitor-mobile-perf.md"
+    },
+    {
+      "source": "tech_mappings_capacitor_mobile_perf",
+      "target": "moment_craft",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/capacitor-mobile-perf.md"
+    },
+    {
+      "source": "tech_mappings_micro_saas_architecture",
+      "target": "moment_planning",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/micro-saas-architecture.md"
+    },
+    {
+      "source": "tech_mappings_micro_saas_architecture",
+      "target": "moment_strategy",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/micro-saas-architecture.md"
+    },
+    {
+      "source": "tech_mappings_monorepo_policy",
+      "target": "moment_git",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/monorepo-policy.md"
+    },
+    {
+      "source": "tech_mappings_monorepo_policy",
+      "target": "moment_git_commit",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/monorepo-policy.md"
+    },
+    {
+      "source": "tech_mappings_monorepo_policy",
+      "target": "moment_push",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/monorepo-policy.md"
+    },
+    {
+      "source": "tech_mappings_odoo_module_design",
+      "target": "moment_building",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/odoo-module-design.md"
+    },
+    {
+      "source": "tech_mappings_odoo_module_design",
+      "target": "moment_craft",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/odoo-module-design.md"
+    },
+    {
+      "source": "tech_mappings_refactoring_policy",
+      "target": "moment_refactoring",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/refactoring-policy.md"
+    },
+    {
+      "source": "tech_mappings_refactoring_policy",
+      "target": "moment_renewal",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/refactoring-policy.md"
+    },
+    {
+      "source": "tech_mappings_refactoring_policy",
+      "target": "moment_dead_code_removed",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/refactoring-policy.md"
+    },
+    {
+      "source": "tech_mappings_security_hardening",
+      "target": "moment_security_hardening",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/security-hardening.md"
+    },
+    {
+      "source": "tech_mappings_security_hardening",
+      "target": "moment_prudence",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/security-hardening.md"
+    },
+    {
+      "source": "tech_mappings_testing_strategy",
+      "target": "moment_tests_failing",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/testing-strategy.md"
+    },
+    {
+      "source": "tech_mappings_testing_strategy",
+      "target": "moment_tests_passing",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/testing-strategy.md"
+    },
+    {
+      "source": "tech_mappings_testing_strategy",
+      "target": "moment_validation",
+      "relation": "serves_moment",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tech-mappings/testing-strategy.md"
     },
     {
       "source": "principles_collaboration",
@@ -24299,6 +24484,14 @@
       "source_file": "quotes/progress.md"
     },
     {
+      "source": "quote_what_you_leave_behind_is_not_what_is_engraved_in",
+      "target": "obj_thucydides",
+      "relation": "attributed_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/progress.md"
+    },
+    {
       "source": "quotes_progress",
       "target": "quote_what_you_leave_behind_is_not_what_is_engraved_in",
       "relation": "quotes",
@@ -25565,14 +25758,6 @@
     {
       "source": "quotes_traditions_folk_sayings",
       "target": "quote_when_spider_webs_unite_they_can_tie_up_a_lion",
-      "relation": "quotes",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "quotes/traditions/folk-sayings.md"
-    },
-    {
-      "source": "quotes_traditions_folk_sayings",
-      "target": "quote_even_a_sheet_of_paper_has_two_sides",
       "relation": "quotes",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
