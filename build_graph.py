@@ -18,16 +18,36 @@ import re
 import sys
 
 ROOT = os.path.abspath(sys.argv[1])
-OUT = os.path.join(ROOT, "graphify-out", "graph.json")
+
+# Default output is NOT the live graph. `graphify update` is the canonical
+# builder for this vault: its graph carries heading-level nodes and semantic
+# community structure that a wikilink-only walk cannot represent. This script
+# is a deterministic CROSS-CHECK — it catches literal [[links]] that graphify's
+# extraction misses. Writing it over graphify's output silently destroys that
+# structure, so that requires an explicit --force.
+FORCE = "--force" in sys.argv
+DRY_RUN = "--dry-run" in sys.argv
+_out = [a for a in sys.argv[2:] if not a.startswith("-")]
+OUT = os.path.abspath(_out[0]) if _out else os.path.join(
+    ROOT, "graphify-out", "graph.wikilinks.json")
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 
-FILES = sorted(glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True))
-FILES = [
-    f for f in FILES
-    if not f.startswith(os.path.join(ROOT, "graphify-out"))
-    and os.path.basename(f) != "README.md"
-]
-# Include README as a node too (it is an index), but keep it.
+if os.path.exists(OUT) and not FORCE and not DRY_RUN:
+    try:
+        _existing = json.load(open(OUT))
+        _native = any(
+            n.get("node_kind") == "heading" or "_origin" in n
+            for n in _existing.get("nodes", [])
+        )
+    except Exception:
+        _native = False
+    if _native:
+        sys.exit(
+            f"refusing to overwrite {OUT}: it was produced by graphify "
+            f"(heading nodes / _origin present), not by this script.\n"
+            f"Use --out PATH to write elsewhere, or --force to override."
+        )
+
 FILES = sorted(glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True))
 FILES = [f for f in FILES
          if not f.startswith(os.path.join(ROOT, "graphify-out"))]
