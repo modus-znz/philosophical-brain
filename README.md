@@ -243,6 +243,19 @@ later is picked up without a second install step. Bypass a single commit with
 `git commit --no-verify`; if you skip the install entirely, run
 `python3 lint_attributions.py --gate` yourself before committing.
 
+**Keep that path relative.** `git config core.hooksPath` accepts an absolute
+path too, and the result looks identical right up until you use a worktree:
+an absolute path pins every worktree to the *main* checkout's hooks, so a hook
+edited on a branch never runs, while `bash hooks/pre-commit` in that worktree
+runs the edited copy and reports success. The verification passes and the
+commit is ungated. A relative `hooks` resolves against each working tree's own
+root, which is what you want — verified on both layouts.
+
+The gate that runs here is `python3 engine/verify_policy.py`, unconditionally,
+after the attribution gate. It re-resolves every binding in `policy/checks.json`
+against the freshly built graph, because `policy/checks.json` can change with
+no `.md` in the commit at all.
+
 ### Rendering the persona library
 
 `render_persona.py` turns the vault into one flat browsable file grouped by
