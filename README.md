@@ -289,12 +289,19 @@ enforcement design rests on measurement rather than inference. Wired on
 Three findings from the first session of real rows, all of which simplify the
 design they were meant to test:
 
-- **`PostToolUse` for the last tool call of a turn completes before `Stop`
-  fires.** Measured 14.2 s apart, in that order, on a turn ending in a tool
-  call. This was the open question that decided whether the integrity gate was
-  buildable at all: had the two raced, a turn whose final act was *running the
-  tests* would carry no record of it when `Stop` read the ledger, and the check
-  would have blocked precisely the honest case it exists to reward.
+- **`PostToolUse` rows always precede that turn's `Stop` row.** Observed, in
+  that order, on every turn recorded so far. This was the open question that
+  decided whether the integrity gate was buildable at all: had the two raced, a
+  turn whose final act was *running the tests* would carry no record of it when
+  `Stop` read the ledger, and the check would have blocked precisely the honest
+  case it exists to reward.
+
+  **The margin is not yet measured.** Every observed gap (14.2 s on the
+  widest) contains the assistant generating its closing prose after the tool
+  call returned, so those numbers are an upper bound on response latency, not
+  the hook-ordering budget. The case the gate actually depends on — a turn
+  whose final act is a tool call with nothing after it — has not been
+  captured. Ordering is established; headroom is not.
 
 - **Both events carry `prompt_id`.** A turn key, handed over directly. The
   design had scoped turns by parsing `transcript_path` for
@@ -304,9 +311,17 @@ design they were meant to test:
 - **`Stop` carries `last_assistant_message`.** The completion claim itself, in
   the payload. The design had read claims from the transcript too.
 
-Together the last two remove *both* of the integrity gate's dependencies on a
-file that may not have caught up yet. The gate reads its own ledger, filtered
-by `prompt_id`, and gets the claim from the event.
+Together the last two would remove *both* of the integrity gate's dependencies
+on a file that may not have caught up yet: the gate would read its own ledger
+filtered by `prompt_id`, and take the claim from the event.
+
+**One unverified link holds that up.** Every `Stop` row captured so far
+predates the commit that started recording `prompt_id`, so its *value* on
+`Stop` has never been compared against the `PostToolUse` rows of the same turn.
+If `Stop` stamps a fresh id rather than the turn's, the filter returns nothing
+and the gate fires on every honest turn — the exact failure it exists to
+prevent. Confirm one `prompt_id` group holds both the turn's `PostToolUse`
+rows and its `Stop` row before building on this.
 
 `Stop` also carries `stop_hook_active` (the loop guard), `session_id`, `cwd`,
 `permission_mode`, `background_tasks` and `session_crons`.
