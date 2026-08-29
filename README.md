@@ -311,17 +311,24 @@ design they were meant to test:
 - **`Stop` carries `last_assistant_message`.** The completion claim itself, in
   the payload. The design had read claims from the transcript too.
 
-Together the last two would remove *both* of the integrity gate's dependencies
-on a file that may not have caught up yet: the gate would read its own ledger
-filtered by `prompt_id`, and take the claim from the event.
+Together the last two remove *both* of the integrity gate's dependencies on a
+file that may not have caught up yet: the gate reads its own ledger filtered by
+`prompt_id`, and takes the claim from the event.
 
-**One unverified link holds that up.** Every `Stop` row captured so far
-predates the commit that started recording `prompt_id`, so its *value* on
-`Stop` has never been compared against the `PostToolUse` rows of the same turn.
-If `Stop` stamps a fresh id rather than the turn's, the filter returns nothing
-and the gate fires on every honest turn — the exact failure it exists to
-prevent. Confirm one `prompt_id` group holds both the turn's `PostToolUse`
-rows and its `Stop` row before building on this.
+**That link is now measured.** It was the one thing holding the design up: if
+`Stop` stamped a fresh id rather than the turn's, the ledger filter would return
+nothing and the gate would fire on every honest turn — the exact failure it
+exists to prevent. Read in file order, two `Stop` rows carry the same
+`prompt_id` as the `PostToolUse` rows immediately preceding them
+(`eb72ce72…`, 13 tool rows then `Stop`; `ed0cf42b…`, 2 then `Stop`). The turn
+key is real.
+
+**But a turn does not always end in a `Stop` row.** Two of the five observed
+`prompt_id` groups have none. Whatever the cause — an interrupted turn, an
+errored one — the consequence for the gate is that it simply never runs on
+those turns. That is the fail-open direction, so it costs nothing; it is
+recorded here because "every turn ends in a `Stop`" is false and something
+later will be tempted to assume it.
 
 `Stop` also carries `stop_hook_active` (the loop guard), `session_id`, `cwd`,
 `permission_mode`, `background_tasks` and `session_crons`.

@@ -18,15 +18,27 @@ a single line of enforcement is written:
      stop_hook_active, session_id, cwd -- and in what shape.
 
   3. THE INJECTION CHANNEL. Whether PostToolUse.additionalContext reaches the
-     model at all. probe.py never injects; the nonce test is run by hand once
-     this has confirmed the event fires.
+     model at all. Tier 2 -- every advisory directive the vault would ever
+     offer -- is worth nothing if this channel is silent, so it is measured
+     rather than assumed. See ARMING THE NONCE below.
 
 Contract, in priority order:
   - FAIL OPEN, ALWAYS. Any exception exits 0 with empty stdout. A philosophy
     vault must never be why a command will not run.
-  - EMPTY STDOUT, ALWAYS. One stray byte breaks hook JSON parsing for every
-    other hook on the event -- including the sudo -> sudo -A rewrite that
-    ~/.claude/settings.json already depends on.
+  - EMPTY STDOUT unless a nonce is explicitly armed. One stray byte breaks
+    hook JSON parsing for every other hook on the event -- including the
+    sudo -> sudo -A rewrite that ~/.claude/settings.json already depends on.
+    (That one is on PreToolUse, which this never writes to.)
+
+ARMING THE NONCE
+  Write a token to ~/.claude/brain-nonce. The next PostToolUse consumes it and
+  returns it as additionalContext. Single-shot by construction: the file is
+  DELETED BEFORE the token is emitted, never after. Deleting first can only
+  lose one test; emitting first, then crashing, would re-inject on every tool
+  call for the rest of the session -- an inert probe turned into a stuck one.
+
+  The token is never written to probe.jsonl -- only its length. A test whose
+  expected answer sits in a file the model can read proves nothing.
 """
 import json
 import os
@@ -76,6 +88,26 @@ def disabled():
     if os.environ.get("BRAIN_ENGINE_OFF"):
         return True
     return os.path.isfile(os.path.expanduser("~/.claude/brain-engine-off"))
+
+
+def take_nonce():
+    """Consume ~/.claude/brain-nonce and return it, or None.
+
+    Removed before it is returned -- see ARMING THE NONCE. Any failure to
+    remove it means it is not returned either, so a file that cannot be
+    deleted can never be injected twice.
+    """
+    path = os.path.expanduser("~/.claude/brain-nonce")
+    try:
+        with open(path, encoding="utf-8") as fh:
+            token = fh.read().strip()
+    except Exception:
+        return None
+    try:
+        os.remove(path)
+    except Exception:
+        return None
+    return token or None
 
 
 def main():
@@ -130,9 +162,30 @@ def main():
     if isinstance(lam, str):
         row["last_assistant_message_len"] = len(lam)
 
+    # Consume the nonce before logging, so the row records the attempt.
+    nonce = None
+    if event == "PostToolUse":
+        nonce = take_nonce()
+    if nonce is not None:
+        row["injected"] = True
+        row["nonce_len"] = len(nonce)
+
     os.makedirs(OUT_DIR, exist_ok=True)
     with open(OUT, "a", encoding="utf-8") as fh:
         fh.write(json.dumps(row) + "\n")
+
+    if nonce is not None:
+        # Built whole, then written once. A partial write here would hand the
+        # harness half a JSON document on an event it parses strictly.
+        out = json.dumps({"hookSpecificOutput": {
+            "hookEventName": "PostToolUse",
+            "additionalContext": (
+                "BRAIN_PROBE_NONCE=%s -- Phase 0 injection test. If you can "
+                "read this token, PostToolUse.additionalContext reaches the "
+                "model and Tier 2 advisory injection is viable. Report the "
+                "token verbatim." % nonce),
+        }})
+        sys.stdout.write(out)
     return 0
 
 
