@@ -1,6 +1,6 @@
 {
   "_comment": "Bare classical attributions accepted as known debt. --gate fails only on defects absent from this list. Shrink it by adding loci; never grow it to make a commit pass.",
-  "count": 73,
+  "count": 71,
   "known": [
     "a craftsman who wishes to do his work well must first sharpen his tools.",
     "a gem cannot be polished without friction, nor a man perfected without trials.",
@@ -29,7 +29,6 @@
     "if you know the enemy and know yourself, you need not fear the result of a hundred battles.",
     "in battle, if you make your opponent flinch, you have already won.",
     "it is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.",
-    "it is not that we have a short time to live, but that we waste a lot of it.",
     "knowing yourself is the beginning of all wisdom.",
     "no man ever steps in the same river twice, for it's not the same river and he's not the same man.",
     "no man is free who is not master of himself.",
@@ -47,7 +46,6 @@
     "the superior man acts before he speaks, and afterwards speaks according to his action.",
     "the superior man, when resting in safety, does not forget that danger may come.",
     "the unexamined life is not worth living.",
-    "the way of the warrior is resolute acceptance of death.",
     "the wound is the place where the light enters you.",
     "there is nothing outside of the momentary determination of a single thought.",
     "to attain knowledge, add things every day. to attain wisdom, remove things every day.",

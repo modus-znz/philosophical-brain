@@ -7,11 +7,15 @@ if git diff --cached --name-only --diff-filter=ACMR | grep -q '\.md$'; then
     python3 build_graph.py . --force >/dev/null
     git add graphify-out/graph.json
 
-    # The persona library at ~/.claude/knowledge/wisdom-quotes.md is a build
-    # artifact of this vault. It lives outside the repo, so it cannot be
-    # staged -- it is refreshed as a side effect so the file every session
-    # greps never drifts from the attributions the gate below enforces.
-    if [ -d "$HOME/.claude/knowledge" ]; then
+    # The persona library is a build artifact of this vault. On this machine it
+    # lives at ~/.claude/knowledge/wisdom-quotes.md -- outside the repo, so it
+    # cannot be staged; it is refreshed as a side effect so the file every
+    # session greps never drifts from the attributions the gate below enforces.
+    #
+    # That destination is OPT-IN. A fresh clone has no .persona-target, so this
+    # step is skipped entirely rather than writing into someone else's config
+    # the first time they commit. See README "Rendering the persona library".
+    if [ -f .persona-target ]; then
         python3 render_persona.py
     fi
 fi

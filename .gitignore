@@ -7,3 +7,10 @@ __pycache__/
 # clone can be queried without a build step.
 graphify-out/*
 !graphify-out/graph.json
+
+# Opt-in destination for the generated persona library (render_persona.py).
+# Untracked on purpose: a clone must not write into a stranger's ~/.claude.
+.persona-target
+
+# Default in-repo render target when .persona-target is absent.
+persona/wisdom-quotes.generated.md

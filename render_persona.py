@@ -186,11 +186,32 @@ def render(root, cap=DEFAULT_CAP):
     return "\n".join(out) + ("\n" + tail + "\n" if tail else "")
 
 
+def default_out():
+    """Where to write the persona library.
+
+    A clone must never write into someone else's ``~/.claude`` as a side effect
+    of committing, so the real destination is opt-in: an untracked
+    ``.persona-target`` file next to this script holding one path. Without it
+    the render lands harmlessly inside the repo.
+    """
+    here = os.path.dirname(os.path.abspath(__file__))
+    target = os.path.join(here, ".persona-target")
+    if os.path.exists(target):
+        with io.open(target, encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    return os.path.expanduser(line)
+    return os.path.join(here, "persona", "wisdom-quotes.generated.md")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--vault", default=os.path.dirname(os.path.abspath(__file__)))
-    ap.add_argument("--out", default=os.path.expanduser("~/.claude/knowledge/wisdom-quotes.md"))
+    ap.add_argument("--out", default=default_out(),
+                    help="destination; defaults to the path in .persona-target, "
+                         "else persona/wisdom-quotes.generated.md inside the repo")
     ap.add_argument("--cap", type=int, default=DEFAULT_CAP,
                     help="max quotes per group; 0 (the default) is uncapped")
     ap.add_argument("--check", action="store_true",

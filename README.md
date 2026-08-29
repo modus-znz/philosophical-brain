@@ -243,6 +243,30 @@ later is picked up without a second install step. Bypass a single commit with
 `git commit --no-verify`; if you skip the install entirely, run
 `python3 lint_attributions.py --gate` yourself before committing.
 
+### Rendering the persona library
+
+`render_persona.py` turns the vault into one flat browsable file grouped by
+session moment. **Where it writes is opt-in.** With no configuration it renders
+to `persona/wisdom-quotes.generated.md` inside the repo:
+
+```bash
+python3 render_persona.py            # in-repo, harmless
+python3 render_persona.py --check    # exit 1 if the artifact is stale
+```
+
+To have it maintain a file elsewhere — on the author's machine that is
+`~/.claude/knowledge/wisdom-quotes.md`, the library a Claude session greps —
+drop the destination path into an untracked `.persona-target`:
+
+```bash
+echo "$HOME/.claude/knowledge/wisdom-quotes.md" > .persona-target
+```
+
+The pre-commit hook re-renders **only** when that file exists, so cloning this
+repo and committing never touches your `~/.claude`. Once pointed at a
+destination, treat that file as generated: fix the quote in the vault and
+re-render, because direct edits are overwritten on the next commit.
+
 ## License
 
 MIT — see [LICENSE](LICENSE). The quotations themselves are historical texts
