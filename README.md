@@ -33,28 +33,100 @@ quote file links:
 Principles and tech-mappings link back to the quote files that support them,
 so the graph is fully navigable in both directions.
 
-## Quote Schema
+## File Schemas
+
+Four schemas, one per directory. Each is used consistently; none was documented
+before. Every file opens with an `# H1` title, then a metadata bullet block,
+then content.
+
+### `quotes/` and `quotes/traditions/` — theme files
+
+One file per *theme* (not per quote), holding many quotations.
 
 ```markdown
-# "Quote text" — Author
+# Progress & Kaizen
 
-- **Author**: [[Author]]
-- **Tradition**: Stoicism / Taoism / ...
-- **Core Principle**: [[Simplicity]]
-- **Tech Mapping**: [[Micro-SaaS Architecture]]
-- **Code Directive**: actionable engineering instruction distilled from the quote
-- **Session Moment**: task-start / bug-found / ... (which dev moment it serves)
+- **Core Principles**: [[kaizen]] · [[patience]] · [[focus]]
+- **Session Moments**: step-complete · writing/building
+- **Tech Mappings**: [[monorepo-policy]] · [[refactoring-policy]]
+
+> "Quote text." — [[Author]] (*Work*, locus)
+
+> "Another quote." — Tradition proverb
 ```
 
-## Tech-Mapping Schema
+Bullet values are separated by ` · `. `quotes/traditions/` files add `##
+Heritage`, `## Lineage`, and `## Signature Sayings` sections; their cross-
+reference bullets take the form `- "quote" — Author → see [[theme]]`.
+
+### `principles/` — axiom files
 
 ```markdown
-# Domain
+# Kaizen — Continuous Improvement
 
-- **Governing Principles**: [[YAGNI]], [[Simplicity]]
-- **Supporting Quotes**: [[quotes/simplicity]], ...
-- **Application**: how the principles translate to concrete engineering in this domain
+> "Epigraph quote." — [[Author]]
+
+**Definition:** what the principle means, and what it means in engineering.
+
+## Core Axiom
+## Supporting Quotes      (bullets: - [[quotes/theme]] — "quote" — [[Author]])
+## Code Directives        (bullets: one actionable instruction each)
+## Tech Mappings
 ```
+
+### `tech-mappings/` — applied-domain files
+
+```markdown
+# API Contract Design
+
+**Domain:** where this applies.
+
+- **Governing Principles**: [[first-principles]] · [[simplicity]]
+- **Supporting Quotes**: [[quotes/debugging]] · [[quotes/preparation]]
+- **Application:** how the principles translate to concrete engineering.
+
+## Engineering Directives
+**Directive title.** Prose, citing the principles it rests on — [[prudence]].
+```
+
+## Attribution Convention
+
+An audit against primary sources found one clean split: **every quote cited to
+a locus was correct, and almost every quote cited to a bare name was not.**
+Twenty misattributions were corrected on that basis. To keep the default
+honest, an attribution must be one of:
+
+| Form | Means | Example |
+|---|---|---|
+| `[[Author]], *Work* locus` | Verified primary source | `[[Marcus Aurelius]], *Meditations* 2.5` |
+| `[[Author]] (year)` | Verified, modern, no classical locus | `[[Frank Outlaw]] (1977)` |
+| `X proverb` | Genuine traditional saying | `East African saying` |
+| `modern coinage; ... misattributed to [[X]]` | Circulates widely, no real source | see `quotes/compassion.md` |
+| `[[A]], after [[B]]` / `as rendered in X` | Paraphrase or derivation | `[[Will Durant]], on [[Aristotle]]` |
+
+**A bare `[[Author]]` with no locus, year, or hedge is a claim of verified
+primary-source provenance.** Treat it as a defect until checked — that is the
+form all twenty errors took. When correcting one, keep the quote and fix the
+provenance; and re-sync the `Supporting Quotes` bullets in `principles/`, which
+historically stripped whatever hedge the theme file carried.
+
+## Building the Graph
+
+`build_graph.py` is the canonical builder — **not** `graphify update`, whose
+extractor sees only pages and headings and therefore drops every quote body,
+every Code Directive and all 55 session moments.
+
+```bash
+python3 build_graph.py .            # rebuild graphify-out/graph.json
+python3 build_graph.py . --dry-run  # counts only, writes nothing
+```
+
+It emits five node kinds — `document`, `concept`, `quote` (full text +
+attribution), `moment`, `directive` — over relations `cites`, `quotes`,
+`attributed_to`, `serves_moment`, `directs`, so that
+**situation → moment → document → quote** is a real graph path. Rerun it after
+editing any `.md` file; it refuses to overwrite a graph it did not generate
+unless given `--force`.
 
 ## Index
 
