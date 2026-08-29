@@ -4,8 +4,6 @@
 - **Session Moments**: focus/deep-work · bug-found · task-start
 - **Tech Mappings**: [[testing-strategy]] · [[security-hardening]] · [[micro-saas-architecture]]
 
-> "The way of the warrior is resolute acceptance of death." — [[Yamamoto Tsunetomo]] (*Hagakure*)
-
 > "There is nothing outside of the momentary determination of a single thought." — [[Yamamoto Tsunetomo]] (*Hagakure*)
 
 > "Today is victory over yourself of yesterday; tomorrow is your victory over lesser men." — [[Miyamoto Musashi]]

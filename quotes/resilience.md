@@ -68,6 +68,8 @@
 
 > "It always seems impossible until it's done." — [[Nelson Mandela]]
 
+> "A smooth sea never made a skilled sailor." — proverb; often attributed to [[Franklin D. Roosevelt]]
+
 ## Code Directive
 
 Design for graceful degradation and fast recovery. Treat each failure as data

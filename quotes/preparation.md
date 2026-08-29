@@ -34,8 +34,6 @@
 
 > "Luck is what happens when preparation meets opportunity." — modern aphorism; no locus in [[Seneca]]
 
-> "Let us prepare our minds as if we'd come to the very end of life. Let us postpone nothing." — [[Seneca]] (*Letters* 101)
-
 > "The time to repair the roof is when the sun is shining." — [[John F. Kennedy]]
 
 > "Everything should be made as simple as possible, but not simpler." — attributed to [[Albert Einstein]]

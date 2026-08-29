@@ -22,14 +22,6 @@
 
 > "The mind is not a vessel to be filled, but a fire to be kindled." — [[Plutarch]]
 
-> "You could leave life right now. Let that determine what you do and say and think." — [[Marcus Aurelius]] (*Meditations* 2.11)
-
-> "The trouble is, you think you have time." — [[Jack Kornfield]], *Buddha's Little Instruction Book* (1994)
-
-> "It is not that we have a short time to live, but that we waste a lot of it." — [[Seneca]] (*On the Shortness of Life*)
-
-> "Think of yourself as dead. You have lived your life. Now take what's left and live it properly." — [[Marcus Aurelius]] (*Meditations* 7.56)
-
 ## Code Directive
 
 Work in bounded, single-purpose sessions — one change set at a time. Order by

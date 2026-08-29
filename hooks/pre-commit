@@ -1,20 +1,4 @@
 #!/usr/bin/env bash
-# Philosophical Brain pre-commit hook.
-#
-# Two jobs, both of which exist because the failure they prevent is silent.
-#
-#   1. graph.json is committed rather than built on clone, so a fresh clone can
-#      be queried with no build step. The cost of that choice is that the graph
-#      can drift from the markdown it was built from, and a stale graph answers
-#      confidently with content that is no longer in the vault. So: rebuild it
-#      whenever a tracked .md file is part of the commit, and stage the result.
-#
-#   2. Attributions ratchet. A new bare classical attribution fails the commit;
-#      the known ones in .attribution-baseline.json do not. See the linter's
-#      docstring for why the gate is a ratchet and not a demand for zero.
-#
-# Install:  ln -s ../../hooks/pre-commit .git/hooks/pre-commit
-# Bypass:   git commit --no-verify   (for a commit that touches neither)
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
 
@@ -22,6 +6,14 @@ if git diff --cached --name-only --diff-filter=ACMR | grep -q '\.md$'; then
     echo "pre-commit: markdown changed, rebuilding graph.json"
     python3 build_graph.py . --force >/dev/null
     git add graphify-out/graph.json
+
+    # The persona library at ~/.claude/knowledge/wisdom-quotes.md is a build
+    # artifact of this vault. It lives outside the repo, so it cannot be
+    # staged -- it is refreshed as a side effect so the file every session
+    # greps never drifts from the attributions the gate below enforces.
+    if [ -d "$HOME/.claude/knowledge" ]; then
+        python3 render_persona.py
+    fi
 fi
 
 python3 lint_attributions.py --gate

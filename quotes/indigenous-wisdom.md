@@ -8,8 +8,6 @@
 
 > "The frog does not drink up the pond in which it lives." — Native American (Sioux) proverb, on restraint
 
-> "When you were born, you cried and the world rejoiced. Live your life so that when you die, the world cries and you rejoice." — Cherokee proverb (widely cited, folk-attributed)
-
 > "It takes a thousand voices to tell a single story." — Native American (Ojibwe-attributed) saying
 
 > "Listen to the wind, it talks. Listen to the silence, it speaks. Listen to your heart, it knows." — Native American (Bear Heart) teaching, popularly circulated

@@ -22,8 +22,6 @@
 
 > "Life shrinks or expands in proportion to one's courage." — [[Anaïs Nin]]
 
-> "It is not death that a man should fear, but he should fear never beginning to live." — attributed to [[Marcus Aurelius]]
-
 ## Code Directive
 
 Decide, then act with tenacity. Ship the uncertain increment that moves the

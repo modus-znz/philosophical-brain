@@ -37,8 +37,6 @@ the present, and the bushido code of the warrior (see [[bushido]]).
 
 - "Do nothing which is of no use." — [[Miyamoto Musashi]] (attributed; commonly traced to *The Book of Five Rings*) → see [[bushido]]
 
-> "死んでからでは遅い" — roughly, "after death it is too late" — Japanese memento-mori saying, live while you can
-
 ## Code Directive
 
 Improve by the smallest honest increment, again and again — the mountain is

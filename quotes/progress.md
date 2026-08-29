@@ -30,8 +30,6 @@
 
 > "A life spent making mistakes is not only more honorable, but more useful than a life spent doing nothing." — [[George Bernard Shaw]]
 
-> "Cattle die, kindred die… but the good name never dies of one who has done well." — [[Hávamál]] (Norse)
-
 > "Deeds, not words, shall speak me." — [[John Fletcher]]
 
 > "History will be kind to me, for I intend to write it." — [[Winston Churchill]]
