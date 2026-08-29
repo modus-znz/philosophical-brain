@@ -15,7 +15,7 @@ to trust.
 
 ## Supporting Quotes
 
-- [[quotes/craft]] — "Quality is not an act, it is a habit." — [[Aristotle]]
+- [[quotes/craft]] — "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — [[Will Durant]], on [[Aristotle]]
 - [[quotes/craft]] — "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — [[Will Durant]], on [[Aristotle]]
 - [[quotes/security]] — "Trust, but verify." — Russian proverb
 - [[quotes/craft]] — "Whatever you do, do it well." — [[Walt Disney]]

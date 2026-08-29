@@ -4,7 +4,7 @@
 - **Session Moments**: dead-code-removed · writing/building
 - **Tech Mappings**: [[micro-saas-architecture]] · [[odoo-module-design]] · [[capacitor-mobile-perf]] · [[api-contract-design]]
 
-> "Simplicity is the ultimate sophistication." — attributed to [[Leonardo da Vinci]]
+> "Simplicity is the ultimate sophistication." — Apple II brochure (1977), after Clare Boothe Luce; no da Vinci source
 
 > "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away." — [[Antoine de Saint-Exupéry]]
 

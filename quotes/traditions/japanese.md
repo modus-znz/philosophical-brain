@@ -35,7 +35,7 @@ the present, and the bushido code of the warrior (see [[bushido]]).
 
 > "What is the sound of one hand clapping?" — [[Hakuin Ekaku]], the classic koan
 
-- "Do nothing which is of no use." — [[Miyamoto Musashi]] (*Dokkōdō*, principle 13) → see [[bushido]]
+- "Do nothing which is of no use." — [[Miyamoto Musashi]] (attributed; commonly traced to *The Book of Five Rings*) → see [[bushido]]
 
 > "死んでからでは遅い" — roughly, "after death it is too late" — Japanese memento-mori saying, live while you can
 

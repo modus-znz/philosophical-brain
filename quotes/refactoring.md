@@ -14,7 +14,7 @@
 
 > "Renew thyself completely each day; do it again, and again, and forever again." — Chinese inscription cited by [[Henry David Thoreau]] (*Walden*)
 
-> "It is not the strongest of the species that survives, but the one most responsive to change." — attributed to [[Charles Darwin]]
+> "It is not the strongest of the species that survives, but the one most responsive to change." — [[Leon C. Megginson]] (1963), paraphrasing [[Charles Darwin]]
 
 > "Change is the only constant in life." — [[Heraclitus]]
 

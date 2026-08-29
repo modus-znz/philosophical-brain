@@ -6,7 +6,7 @@
 
 > "Victorious warriors win first and then go to war." — [[Sun Tzu]] (*The Art of War*)
 
-> "In all things, success depends on previous preparation." — [[Confucius]] (*Analects*)
+> "In all things, success depends on previous preparation." — [[Confucius]], *Doctrine of the Mean* 20 (tr. Legge)
 
 > "A goal without a plan is just a wish." — attributed to [[Antoine de Saint-Exupéry]]
 
@@ -32,7 +32,7 @@
 
 > "A craftsman who wishes to do his work well must first sharpen his tools." — [[Confucius]] (*Analects* 15.10)
 
-> "Luck is what happens when preparation meets opportunity." — [[Seneca]]
+> "Luck is what happens when preparation meets opportunity." — modern aphorism; no locus in [[Seneca]]
 
 > "Let us prepare our minds as if we'd come to the very end of life. Let us postpone nothing." — [[Seneca]] (*Letters* 101)
 

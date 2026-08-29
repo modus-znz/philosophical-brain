@@ -4,7 +4,7 @@
 - **Session Moments**: tests-passing · validation
 - **Tech Mappings**: [[testing-strategy]] · [[monorepo-policy]]
 
-> "Excellence is never an accident. It is always the result of high intention and sincere effort." — attributed to [[Aristotle]]
+> "Excellence is never an accident. It is always the result of high intention and sincere effort." — [[Willa A. Foster]]
 
 > "The proof of the pudding is in the eating." — English proverb
 

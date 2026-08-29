@@ -4,7 +4,6 @@
 - **Session Moments**: writing/building · craft
 - **Tech Mappings**: [[odoo-module-design]] · [[capacitor-mobile-perf]]
 
-> "Quality is not an act, it is a habit." — [[Aristotle]]
 
 > "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — [[Will Durant]], on [[Aristotle]]
 
@@ -20,7 +19,7 @@
 
 > "First, have a definite, clear practical ideal — a goal. Second, have the necessary means: wisdom, money, materials, and methods. Third, adjust all your means to that end." — attributed to [[Aristotle]]
 
-> "Art is never finished, only abandoned." — attributed to [[Leonardo da Vinci]]
+> "Art is never finished, only abandoned." — [[Paul Valéry]] (of poems); widely misattributed to da Vinci
 
 > "The function of good software is to make the complex appear to be simple." — [[Grady Booch]]
 

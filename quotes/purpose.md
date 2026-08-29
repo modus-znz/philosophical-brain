@@ -6,7 +6,7 @@
 
 > "He who has a why to live can bear almost any how." — [[Friedrich Nietzsche]]
 
-> "The meaning of life is to find your gift. The purpose of life is to give it away." — attributed to [[Pablo Picasso]]
+> "The meaning of life is to find your gift. The purpose of life is to give it away." — [[David Viscott]], *Finding Your Strength in Difficult Times*
 
 > "Everyone has a purpose in life... a unique gift or special talent to give to others." — [[Deepak Chopra]]
 

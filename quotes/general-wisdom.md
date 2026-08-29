@@ -22,7 +22,7 @@
 
 > "As you think, so you become." — Upanishadic teaching
 
-> "Watch your thoughts, they become your words; watch your words, they become your actions; watch your actions, they become your habits; watch your habits, they become your character." — attributed to [[Lao Tzu]]
+> "Watch your thoughts, they become your words; watch your words, they become your actions; watch your actions, they become your habits; watch your habits, they become your character." — [[Frank Outlaw]] (1977); widely misattributed to Lao Tzu
 
 > "The happiness of your life depends upon the quality of your thoughts." — [[Marcus Aurelius]]
 

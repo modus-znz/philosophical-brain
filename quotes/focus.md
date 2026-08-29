@@ -24,7 +24,7 @@
 
 > "You could leave life right now. Let that determine what you do and say and think." — [[Marcus Aurelius]] (*Meditations* 2.11)
 
-> "The trouble is, you think you have time." — attributed to the [[Buddha]]
+> "The trouble is, you think you have time." — [[Jack Kornfield]], *Buddha's Little Instruction Book* (1994)
 
 > "It is not that we have a short time to live, but that we waste a lot of it." — [[Seneca]] (*On the Shortness of Life*)
 

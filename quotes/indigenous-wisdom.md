@@ -14,7 +14,7 @@
 
 > "Listen to the wind, it talks. Listen to the silence, it speaks. Listen to your heart, it knows." — Native American (Bear Heart) teaching, popularly circulated
 
-> "The soul would have no rainbow if the eyes had no tears." — Native American (Cherokee) proverb, folk-attributed
+> "The soul would have no rainbow if the eyes had no tears." — [[John Vance Cheney]], *Poems* (1905); widely folk-attributed to the Cherokee
 
 > "He who has gone, so we but cherish his memory, abides with us, more potent, nay, more present than the living man." — [[Antoine de Saint-Exupéry]], echoing indigenous ancestor-reverence themes
 

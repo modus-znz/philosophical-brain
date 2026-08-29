@@ -1,6 +1,6 @@
 # Simplicity
 
-> "Simplicity is the ultimate sophistication." — attributed to [[Leonardo da Vinci]]
+> "Simplicity is the ultimate sophistication." — Apple II brochure (1977), after Clare Boothe Luce; no da Vinci source
 > "Nature is pleased with simplicity." — [[Isaac Newton]]
 
 **Definition:** Reduce complexity to its necessary minimum. Prefer the smallest,

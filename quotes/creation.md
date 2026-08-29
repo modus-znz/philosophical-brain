@@ -10,7 +10,7 @@
 
 > "The creation of a thousand forests is in one acorn." — [[Ralph Waldo Emerson]]
 
-> "Whatever you can do or dream you can, begin it. Boldness has genius, power, and magic in it." — [[Johann Wolfgang von Goethe]]
+> "Whatever you can do or dream you can, begin it. Boldness has genius, power, and magic in it." — [[John Anster]] (1835), loosely rendering [[Goethe]]'s *Faust*
 
 > "You can't use up creativity. The more you use, the more you have." — [[Maya Angelou]]
 

@@ -1,7 +1,7 @@
 # Preparation
 
 > "Give me six hours to chop down a tree and I will spend the first four sharpening the axe." — attributed to [[Abraham Lincoln]]
-> "Luck is what happens when preparation meets opportunity." — [[Seneca]]
+> "Luck is what happens when preparation meets opportunity." — modern aphorism; no locus in [[Seneca]]
 
 **Definition:** Do the invisible work before the visible work. Plan, gather
 tools, and understand the ground before acting. Preparation converts hard work

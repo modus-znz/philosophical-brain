@@ -26,7 +26,7 @@ War*) root discipline in self-cultivation rather than reward.
 
 > "Knowing others is intelligence; knowing yourself is true wisdom." — [[Lao Tzu]] (*Tao Te Ching* 33)
 
-> "When you have a hammer, all problems look like nails." — Chinese folk proverb (later attributed variety)
+> "When you have a hammer, all problems look like nails." — the law of the instrument, [[Abraham Maslow]] (1966), after Kaplan (1964)
 
 > "Life is really simple, but we insist on making it complicated." — attributed to [[Confucius]]
 

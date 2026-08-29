@@ -1,6 +1,6 @@
 # Resilience
 
-> "What lies behind us and what lies before us are tiny matters compared to what lies within us." — attributed to [[Ralph Waldo Emerson]]
+> "What lies behind us and what lies before us are tiny matters compared to what lies within us." — [[Henry Stanley Haskins]], *Meditations in Wall Street* (1940)
 > "Fall seven times, stand up eight." — Japanese proverb
 
 **Definition:** The capacity to fail and recover — in systems, in delivery, and
@@ -18,7 +18,7 @@ that sharpens the next attempt. "He conquers who endures." — [[Persius]]
 - [[quotes/resilience]] — "It always seems impossible until it's done." — [[Nelson Mandela]]
 - [[quotes/resilience]] — "Failure is simply the opportunity to begin again, this time more intelligently." — [[Henry Ford]]
 - [[quotes/resilience]] — "I have not failed. I've just found 10,000 ways that won't work." — [[Thomas Edison]]
-- [[quotes/resilience]] — "Our greatest glory is not in never falling, but in rising every time we fall." — [[Confucius]]
+- [[quotes/resilience]] — "Our greatest glory is not in never falling, but in rising every time we fall." — [[Oliver Goldsmith]], *The Citizen of the World*
 - [[quotes/resilience]] — "every adversity carries with it the seed of an equal or greater benefit." — [[Napoleon Hill]]
 
 ## Code Directives

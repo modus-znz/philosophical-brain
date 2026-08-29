@@ -6,7 +6,7 @@
 
 > "Compassion is the basis of all morality." — [[Arthur Schopenhauer]]
 
-> "In separateness lies the world's greatest misery; in compassion lies the world's true strength." — [[Buddha]]
+> "In separateness lies the world's greatest misery; in compassion lies the world's true strength." — modern coinage; no canonical source, widely misattributed to the [[Buddha]]
 
 > "No one has ever become poor by giving." — [[Anne Frank]]
 

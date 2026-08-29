@@ -26,7 +26,7 @@
 
 > "Fall seven times, stand up eight." — Japanese proverb (Nana korobi ya oki)
 
-> "What lies behind us and what lies before us are tiny matters compared to what lies within us." — attributed to [[Ralph Waldo Emerson]]
+> "What lies behind us and what lies before us are tiny matters compared to what lies within us." — [[Henry Stanley Haskins]], *Meditations in Wall Street* (1940)
 
 > "Out of difficulties grow miracles." — [[Jean de La Bruyère]]
 
@@ -46,7 +46,7 @@
 
 > "Victory belongs to the most persevering." — attributed to [[Napoleon Bonaparte]]
 
-> "Our greatest glory is not in never falling, but in rising every time we fall." — [[Confucius]]
+> "Our greatest glory is not in never falling, but in rising every time we fall." — [[Oliver Goldsmith]], *The Citizen of the World*
 
 > "It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult." — [[Seneca]]
 

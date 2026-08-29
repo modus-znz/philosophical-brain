@@ -27,7 +27,7 @@ the careful path, and let the work outlast you.
 ## Signature Sayings
 
 - "What you seek is seeking you." — [[Rumi]] → see [[general-wisdom]]
-- "In separateness lies the world's greatest misery; in compassion the world's true strength." — [[Buddha]] → see [[compassion]]
+- "In separateness lies the world's greatest misery; in compassion the world's true strength." — modern coinage; no canonical source, widely misattributed to the [[Buddha]] → see [[compassion]]
 - "The journey of a thousand miles begins with a single step." — [[Lao Tzu]] → see [[action]]
 
 > "You have the right to your actions, but never to their fruits." — [[Bhagavad Gita]] (Krishna to Arjuna)

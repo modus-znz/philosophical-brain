@@ -16,7 +16,7 @@
 
 > "Uhuru ni jukumu." (Freedom is a responsibility.) — Swahili saying
 
-> "Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravings, and passions." — [[Eliphas Levi]] (paraphrase popular in Stoic circles)
+> "Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravings, and passions." — [[Eliud Kipchoge]]
 
 > "He is a free man whom the truth makes free, and he is a slave who commits sin." — [[Epictetus]]
 

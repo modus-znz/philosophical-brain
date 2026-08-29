@@ -18,7 +18,7 @@
 
 > "Humility is the solid foundation of all virtues." — [[Confucius]]
 
-> "When you realize you've made a mistake, take immediate steps to correct it." — [[Dalai Lama]]
+> "When you realize you've made a mistake, take immediate steps to correct it." — [[H. Jackson Brown Jr.]], "Instructions for Life"; widely misattributed to the Dalai Lama
 
 > "The greatest of faults, I should say, is to be conscious of none." — [[Thomas Carlyle]]
 

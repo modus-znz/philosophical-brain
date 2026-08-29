@@ -6,7 +6,7 @@
 
 > "The real voyage of discovery consists not in seeking new landscapes, but in having new eyes." — [[Marcel Proust]]
 
-> "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from the safe harbor." — attributed to [[Mark Twain]]
+> "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from the safe harbor." — [[H. Jackson Brown Jr.]], *P.S. I Love You*
 
 > "Not all those who wander are lost." — [[J.R.R. Tolkien]]
 
