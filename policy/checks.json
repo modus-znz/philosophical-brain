@@ -61,7 +61,7 @@
       "predicate": "completion_claim_without_evidence",
       "params": {
         "claim_patterns": [
-          "\\btests?\\s+(are\\s+)?(all\\s+)?(now\\s+)?pass(ing|ed|es)\\b",
+          "\\btests?\\s+(are\\s+)?(all\\s+)?(now\\s+)?pass(ing|ed|es)?\\b",
           "\\ball\\s+(tests|checks)\\s+(are\\s+)?(green|passing)\\b",
           "\\bbuild\\s+(is\\s+)?(now\\s+)?(green|clean|passing)\\b",
           "\\blint(ing)?\\s+(is\\s+)?clean\\b",

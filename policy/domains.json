@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "_comment": "Path patterns that decide when a tech-mappings domain is being touched. Consulted only by first_touch_of_domain, the Tier 2 trigger. JSON rather than Markdown for the same reason as checks.json: build_graph.py globs ROOT/**/*.md and would turn a .md here into a graph node. There are eight files in tech-mappings/ and one entry here, on purpose -- a domain is added the session a check names it, not in advance. Patterns are searched against the path relative to the repo the edit happened in, so they match a file's role rather than anyone's home directory.",
+  "domains": {
+    "security-hardening": {
+      "source": "tech-mappings/security-hardening.md",
+      "path_re": [
+        "(^|/)(auth|authn|authz|security|crypto|session)/",
+        "(^|/)[^/]*(auth|login|logout|password|passwd|token|jwt|oauth|session|crypto|cipher|hash|secret|credential|permission)[^/]*\\.(py|[jt]sx?|go|rb|java|php|rs)$",
+        "(^|/)middleware/[^/]*\\.(py|[jt]sx?)$",
+        "(^|/)(\\.env\\.example|settings\\.py|security\\.conf)$"
+      ],
+      "_comment": "Deliberately does not match .env, secrets.yaml or any file expected to hold live credentials. Matching those would mean the engine reacts to the moment a secret is on screen, and every reaction it can make is written to a plain log."
+    }
+  }
+}

@@ -344,6 +344,75 @@ BRAIN_ENGINE_OFF=1 <command>        # one command
 touch ~/.claude/brain-engine-off    # this machine, until removed
 ```
 
+### The shadow engine
+
+`engine/dispatch.py` is the single hook entry point. It runs every check in
+`policy/checks.json`, writes what each one *would* have done to a session
+ledger, and emits nothing at all.
+
+```bash
+python3 engine/test_predicates.py    # 40 tests, stdlib only
+python3 engine/verify_policy.py      # bindings + predicate names
+```
+
+The silence is not a phase, it is the contract. Every check ships at
+`mode: "log"`, and `policy/checks.json` says what it costs to leave: twenty
+fires, no labelled false positives, at most one fire per session. That ratchet
+exists because of a measurement in this repo's own history — the hollow-test
+rule scored 0/4 false positives on its author's test set and then rejected
+three legitimate conditional skips (`skipif(sys.platform == "win32")` among
+them) the first time it met real code. A test set written by whoever wrote the
+predicate is not evidence, and the promotion rule is written so that it cannot
+be mistaken for evidence.
+
+There is a second reason for the silence. One stray byte on stdout breaks hook
+JSON parsing for every other hook on the event, including the `sudo` → `sudo -A`
+rewrite that `~/.claude/settings.json` already depends on. So the decision-
+emitting paths are not written yet rather than written and unreachable: code
+that cannot run is code that cannot leak a byte.
+
+| Piece | What it holds |
+|---|---|
+| `engine/predicates.py` | The four rules, one module-level function each |
+| `engine/ledger.py` | Append-only session record, `graphify-out/engine/ledger-<session>.jsonl` |
+| `engine/dispatch.py` | Loads policy, runs what applies, writes verdicts, exits 0 |
+| `policy/checks.json` | Patterns, budgets, modes, and the vault directive each check quotes |
+| `policy/domains.json` | Paths that mean a `tech-mappings/` domain is being touched |
+
+**The predicates read `params` and nothing else.** Every regex lives in
+`policy/checks.json`, where `verify_policy.py` compiles it and the binding gate
+holds it against live vault prose. A pattern copied into Python would recreate
+precisely the drift that gate exists to prevent, so none is.
+
+**The predicates are also pure.** `completion_claim_without_evidence` needs to
+know whether a test ran this turn — a `prompt_id`-filtered ledger read — so the
+dispatcher performs it and passes the answer in. A predicate that fetched its
+own evidence would stop being testable offline, and offline testability is the
+only reason any of this could be trusted before it ever ran live.
+
+**Why a ledger and not the transcript.** `transcript_path` is written
+asynchronously and lags the live turn, so a `Stop` hook reading it can miss the
+final tool call of the turn it is judging. The ledger is written synchronously
+by `PostToolUse` as each tool returns, and keyed by `prompt_id` — the turn key
+confirmed in the probe rows above. Evidence never crosses turns: a test run in
+an earlier turn must not excuse a claim made in this one, which is the exact
+falsification the check exists to catch.
+
+**Measured cost.** End to end, 49–71 ms per invocation (median 62), against the
+80 ms `budgets.dispatch_ms`. Only 2–3 ms of that is the engine; the rest is
+Python interpreter startup, so the budget is in practice a startup budget and
+the way to break it is to import something heavy. `graphify-out/graph.json`
+costs 54 ms to parse on its own and is never opened here — the precompiled
+policy exists so the hot path never needs the graph. Each run records its own
+`dispatch_ms`, so the number stays measured rather than asserted; going over
+is recorded and never enforced, since a hook that killed itself for being slow
+would fail closed.
+
+**Known limit:** `dispatch.py` reads the whole session ledger on every call, so
+its cost grows with session length. At the sizes seen so far this is noise
+against interpreter startup; a very long session is the thing to measure before
+assuming it stays that way.
+
 ### Rendering the persona library
 
 `render_persona.py` turns the vault into one flat browsable file grouped by
