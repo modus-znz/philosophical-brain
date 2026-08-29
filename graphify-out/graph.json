@@ -3,35 +3,11 @@
   "multigraph": false,
   "graph": {
     "generator": "build_graph.py",
-    "generated_at": "2026-08-29T17:02:43+00:00",
-    "vault_root": "/home/ghost/philosophical-brain",
-    "source_files": 72
+    "generated_at": "2026-08-29T17:21:16+00:00",
+    "vault_root": "philosophical-brain",
+    "source_files": 70
   },
   "nodes": [
-    {
-      "id": "readme",
-      "label": "Philosophical Brain — Modus Labs",
-      "community": 1,
-      "community_name": "documents",
-      "file_type": "document",
-      "node_kind": "document",
-      "norm_label": "philosophical brain — modus labs",
-      "text": "A queryable, localized semantic knowledge graph distilled from the raw philosophical-quote collection. Serves as the core decision-making and logic library for development workflows across Claude Code CLI and Opencode.",
-      "rationale": "A queryable, localized semantic knowledge graph distilled from the raw philosophical-quote collection. Serves as the core decision-making and logic library for development workflows across Claude Code CLI and Opencode.",
-      "source_file": "README.md"
-    },
-    {
-      "id": "authors",
-      "label": "Authors",
-      "community": 1,
-      "community_name": "documents",
-      "file_type": "document",
-      "node_kind": "document",
-      "norm_label": "authors",
-      "text": "",
-      "rationale": "",
-      "source_file": "authors.md"
-    },
     {
       "id": "principles_collaboration",
       "label": "Collaboration & Teamwork",
@@ -42,6 +18,7 @@
       "norm_label": "collaboration & teamwork",
       "text": "Leverage the compounding intelligence of the group. The best engineering decisions survive the scrutiny of diverse minds; the best systems are built by people who communicate.",
       "rationale": "Leverage the compounding intelligence of the group. The best engineering decisions survive the scrutiny of diverse minds; the best systems are built by people who communicate.",
+      "moments": [],
       "source_file": "principles/collaboration.md"
     },
     {
@@ -54,6 +31,7 @@
       "norm_label": "first principles",
       "text": "Reason from the ground up. Strip every claim down to what is verifiably true, then rebuild your conclusion from those irreducible facts — never from inherited assumptions, convention, or \"the way we've always done it.\"",
       "rationale": "Reason from the ground up. Strip every claim down to what is verifiably true, then rebuild your conclusion from those irreducible facts — never from inherited assumptions, convention, or \"the way we've always done it.\"",
+      "moments": [],
       "source_file": "principles/first-principles.md"
     },
     {
@@ -66,6 +44,7 @@
       "norm_label": "focus & discipline",
       "text": "Direct sustained attention at a single target. Mastery of self precedes mastery of work — no external tooling substitutes for deliberate, undistracted effort.",
       "rationale": "Direct sustained attention at a single target. Mastery of self precedes mastery of work — no external tooling substitutes for deliberate, undistracted effort.",
+      "moments": [],
       "source_file": "principles/focus.md"
     },
     {
@@ -78,6 +57,7 @@
       "norm_label": "humility & learning",
       "text": "Hold your knowledge as provisional. The willingness to admit being wrong is the precondition for learning anything new. The engineer who cannot be corrected cannot be improved.",
       "rationale": "Hold your knowledge as provisional. The willingness to admit being wrong is the precondition for learning anything new. The engineer who cannot be corrected cannot be improved.",
+      "moments": [],
       "source_file": "principles/humility-and-learning.md"
     },
     {
@@ -90,6 +70,7 @@
       "norm_label": "kaizen — continuous improvement",
       "text": "Japanese philosophy of *continuous improvement* — small, incremental, compounding changes rather than dramatic overhauls. In production engineering: optimize the workflow, not just the output; make the process itself steadily better.",
       "rationale": "Japanese philosophy of *continuous improvement* — small, incremental, compounding changes rather than dramatic overhauls. In production engineering: optimize the workflow, not just the output; make the process itself steadily better.",
+      "moments": [],
       "source_file": "principles/kaizen.md"
     },
     {
@@ -102,6 +83,7 @@
       "norm_label": "patience",
       "text": "Endure the slow, incremental path without desperation. Trust that correct, steady work compounds. Patience is not passivity — it is the discipline to not force an outcome before its conditions are met.",
       "rationale": "Endure the slow, incremental path without desperation. Trust that correct, steady work compounds. Patience is not passivity — it is the discipline to not force an outcome before its conditions are met.",
+      "moments": [],
       "source_file": "principles/patience.md"
     },
     {
@@ -114,6 +96,7 @@
       "norm_label": "preparation",
       "text": "Do the invisible work before the visible work. Plan, gather tools, and understand the ground before acting. Preparation converts hard work into predictable work.",
       "rationale": "Do the invisible work before the visible work. Plan, gather tools, and understand the ground before acting. Preparation converts hard work into predictable work.",
+      "moments": [],
       "source_file": "principles/preparation.md"
     },
     {
@@ -126,6 +109,7 @@
       "norm_label": "prudence",
       "text": "Foresee the modes of failure and act to prevent them before they arrive. Prudence is not fear — it is informed anticipation, the difference between the wise and the fool being simply *when* each responds to risk.",
       "rationale": "Foresee the modes of failure and act to prevent them before they arrive. Prudence is not fear — it is informed anticipation, the difference between the wise and the fool being simply *when* each responds to risk.",
+      "moments": [],
       "source_file": "principles/prudence.md"
     },
     {
@@ -138,6 +122,7 @@
       "norm_label": "reliability",
       "text": "The measure of a system's trustworthiness under real conditions. Reliability is bought by reducing the number of ways the system can fail, not by accumulating more machinery.",
       "rationale": "The measure of a system's trustworthiness under real conditions. Reliability is bought by reducing the number of ways the system can fail, not by accumulating more machinery.",
+      "moments": [],
       "source_file": "principles/reliability.md"
     },
     {
@@ -150,6 +135,7 @@
       "norm_label": "resilience",
       "text": "The capacity to fail and recover — in systems, in delivery, and in the engineer. Resilience is designed in before the failure, and cultivated in the engineer through each setback.",
       "rationale": "The capacity to fail and recover — in systems, in delivery, and in the engineer. Resilience is designed in before the failure, and cultivated in the engineer through each setback.",
+      "moments": [],
       "source_file": "principles/resilience.md"
     },
     {
@@ -162,6 +148,7 @@
       "norm_label": "simplicity",
       "text": "Reduce complexity to its necessary minimum. Prefer the smallest, flattest, least-indirect structure that satisfies the requirement. Complexity that buys no capability or reliability is waste.",
       "rationale": "Reduce complexity to its necessary minimum. Prefer the smallest, flattest, least-indirect structure that satisfies the requirement. Complexity that buys no capability or reliability is waste.",
+      "moments": [],
       "source_file": "principles/simplicity.md"
     },
     {
@@ -174,6 +161,7 @@
       "norm_label": "truth & integrity",
       "text": "Do the right thing even when it is unobserved. Hold the system and yourself to what is actually true — not what is convenient to believe.",
       "rationale": "Do the right thing even when it is unobserved. Hold the system and yourself to what is actually true — not what is convenient to believe.",
+      "moments": [],
       "source_file": "principles/truth-and-integrity.md"
     },
     {
@@ -186,6 +174,7 @@
       "norm_label": "yagni — you aren't gonna need it",
       "text": "Do not build for hypothetical future requirements. Build for the requirement you have today. Defer speculative complexity until a real user or a real requirement demands it.",
       "rationale": "Do not build for hypothetical future requirements. Build for the requirement you have today. Defer speculative complexity until a real user or a real requirement demands it.",
+      "moments": [],
       "source_file": "principles/yagni.md"
     },
     {
@@ -196,8 +185,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "beginning & action",
-      "text": "Start with the smallest first step and ship it. Act before you have full certainty; apply what you know rather than polishing theory.",
-      "rationale": "Start with the smallest first step and ship it. Act before you have full certainty; apply what you know rather than polishing theory.",
+      "text": "Start with the smallest first step and ship it. Act before you have full certainty; apply what you know rather than polishing theory.  Applies at: task-start, running-a-command, action.",
+      "rationale": "Start with the smallest first step and ship it. Act before you have full certainty; apply what you know rather than polishing theory.  Applies at: task-start, running-a-command, action.",
+      "moments": [
+        "task-start",
+        "running-a-command",
+        "action"
+      ],
       "source_file": "quotes/action.md"
     },
     {
@@ -208,8 +202,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "bushido & the way of the warrior",
-      "text": "Discipline over inspiration. Do only what serves the outcome; perceive beyond the obvious. The warrior's edge in engineering is relentless, deliberate practice — victory over your yesterday self, logged and shipped.",
-      "rationale": "Discipline over inspiration. Do only what serves the outcome; perceive beyond the obvious. The warrior's edge in engineering is relentless, deliberate practice — victory over your yesterday self, logged and shipped.",
+      "text": "Discipline over inspiration. Do only what serves the outcome; perceive beyond the obvious. The warrior's edge in engineering is relentless, deliberate practice — victory over your yesterday self, logged and shipped.  Applies at: focus, deep-work, bug-found, task-start.",
+      "rationale": "Discipline over inspiration. Do only what serves the outcome; perceive beyond the obvious. The warrior's edge in engineering is relentless, deliberate practice — victory over your yesterday self, logged and shipped.  Applies at: focus, deep-work, bug-found, task-start.",
+      "moments": [
+        "focus",
+        "deep-work",
+        "bug-found",
+        "task-start"
+      ],
       "source_file": "quotes/bushido.md"
     },
     {
@@ -220,8 +220,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "compassion & service",
-      "text": "Build things users can actually reach and fix problems their real suffering creates. Code review and support are acts of service — treat the person behind the issue as the requirement, not the issue as the interruption.",
-      "rationale": "Build things users can actually reach and fix problems their real suffering creates. Code review and support are acts of service — treat the person behind the issue as the requirement, not the issue as the interruption.",
+      "text": "Build things users can actually reach and fix problems their real suffering creates. Code review and support are acts of service — treat the person behind the issue as the requirement, not the issue as the interruption.  Applies at: teamwork, gratitude, task-complete.",
+      "rationale": "Build things users can actually reach and fix problems their real suffering creates. Code review and support are acts of service — treat the person behind the issue as the requirement, not the issue as the interruption.  Applies at: teamwork, gratitude, task-complete.",
+      "moments": [
+        "teamwork",
+        "gratitude",
+        "task-complete"
+      ],
       "source_file": "quotes/compassion.md"
     },
     {
@@ -232,8 +237,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "wealth, money & contentment",
-      "text": "Optimize for few needs, not many features. A lean system has less surface area to defend and maintain — scale is a tax unless the requirement demands it.",
-      "rationale": "Optimize for few needs, not many features. A lean system has less surface area to defend and maintain — scale is a tax unless the requirement demands it.",
+      "text": "Optimize for few needs, not many features. A lean system has less surface area to defend and maintain — scale is a tax unless the requirement demands it.  Applies at: dead-code-removed, general-wisdom.",
+      "rationale": "Optimize for few needs, not many features. A lean system has less surface area to defend and maintain — scale is a tax unless the requirement demands it.  Applies at: dead-code-removed, general-wisdom.",
+      "moments": [
+        "dead-code-removed",
+        "general-wisdom"
+      ],
       "source_file": "quotes/contentment.md"
     },
     {
@@ -244,8 +253,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "courage & risk",
-      "text": "Decide, then act with tenacity. Ship the uncertain increment that moves the product; the man in the arena, not the critic, does the work.",
-      "rationale": "Decide, then act with tenacity. Ship the uncertain increment that moves the product; the man in the arena, not the critic, does the work.",
+      "text": "Decide, then act with tenacity. Ship the uncertain increment that moves the product; the man in the arena, not the critic, does the work.  Applies at: courage, risk-taking.",
+      "rationale": "Decide, then act with tenacity. Ship the uncertain increment that moves the product; the man in the arena, not the critic, does the work.  Applies at: courage, risk-taking.",
+      "moments": [
+        "courage",
+        "risk-taking"
+      ],
       "source_file": "quotes/courage.md"
     },
     {
@@ -256,8 +269,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "craft & quality",
-      "text": "Treat quality as a habit built by repetition, not an act performed once. The details make the design; make the complex appear simple.",
-      "rationale": "Treat quality as a habit built by repetition, not an act performed once. The details make the design; make the complex appear simple.",
+      "text": "Treat quality as a habit built by repetition, not an act performed once. The details make the design; make the complex appear simple.  Applies at: writing, building, craft.",
+      "rationale": "Treat quality as a habit built by repetition, not an act performed once. The details make the design; make the complex appear simple.  Applies at: writing, building, craft.",
+      "moments": [
+        "writing",
+        "building",
+        "craft"
+      ],
       "source_file": "quotes/craft.md"
     },
     {
@@ -268,8 +286,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "creation & imagination",
-      "text": "Create by committing: a buried idea is a dream, a shipped one is creation. Every act of building first destroys an old way of doing something — make that destruction deliberate. Aim for the smallest faithful prototype that the light can walk through, then let reality amend the sketch.",
-      "rationale": "Create by committing: a buried idea is a dream, a shipped one is creation. Every act of building first destroys an old way of doing something — make that destruction deliberate. Aim for the smallest faithful prototype that the light can walk through, then let reality amend the sketch.",
+      "text": "Create by committing: a buried idea is a dream, a shipped one is creation. Every act of building first destroys an old way of doing something — make that destruction deliberate. Aim for the smallest faithful prototype that the light can walk through, then let reality amend the sketch.  Applies at: writing, building, task-start, task-complete.",
+      "rationale": "Create by committing: a buried idea is a dream, a shipped one is creation. Every act of building first destroys an old way of doing something — make that destruction deliberate. Aim for the smallest faithful prototype that the light can walk through, then let reality amend the sketch.  Applies at: writing, building, task-start, task-complete.",
+      "moments": [
+        "writing",
+        "building",
+        "task-start",
+        "task-complete"
+      ],
       "source_file": "quotes/creation.md"
     },
     {
@@ -280,8 +304,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "debugging & first principles",
-      "text": "Reproduce and state the problem fully before fixing. Eliminate the impossible first, doubt every assumption, and never fool yourself about what the code actually does.",
-      "rationale": "Reproduce and state the problem fully before fixing. Eliminate the impossible first, doubt every assumption, and never fool yourself about what the code actually does.",
+      "text": "Reproduce and state the problem fully before fixing. Eliminate the impossible first, doubt every assumption, and never fool yourself about what the code actually does.  Applies at: investigating, debugging, bug-found, bug-fixed.",
+      "rationale": "Reproduce and state the problem fully before fixing. Eliminate the impossible first, doubt every assumption, and never fool yourself about what the code actually does.  Applies at: investigating, debugging, bug-found, bug-fixed.",
+      "moments": [
+        "investigating",
+        "debugging",
+        "bug-found",
+        "bug-fixed"
+      ],
       "source_file": "quotes/debugging.md"
     },
     {
@@ -292,8 +322,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "emotional mastery & anger",
-      "text": "Do not ship from anger. When a bug or a review provokes you, step back, think of the consequences, and respond with measured reasoning — anger only extinguishes the clarity the work needs.",
-      "rationale": "Do not ship from anger. When a bug or a review provokes you, step back, think of the consequences, and respond with measured reasoning — anger only extinguishes the clarity the work needs.",
+      "text": "Do not ship from anger. When a bug or a review provokes you, step back, think of the consequences, and respond with measured reasoning — anger only extinguishes the clarity the work needs.  Applies at: bug-found, blocked, general-wisdom.",
+      "rationale": "Do not ship from anger. When a bug or a review provokes you, step back, think of the consequences, and respond with measured reasoning — anger only extinguishes the clarity the work needs.  Applies at: bug-found, blocked, general-wisdom.",
+      "moments": [
+        "bug-found",
+        "blocked",
+        "general-wisdom"
+      ],
       "source_file": "quotes/emotional-mastery.md"
     },
     {
@@ -304,8 +339,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "euphoria & celebration",
-      "text": "Reasons celebrate when peers finish loud, then return to the next fork. Joy and woe are woven together — ship the win, log it, and let the acknowledgment compound trust rather than ego. Celebration is the reward signal that makes the habit of shipping sustainable.",
-      "rationale": "Reasons celebrate when peers finish loud, then return to the next fork. Joy and woe are woven together — ship the win, log it, and let the acknowledgment compound trust rather than ego. Celebration is the reward signal that makes the habit of shipping sustainable.",
+      "text": "Reasons celebrate when peers finish loud, then return to the next fork. Joy and woe are woven together — ship the win, log it, and let the acknowledgment compound trust rather than ego. Celebration is the reward signal that makes the habit of shipping sustainable.  Applies at: tests-passing, task-complete, gratitude, joy.",
+      "rationale": "Reasons celebrate when peers finish loud, then return to the next fork. Joy and woe are woven together — ship the win, log it, and let the acknowledgment compound trust rather than ego. Celebration is the reward signal that makes the habit of shipping sustainable.  Applies at: tests-passing, task-complete, gratitude, joy.",
+      "moments": [
+        "tests-passing",
+        "task-complete",
+        "gratitude",
+        "joy"
+      ],
       "source_file": "quotes/euphoria.md"
     },
     {
@@ -316,8 +357,16 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "exploration & discovery",
-      "text": "Treat the unknown as a map to be filled, not a wall to be feared. Discovery is re-framing the familiar through new eyes — spend effort asking the right question before hunting the answer. Curiosity is the engine; wandering is the method; documentation is the new landscape you leave behind.",
-      "rationale": "Treat the unknown as a map to be filled, not a wall to be feared. Discovery is re-framing the familiar through new eyes — spend effort asking the right question before hunting the answer. Curiosity is the engine; wandering is the method; documentation is the new landscape you leave behind.",
+      "text": "Treat the unknown as a map to be filled, not a wall to be feared. Discovery is re-framing the familiar through new eyes — spend effort asking the right question before hunting the answer. Curiosity is the engine; wandering is the method; documentation is the new landscape you leave behind.  Applies at: reading, studying, investigating, debugging, focus, deep-work.",
+      "rationale": "Treat the unknown as a map to be filled, not a wall to be feared. Discovery is re-framing the familiar through new eyes — spend effort asking the right question before hunting the answer. Curiosity is the engine; wandering is the method; documentation is the new landscape you leave behind.  Applies at: reading, studying, investigating, debugging, focus, deep-work.",
+      "moments": [
+        "reading",
+        "studying",
+        "investigating",
+        "debugging",
+        "focus",
+        "deep-work"
+      ],
       "source_file": "quotes/exploration.md"
     },
     {
@@ -328,8 +377,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "focus & discipline",
-      "text": "Work in bounded, single-purpose sessions — one change set at a time. Order by dependency, close the noise, and make the singular goal concrete before you start.",
-      "rationale": "Work in bounded, single-purpose sessions — one change set at a time. Order by dependency, close the noise, and make the singular goal concrete before you start.",
+      "text": "Work in bounded, single-purpose sessions — one change set at a time. Order by dependency, close the noise, and make the singular goal concrete before you start.  Applies at: focus, deep-work.",
+      "rationale": "Work in bounded, single-purpose sessions — one change set at a time. Order by dependency, close the noise, and make the singular goal concrete before you start.  Applies at: focus, deep-work.",
+      "moments": [
+        "focus",
+        "deep-work"
+      ],
       "source_file": "quotes/focus.md"
     },
     {
@@ -340,8 +393,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "freedom & self mastery",
-      "text": "Choose what to commit to, then freely bind yourself to it. The engineer who masters attention is free; the one scattered by every notification is a slave to interruption. Decide, then act with tenacity.",
-      "rationale": "Choose what to commit to, then freely bind yourself to it. The engineer who masters attention is free; the one scattered by every notification is a slave to interruption. Decide, then act with tenacity.",
+      "text": "Choose what to commit to, then freely bind yourself to it. The engineer who masters attention is free; the one scattered by every notification is a slave to interruption. Decide, then act with tenacity.  Applies at: focus, deep-work, action.",
+      "rationale": "Choose what to commit to, then freely bind yourself to it. The engineer who masters attention is free; the one scattered by every notification is a slave to interruption. Decide, then act with tenacity.  Applies at: focus, deep-work, action.",
+      "moments": [
+        "focus",
+        "deep-work",
+        "action"
+      ],
       "source_file": "quotes/freedom.md"
     },
     {
@@ -352,8 +410,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "general wisdom",
-      "text": "Apply across every engineering decision: master your own thinking, treat each present task with full attention, and let the quality of your reasoning shape the quality of the system.",
-      "rationale": "Apply across every engineering decision: master your own thinking, treat each present task with full attention, and let the quality of your reasoning shape the quality of the system.",
+      "text": "Apply across every engineering decision: master your own thinking, treat each present task with full attention, and let the quality of your reasoning shape the quality of the system.  Applies at: any moment, task-complete.",
+      "rationale": "Apply across every engineering decision: master your own thinking, treat each present task with full attention, and let the quality of your reasoning shape the quality of the system.  Applies at: any moment, task-complete.",
+      "moments": [
+        "any moment",
+        "task-complete"
+      ],
       "source_file": "quotes/general-wisdom.md"
     },
     {
@@ -364,8 +426,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "gratitude & joy",
-      "text": "Acknowledge the people who make a difference in the work. Gratitude is the simplest form of the collaboration that holds a project together.",
-      "rationale": "Acknowledge the people who make a difference in the work. Gratitude is the simplest form of the collaboration that holds a project together.",
+      "text": "Acknowledge the people who make a difference in the work. Gratitude is the simplest form of the collaboration that holds a project together.  Applies at: gratitude, joy, task-complete.",
+      "rationale": "Acknowledge the people who make a difference in the work. Gratitude is the simplest form of the collaboration that holds a project together.  Applies at: gratitude, joy, task-complete.",
+      "moments": [
+        "gratitude",
+        "joy",
+        "task-complete"
+      ],
       "source_file": "quotes/gratitude.md"
     },
     {
@@ -376,8 +443,15 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "hebrew wisdom literature",
-      "text": "Value truth, prudence, and honest work over flash. Guard what you say and whom you trust; verify before believing. Wisdom literature's engineering corollary: clear vision, patient correction, and a reputation (commit history) that speaks without exaggeration.",
-      "rationale": "Value truth, prudence, and honest work over flash. Guard what you say and whom you trust; verify before believing. Wisdom literature's engineering corollary: clear vision, patient correction, and a reputation (commit history) that speaks without exaggeration.",
+      "text": "Value truth, prudence, and honest work over flash. Guard what you say and whom you trust; verify before believing. Wisdom literature's engineering corollary: clear vision, patient correction, and a reputation (commit history) that speaks without exaggeration.  Applies at: git-commit, push, truth, integrity, security-hardening.",
+      "rationale": "Value truth, prudence, and honest work over flash. Guard what you say and whom you trust; verify before believing. Wisdom literature's engineering corollary: clear vision, patient correction, and a reputation (commit history) that speaks without exaggeration.  Applies at: git-commit, push, truth, integrity, security-hardening.",
+      "moments": [
+        "git-commit",
+        "push",
+        "truth",
+        "integrity",
+        "security-hardening"
+      ],
       "source_file": "quotes/hebrew-wisdom.md"
     },
     {
@@ -388,8 +462,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "humility & mistakes",
-      "text": "When a hypothesis is disproven, record it. Seek review and treat critique as data. Add a regression test for each mistake so the portal is not re-sealed.",
-      "rationale": "When a hypothesis is disproven, record it. Seek review and treat critique as data. Add a regression test for each mistake so the portal is not re-sealed.",
+      "text": "When a hypothesis is disproven, record it. Seek review and treat critique as data. Add a regression test for each mistake so the portal is not re-sealed.  Applies at: humility, learning-from-mistakes.",
+      "rationale": "When a hypothesis is disproven, record it. Seek review and treat critique as data. Add a regression test for each mistake so the portal is not re-sealed.  Applies at: humility, learning-from-mistakes.",
+      "moments": [
+        "humility",
+        "learning-from-mistakes"
+      ],
       "source_file": "quotes/humility.md"
     },
     {
@@ -400,8 +478,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "native & indigenous wisdom",
-      "text": "Take only what you need; leave the system better than you found it. The code you deploy is borrowed from every future maintainer — write restraint, keep the pool from being drained, and let every voice contribute to the shared story.",
-      "rationale": "Take only what you need; leave the system better than you found it. The code you deploy is borrowed from every future maintainer — write restraint, keep the pool from being drained, and let every voice contribute to the shared story.",
+      "text": "Take only what you need; leave the system better than you found it. The code you deploy is borrowed from every future maintainer — write restraint, keep the pool from being drained, and let every voice contribute to the shared story.  Applies at: general-wisdom, task-complete, refactoring, renewal.",
+      "rationale": "Take only what you need; leave the system better than you found it. The code you deploy is borrowed from every future maintainer — write restraint, keep the pool from being drained, and let every voice contribute to the shared story.  Applies at: general-wisdom, task-complete, refactoring, renewal.",
+      "moments": [
+        "general-wisdom",
+        "task-complete",
+        "refactoring",
+        "renewal"
+      ],
       "source_file": "quotes/indigenous-wisdom.md"
     },
     {
@@ -412,8 +496,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "integrity & truth",
-      "text": "Test the real behavior, never gloss a defect, and document what the code actually does. The written word outlasts memory — commit honestly.",
-      "rationale": "Test the real behavior, never gloss a defect, and document what the code actually does. The written word outlasts memory — commit honestly.",
+      "text": "Test the real behavior, never gloss a defect, and document what the code actually does. The written word outlasts memory — commit honestly.  Applies at: truth, integrity, git-commit, preserving-work.",
+      "rationale": "Test the real behavior, never gloss a defect, and document what the code actually does. The written word outlasts memory — commit honestly.  Applies at: truth, integrity, git-commit, preserving-work.",
+      "moments": [
+        "truth",
+        "integrity",
+        "git-commit",
+        "preserving-work"
+      ],
       "source_file": "quotes/integrity.md"
     },
     {
@@ -424,8 +514,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "justice, fairness & leadership",
-      "text": "The abuse of a privilege is the failure of an access control. Enforce the least privilege that serves the requirement; a review gate is justice in action — trust, but verify.",
-      "rationale": "The abuse of a privilege is the failure of an access control. Enforce the least privilege that serves the requirement; a review gate is justice in action — trust, but verify.",
+      "text": "The abuse of a privilege is the failure of an access control. Enforce the least privilege that serves the requirement; a review gate is justice in action — trust, but verify.  Applies at: teamwork, truth, integrity.",
+      "rationale": "The abuse of a privilege is the failure of an access control. Enforce the least privilege that serves the requirement; a review gate is justice in action — trust, but verify.  Applies at: teamwork, truth, integrity.",
+      "moments": [
+        "teamwork",
+        "truth",
+        "integrity"
+      ],
       "source_file": "quotes/justice.md"
     },
     {
@@ -436,8 +531,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "learning & study",
-      "text": "Study before you build; incorporate lessons learned by others to avoid re-deriving them. Treat every mistake and every read as a portal to knowledge.",
-      "rationale": "Study before you build; incorporate lessons learned by others to avoid re-deriving them. Treat every mistake and every read as a portal to knowledge.",
+      "text": "Study before you build; incorporate lessons learned by others to avoid re-deriving them. Treat every mistake and every read as a portal to knowledge.  Applies at: reading, studying, learning.",
+      "rationale": "Study before you build; incorporate lessons learned by others to avoid re-deriving them. Treat every mistake and every read as a portal to knowledge.  Applies at: reading, studying, learning.",
+      "moments": [
+        "reading",
+        "studying",
+        "learning"
+      ],
       "source_file": "quotes/learning.md"
     },
     {
@@ -448,8 +548,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "love & relationships",
-      "text": "The system survives on trust between its parts more than on any single hero. Relationship quality between modules, teams, and humans is load-bearing — maintain it deliberately.",
-      "rationale": "The system survives on trust between its parts more than on any single hero. Relationship quality between modules, teams, and humans is load-bearing — maintain it deliberately.",
+      "text": "The system survives on trust between its parts more than on any single hero. Relationship quality between modules, teams, and humans is load-bearing — maintain it deliberately.  Applies at: teamwork, gratitude, task-complete.",
+      "rationale": "The system survives on trust between its parts more than on any single hero. Relationship quality between modules, teams, and humans is load-bearing — maintain it deliberately.  Applies at: teamwork, gratitude, task-complete.",
+      "moments": [
+        "teamwork",
+        "gratitude",
+        "task-complete"
+      ],
       "source_file": "quotes/love.md"
     },
     {
@@ -460,8 +565,16 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "nature, seasons & cycles",
-      "text": "Work in seasons, not sprints. Development has planting and harvesting cycles — write, rest, prune, renew. Match pace to the season of the codebase; rhizome, don't bulldoze.",
-      "rationale": "Work in seasons, not sprints. Development has planting and harvesting cycles — write, rest, prune, renew. Match pace to the season of the codebase; rhizome, don't bulldoze.",
+      "text": "Work in seasons, not sprints. Development has planting and harvesting cycles — write, rest, prune, renew. Match pace to the season of the codebase; rhizome, don't bulldoze.  Applies at: blocked, waiting, tests-failing, setback, refactoring, renewal.",
+      "rationale": "Work in seasons, not sprints. Development has planting and harvesting cycles — write, rest, prune, renew. Match pace to the season of the codebase; rhizome, don't bulldoze.  Applies at: blocked, waiting, tests-failing, setback, refactoring, renewal.",
+      "moments": [
+        "blocked",
+        "waiting",
+        "tests-failing",
+        "setback",
+        "refactoring",
+        "renewal"
+      ],
       "source_file": "quotes/nature.md"
     },
     {
@@ -472,8 +585,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "patience & blocked",
-      "text": "Stay with a stubborn defect; gather data over several reproductions before changing hypothesis. When blocked, step back and let understanding arrive, trusting steady compounding over forced shortcuts.",
-      "rationale": "Stay with a stubborn defect; gather data over several reproductions before changing hypothesis. When blocked, step back and let understanding arrive, trusting steady compounding over forced shortcuts.",
+      "text": "Stay with a stubborn defect; gather data over several reproductions before changing hypothesis. When blocked, step back and let understanding arrive, trusting steady compounding over forced shortcuts.  Applies at: blocked, waiting, tests-failing, setback.",
+      "rationale": "Stay with a stubborn defect; gather data over several reproductions before changing hypothesis. When blocked, step back and let understanding arrive, trusting steady compounding over forced shortcuts.  Applies at: blocked, waiting, tests-failing, setback.",
+      "moments": [
+        "blocked",
+        "waiting",
+        "tests-failing",
+        "setback"
+      ],
       "source_file": "quotes/patience.md"
     },
     {
@@ -484,8 +603,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "planning & preparation",
-      "text": "Plan and gather tooling before building. Reproduce the problem before fixing it, define the contract before implementing, and set up the environment and smoke test before release.",
-      "rationale": "Plan and gather tooling before building. Reproduce the problem before fixing it, define the contract before implementing, and set up the environment and smoke test before release.",
+      "text": "Plan and gather tooling before building. Reproduce the problem before fixing it, define the contract before implementing, and set up the environment and smoke test before release.  Applies at: planning, strategy, installing, gathering-tools.",
+      "rationale": "Plan and gather tooling before building. Reproduce the problem before fixing it, define the contract before implementing, and set up the environment and smoke test before release.  Applies at: planning, strategy, installing, gathering-tools.",
+      "moments": [
+        "planning",
+        "strategy",
+        "installing",
+        "gathering-tools"
+      ],
       "source_file": "quotes/preparation.md"
     },
     {
@@ -496,8 +621,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "progress & kaizen",
-      "text": "Ship small, working increments. Perfect the process as you go — improve the loop, not just the output.",
-      "rationale": "Ship small, working increments. Perfect the process as you go — improve the loop, not just the output.",
+      "text": "Ship small, working increments. Perfect the process as you go — improve the loop, not just the output.  Applies at: step-complete, writing, building.",
+      "rationale": "Ship small, working increments. Perfect the process as you go — improve the loop, not just the output.  Applies at: step-complete, writing, building.",
+      "moments": [
+        "step-complete",
+        "writing",
+        "building"
+      ],
       "source_file": "quotes/progress.md"
     },
     {
@@ -508,8 +638,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "purpose & meaning",
-      "text": "Anchor every task to the \"why\" it serves before writing a line. A feature whose purpose cannot be stated in one sentence is a feature in search of a problem. Purpose is the first-principles test of effort.",
-      "rationale": "Anchor every task to the \"why\" it serves before writing a line. A feature whose purpose cannot be stated in one sentence is a feature in search of a problem. Purpose is the first-principles test of effort.",
+      "text": "Anchor every task to the \"why\" it serves before writing a line. A feature whose purpose cannot be stated in one sentence is a feature in search of a problem. Purpose is the first-principles test of effort.  Applies at: task-start, task-complete.",
+      "rationale": "Anchor every task to the \"why\" it serves before writing a line. A feature whose purpose cannot be stated in one sentence is a feature in search of a problem. Purpose is the first-principles test of effort.  Applies at: task-start, task-complete.",
+      "moments": [
+        "task-start",
+        "task-complete"
+      ],
       "source_file": "quotes/purpose.md"
     },
     {
@@ -520,8 +654,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "refactoring & renewal",
-      "text": "Refactor in small, behavior-preserving slices that keep the build green. Remove dead code, then simplify what remains — understand why the complexity arose first.",
-      "rationale": "Refactor in small, behavior-preserving slices that keep the build green. Remove dead code, then simplify what remains — understand why the complexity arose first.",
+      "text": "Refactor in small, behavior-preserving slices that keep the build green. Remove dead code, then simplify what remains — understand why the complexity arose first.  Applies at: refactoring, renewal, dead-code-removed.",
+      "rationale": "Refactor in small, behavior-preserving slices that keep the build green. Remove dead code, then simplify what remains — understand why the complexity arose first.  Applies at: refactoring, renewal, dead-code-removed.",
+      "moments": [
+        "refactoring",
+        "renewal",
+        "dead-code-removed"
+      ],
       "source_file": "quotes/refactoring.md"
     },
     {
@@ -532,8 +671,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "resilience & setback",
-      "text": "Design for graceful degradation and fast recovery. Treat each failure as data for the next attempt — add a test or guard so the class of failure cannot recur silently.",
-      "rationale": "Design for graceful degradation and fast recovery. Treat each failure as data for the next attempt — add a test or guard so the class of failure cannot recur silently.",
+      "text": "Design for graceful degradation and fast recovery. Treat each failure as data for the next attempt — add a test or guard so the class of failure cannot recur silently.  Applies at: bug-found, bug-fixed, tests-failing, setback.",
+      "rationale": "Design for graceful degradation and fast recovery. Treat each failure as data for the next attempt — add a test or guard so the class of failure cannot recur silently.  Applies at: bug-found, bug-fixed, tests-failing, setback.",
+      "moments": [
+        "bug-found",
+        "bug-fixed",
+        "tests-failing",
+        "setback"
+      ],
       "source_file": "quotes/resilience.md"
     },
     {
@@ -544,8 +689,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "rest & balance",
-      "text": "Stay at a sustainable pace. Unplug to let a weary system (or engineer) recover — a rested field yields a bountiful crop.",
-      "rationale": "Stay at a sustainable pace. Unplug to let a weary system (or engineer) recover — a rested field yields a bountiful crop.",
+      "text": "Stay at a sustainable pace. Unplug to let a weary system (or engineer) recover — a rested field yields a bountiful crop.  Applies at: balance, rest, sustainable-pace.",
+      "rationale": "Stay at a sustainable pace. Unplug to let a weary system (or engineer) recover — a rested field yields a bountiful crop.  Applies at: balance, rest, sustainable-pace.",
+      "moments": [
+        "balance",
+        "rest",
+        "sustainable-pace"
+      ],
       "source_file": "quotes/rest.md"
     },
     {
@@ -556,8 +706,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "security & prudence",
-      "text": "Engage risk while it is cheap. Validate all inputs at their trust boundary, least-privilege every credential, and fail closed on ambiguity.",
-      "rationale": "Engage risk while it is cheap. Validate all inputs at their trust boundary, least-privilege every credential, and fail closed on ambiguity.",
+      "text": "Engage risk while it is cheap. Validate all inputs at their trust boundary, least-privilege every credential, and fail closed on ambiguity.  Applies at: security-hardening, investigation.",
+      "rationale": "Engage risk while it is cheap. Validate all inputs at their trust boundary, least-privilege every credential, and fail closed on ambiguity.  Applies at: security-hardening, investigation.",
+      "moments": [
+        "security-hardening",
+        "investigation"
+      ],
       "source_file": "quotes/security.md"
     },
     {
@@ -568,8 +722,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "simplicity",
-      "text": "Favor flat architectures over deep class hierarchies. Reject early optimization. Remove what does not serve the present requirement.",
-      "rationale": "Favor flat architectures over deep class hierarchies. Reject early optimization. Remove what does not serve the present requirement.",
+      "text": "Favor flat architectures over deep class hierarchies. Reject early optimization. Remove what does not serve the present requirement.  Applies at: dead-code-removed, writing, building.",
+      "rationale": "Favor flat architectures over deep class hierarchies. Reject early optimization. Remove what does not serve the present requirement.  Applies at: dead-code-removed, writing, building.",
+      "moments": [
+        "dead-code-removed",
+        "writing",
+        "building"
+      ],
       "source_file": "quotes/simplicity.md"
     },
     {
@@ -580,8 +739,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "solitude & silence",
-      "text": "Protect depth. Solitary, uninterrupted thought is where the hard parts resolve; noise is the enemy of correctness. When stuck, silence the churn and read the state — the answer is usually in the stillness between guesses.",
-      "rationale": "Protect depth. Solitary, uninterrupted thought is where the hard parts resolve; noise is the enemy of correctness. When stuck, silence the churn and read the state — the answer is usually in the stillness between guesses.",
+      "text": "Protect depth. Solitary, uninterrupted thought is where the hard parts resolve; noise is the enemy of correctness. When stuck, silence the churn and read the state — the answer is usually in the stillness between guesses.  Applies at: focus, deep-work, general-wisdom.",
+      "rationale": "Protect depth. Solitary, uninterrupted thought is where the hard parts resolve; noise is the enemy of correctness. When stuck, silence the churn and read the state — the answer is usually in the stillness between guesses.  Applies at: focus, deep-work, general-wisdom.",
+      "moments": [
+        "focus",
+        "deep-work",
+        "general-wisdom"
+      ],
       "source_file": "quotes/solitude.md"
     },
     {
@@ -592,8 +756,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "teamwork & collaboration",
-      "text": "Review every non-trivial change; write for the next reader; document the why. Convert individual error into collective reliability through shared context.",
-      "rationale": "Review every non-trivial change; write for the next reader; document the why. Convert individual error into collective reliability through shared context.",
+      "text": "Review every non-trivial change; write for the next reader; document the why. Convert individual error into collective reliability through shared context.  Applies at: collaboration, teamwork.",
+      "rationale": "Review every non-trivial change; write for the next reader; document the why. Convert individual error into collective reliability through shared context.  Applies at: collaboration, teamwork.",
+      "moments": [
+        "collaboration",
+        "teamwork"
+      ],
       "source_file": "quotes/teamwork.md"
     },
     {
@@ -604,8 +772,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "chinese philosophy",
-      "text": "Chinese philosophy spans Confucian cultivation, Daoist flow, and the strategy of the hundred schools. The classics (`Analects`, *Tao Te Ching*, *Art of War*) root discipline in self-cultivation rather than reward.",
-      "rationale": "Chinese philosophy spans Confucian cultivation, Daoist flow, and the strategy of the hundred schools. The classics (`Analects`, *Tao Te Ching*, *Art of War*) root discipline in self-cultivation rather than reward.",
+      "text": "Chinese philosophy spans Confucian cultivation, Daoist flow, and the strategy of the hundred schools. The classics (`Analects`, *Tao Te Ching*, *Art of War*) root discipline in self-cultivation rather than reward.  Applies at: learning, preparation, resilience.",
+      "rationale": "Chinese philosophy spans Confucian cultivation, Daoist flow, and the strategy of the hundred schools. The classics (`Analects`, *Tao Te Ching*, *Art of War*) root discipline in self-cultivation rather than reward.  Applies at: learning, preparation, resilience.",
+      "moments": [
+        "learning",
+        "preparation",
+        "resilience"
+      ],
       "source_file": "quotes/traditions/chinese-philosophy.md"
     },
     {
@@ -616,8 +789,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "world folk sayings",
-      "text": "Every people's anonymous wisdom — the proverb — is a compressed engineering manual for life: a warning, a plan, a law of nature tested by generations. Across continents the same truths resurface in different dress. This file is the resource library: folk sayings from the world over, kept when they change the way you build.",
-      "rationale": "Every people's anonymous wisdom — the proverb — is a compressed engineering manual for life: a warning, a plan, a law of nature tested by generations. Across continents the same truths resurface in different dress. This file is the resource library: folk sayings from the world over, kept when they change the way you build.",
+      "text": "Every people's anonymous wisdom — the proverb — is a compressed engineering manual for life: a warning, a plan, a law of nature tested by generations. Across continents the same truths resurface in different dress. This file is the resource library: folk sayings from the world over, kept when they change the way you build.  Applies at: general-wisdom, preparation, task-complete.",
+      "rationale": "Every people's anonymous wisdom — the proverb — is a compressed engineering manual for life: a warning, a plan, a law of nature tested by generations. Across continents the same truths resurface in different dress. This file is the resource library: folk sayings from the world over, kept when they change the way you build.  Applies at: general-wisdom, preparation, task-complete.",
+      "moments": [
+        "general-wisdom",
+        "preparation",
+        "task-complete"
+      ],
       "source_file": "quotes/traditions/folk-sayings.md"
     },
     {
@@ -628,8 +806,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "french wisdom",
-      "text": "France is the homeland of clear reason and the sharpened sentence. From Montaigne's essays (try everything, doubt everything) through the *clarté* of the Enlightenment — Descartes, Voltaire, the *encyclopédistes* — to the modern craft of Proust and Camus, French wisdom prizes precision of expression and the courage to question authority with a polite smile.",
-      "rationale": "France is the homeland of clear reason and the sharpened sentence. From Montaigne's essays (try everything, doubt everything) through the *clarté* of the Enlightenment — Descartes, Voltaire, the *encyclopédistes* — to the modern craft of Proust and Camus, French wisdom prizes precision of expression and the courage to question authority with a polite smile.",
+      "text": "France is the homeland of clear reason and the sharpened sentence. From Montaigne's essays (try everything, doubt everything) through the *clarté* of the Enlightenment — Descartes, Voltaire, the *encyclopédistes* — to the modern craft of Proust and Camus, French wisdom prizes precision of expression and the courage to question authority with a polite smile.  Applies at: debugging, preparation, task-complete.",
+      "rationale": "France is the homeland of clear reason and the sharpened sentence. From Montaigne's essays (try everything, doubt everything) through the *clarté* of the Enlightenment — Descartes, Voltaire, the *encyclopédistes* — to the modern craft of Proust and Camus, French wisdom prizes precision of expression and the courage to question authority with a polite smile.  Applies at: debugging, preparation, task-complete.",
+      "moments": [
+        "debugging",
+        "preparation",
+        "task-complete"
+      ],
       "source_file": "quotes/traditions/french.md"
     },
     {
@@ -640,8 +823,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "german wisdom",
-      "text": "The German mind treats thinking as a deep excavation. Idealism (Kant, Hegel) built philosophy on method and duty; later voices — Schopenhauer, Nietzsche, Rilke — turned sharply inward toward will, honesty, and suffering's use. Engineers inherit the same temperament: meticulous, principled, thorough, and only satisfied by the system that holds together under its own weight.",
-      "rationale": "The German mind treats thinking as a deep excavation. Idealism (Kant, Hegel) built philosophy on method and duty; later voices — Schopenhauer, Nietzsche, Rilke — turned sharply inward toward will, honesty, and suffering's use. Engineers inherit the same temperament: meticulous, principled, thorough, and only satisfied by the system that holds together under its own weight.",
+      "text": "The German mind treats thinking as a deep excavation. Idealism (Kant, Hegel) built philosophy on method and duty; later voices — Schopenhauer, Nietzsche, Rilke — turned sharply inward toward will, honesty, and suffering's use. Engineers inherit the same temperament: meticulous, principled, thorough, and only satisfied by the system that holds together under its own weight.  Applies at: planning, preparation, debugging, task-complete.",
+      "rationale": "The German mind treats thinking as a deep excavation. Idealism (Kant, Hegel) built philosophy on method and duty; later voices — Schopenhauer, Nietzsche, Rilke — turned sharply inward toward will, honesty, and suffering's use. Engineers inherit the same temperament: meticulous, principled, thorough, and only satisfied by the system that holds together under its own weight.  Applies at: planning, preparation, debugging, task-complete.",
+      "moments": [
+        "planning",
+        "preparation",
+        "debugging",
+        "task-complete"
+      ],
       "source_file": "quotes/traditions/german.md"
     },
     {
@@ -652,8 +841,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "greco roman thought",
-      "text": "From the golden age of Athens to the closing Rome, the classical mind gave the West its founding categories: reason, virtue, rhetoric, and the examined life. Socrates questioned, Plato systematized, Aristotle measured, and the Stoics turned philosophy into a practice for ordinary days.",
-      "rationale": "From the golden age of Athens to the closing Rome, the classical mind gave the West its founding categories: reason, virtue, rhetoric, and the examined life. Socrates questioned, Plato systematized, Aristotle measured, and the Stoics turned philosophy into a practice for ordinary days.",
+      "text": "From the golden age of Athens to the closing Rome, the classical mind gave the West its founding categories: reason, virtue, rhetoric, and the examined life. Socrates questioned, Plato systematized, Aristotle measured, and the Stoics turned philosophy into a practice for ordinary days.  Applies at: action, debugging, gratitude, focus.",
+      "rationale": "From the golden age of Athens to the closing Rome, the classical mind gave the West its founding categories: reason, virtue, rhetoric, and the examined life. Socrates questioned, Plato systematized, Aristotle measured, and the Stoics turned philosophy into a practice for ordinary days.  Applies at: action, debugging, gratitude, focus.",
+      "moments": [
+        "action",
+        "debugging",
+        "gratitude",
+        "focus"
+      ],
       "source_file": "quotes/traditions/greco-roman.md"
     },
     {
@@ -664,8 +859,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "japanese wisdom",
-      "text": "Japanese thought mixes native Shinto reverence for nature with imported Confucian discipline, Daoist flow, and Zen Buddhism. The result is a practical ethic of small habits, deep preparation, and quiet persistence — the *kaizen* improvement mindset, the *ichigo ichie* (\"one time, one meeting\") attention to the present, and the bushido code of the warrior (see bushido).",
-      "rationale": "Japanese thought mixes native Shinto reverence for nature with imported Confucian discipline, Daoist flow, and Zen Buddhism. The result is a practical ethic of small habits, deep preparation, and quiet persistence — the *kaizen* improvement mindset, the *ichigo ichie* (\"one time, one meeting\") attention to the present, and the bushido code of the warrior (see bushido).",
+      "text": "Japanese thought mixes native Shinto reverence for nature with imported Confucian discipline, Daoist flow, and Zen Buddhism. The result is a practical ethic of small habits, deep preparation, and quiet persistence — the *kaizen* improvement mindset, the *ichigo ichie* (\"one time, one meeting\") attention to the present, and the bushido code of the warrior (see bushido).  Applies at: focus, deep-work, resilience, preparation.",
+      "rationale": "Japanese thought mixes native Shinto reverence for nature with imported Confucian discipline, Daoist flow, and Zen Buddhism. The result is a practical ethic of small habits, deep preparation, and quiet persistence — the *kaizen* improvement mindset, the *ichigo ichie* (\"one time, one meeting\") attention to the present, and the bushido code of the warrior (see bushido).  Applies at: focus, deep-work, resilience, preparation.",
+      "moments": [
+        "focus",
+        "deep-work",
+        "resilience",
+        "preparation"
+      ],
       "source_file": "quotes/traditions/japanese.md"
     },
     {
@@ -676,8 +877,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "nordic thought",
-      "text": "The Norse view is stark and honest: the world is a long winter, and what survives it is what you do — the deed, the name, the faithful oath. The *Hávamál* (\"Sayings of the High One\") is the north's own wisdom book: pithy, practical, unsentimental.",
-      "rationale": "The Norse view is stark and honest: the world is a long winter, and what survives it is what you do — the deed, the name, the faithful oath. The *Hávamál* (\"Sayings of the High One\") is the north's own wisdom book: pithy, practical, unsentimental.",
+      "text": "The Norse view is stark and honest: the world is a long winter, and what survives it is what you do — the deed, the name, the faithful oath. The *Hávamál* (\"Sayings of the High One\") is the north's own wisdom book: pithy, practical, unsentimental.  Applies at: resilience, task-complete.",
+      "rationale": "The Norse view is stark and honest: the world is a long winter, and what survives it is what you do — the deed, the name, the faithful oath. The *Hávamál* (\"Sayings of the High One\") is the north's own wisdom book: pithy, practical, unsentimental.  Applies at: resilience, task-complete.",
+      "moments": [
+        "resilience",
+        "task-complete"
+      ],
       "source_file": "quotes/traditions/nordic.md"
     },
     {
@@ -688,8 +893,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "old english wisdom",
-      "text": "The Anglo-Saxon mind is a northern mind — short of sugar, long on endurance. Its wisdom lives in gnomic maxims, proverbs, and the great epics (*Beowulf*, the Exeter Book riddles) that treat fate, loyalty, and the \"good name\" as the only things that survive a man. Old English is the root dialect of the English that engineering now speaks.",
-      "rationale": "The Anglo-Saxon mind is a northern mind — short of sugar, long on endurance. Its wisdom lives in gnomic maxims, proverbs, and the great epics (*Beowulf*, the Exeter Book riddles) that treat fate, loyalty, and the \"good name\" as the only things that survive a man. Old English is the root dialect of the English that engineering now speaks.",
+      "text": "The Anglo-Saxon mind is a northern mind — short of sugar, long on endurance. Its wisdom lives in gnomic maxims, proverbs, and the great epics (*Beowulf*, the Exeter Book riddles) that treat fate, loyalty, and the \"good name\" as the only things that survive a man. Old English is the root dialect of the English that engineering now speaks.  Applies at: task-complete, integrity, resilience.",
+      "rationale": "The Anglo-Saxon mind is a northern mind — short of sugar, long on endurance. Its wisdom lives in gnomic maxims, proverbs, and the great epics (*Beowulf*, the Exeter Book riddles) that treat fate, loyalty, and the \"good name\" as the only things that survive a man. Old English is the root dialect of the English that engineering now speaks.  Applies at: task-complete, integrity, resilience.",
+      "moments": [
+        "task-complete",
+        "integrity",
+        "resilience"
+      ],
       "source_file": "quotes/traditions/old-english.md"
     },
     {
@@ -700,8 +910,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "romanian wisdom",
-      "text": "Romanian wisdom sits at the crossroads of the Balkans, the Carpathians, Latin Europe, and the Orthodox East. Its folk soul is the *folclor* of doinas, proverbs, and fables; its philosophical voice — Cioran, Ionesco, and the sculptor-architect Brancuși — is playful, paradoxical, and built for hard earth. The proverb \"vorba dulce\" (the sweet word) runs through it: wit is defense, endurance is pride.",
-      "rationale": "Romanian wisdom sits at the crossroads of the Balkans, the Carpathians, Latin Europe, and the Orthodox East. Its folk soul is the *folclor* of doinas, proverbs, and fables; its philosophical voice — Cioran, Ionesco, and the sculptor-architect Brancuși — is playful, paradoxical, and built for hard earth. The proverb \"vorba dulce\" (the sweet word) runs through it: wit is defense, endurance is pride.",
+      "text": "Romanian wisdom sits at the crossroads of the Balkans, the Carpathians, Latin Europe, and the Orthodox East. Its folk soul is the *folclor* of doinas, proverbs, and fables; its philosophical voice — Cioran, Ionesco, and the sculptor-architect Brancuși — is playful, paradoxical, and built for hard earth. The proverb \"vorba dulce\" (the sweet word) runs through it: wit is defense, endurance is pride.  Applies at: prudence, collaboration, task-complete.",
+      "rationale": "Romanian wisdom sits at the crossroads of the Balkans, the Carpathians, Latin Europe, and the Orthodox East. Its folk soul is the *folclor* of doinas, proverbs, and fables; its philosophical voice — Cioran, Ionesco, and the sculptor-architect Brancuși — is playful, paradoxical, and built for hard earth. The proverb \"vorba dulce\" (the sweet word) runs through it: wit is defense, endurance is pride.  Applies at: prudence, collaboration, task-complete.",
+      "moments": [
+        "prudence",
+        "collaboration",
+        "task-complete"
+      ],
       "source_file": "quotes/traditions/romanian.md"
     },
     {
@@ -712,8 +927,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "taoism",
-      "text": "Taoism is the art of flowing with the river instead of against it. The *Tao Te Ching* (Lao Tzu) and the *Zhuangzi* preach wu-wei — action without strain — and the wisdom of yielding, emptiness, and the uncarved block. Fewer, not more.",
-      "rationale": "Taoism is the art of flowing with the river instead of against it. The *Tao Te Ching* (Lao Tzu) and the *Zhuangzi* preach wu-wei — action without strain — and the wisdom of yielding, emptiness, and the uncarved block. Fewer, not more.",
+      "text": "Taoism is the art of flowing with the river instead of against it. The *Tao Te Ching* (Lao Tzu) and the *Zhuangzi* preach wu-wei — action without strain — and the wisdom of yielding, emptiness, and the uncarved block. Fewer, not more.  Applies at: rest, simplicity, general-wisdom.",
+      "rationale": "Taoism is the art of flowing with the river instead of against it. The *Tao Te Ching* (Lao Tzu) and the *Zhuangzi* preach wu-wei — action without strain — and the wisdom of yielding, emptiness, and the uncarved block. Fewer, not more.  Applies at: rest, simplicity, general-wisdom.",
+      "moments": [
+        "rest",
+        "simplicity",
+        "general-wisdom"
+      ],
       "source_file": "quotes/traditions/taoism.md"
     },
     {
@@ -724,8 +944,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "world philosophers",
-      "text": "Philosophers are the engineers of meaning — they build, test, and refactor the ideas a civilization runs on. Across millennia and continents they converge on the same load-bearing principles: know yourself, question your tools, prefer the careful path, and let the work outlast you.",
-      "rationale": "Philosophers are the engineers of meaning — they build, test, and refactor the ideas a civilization runs on. Across millennia and continents they converge on the same load-bearing principles: know yourself, question your tools, prefer the careful path, and let the work outlast you.",
+      "text": "Philosophers are the engineers of meaning — they build, test, and refactor the ideas a civilization runs on. Across millennia and continents they converge on the same load-bearing principles: know yourself, question your tools, prefer the careful path, and let the work outlast you.  Applies at: general-wisdom, task-start, task-complete.",
+      "rationale": "Philosophers are the engineers of meaning — they build, test, and refactor the ideas a civilization runs on. Across millennia and continents they converge on the same load-bearing principles: know yourself, question your tools, prefer the careful path, and let the work outlast you.  Applies at: general-wisdom, task-start, task-complete.",
+      "moments": [
+        "general-wisdom",
+        "task-start",
+        "task-complete"
+      ],
       "source_file": "quotes/traditions/world-philosophers.md"
     },
     {
@@ -736,8 +961,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "zen",
-      "text": "Zen (Chan) is Buddhism distilled: no doctrine, just the unmuddied mind present with what is. Its practice — sitting, breath, the koan — is attention as discipline, and its paradox is that the answer and the question are the same moment.",
-      "rationale": "Zen (Chan) is Buddhism distilled: no doctrine, just the unmuddied mind present with what is. Its practice — sitting, breath, the koan — is attention as discipline, and its paradox is that the answer and the question are the same moment.",
+      "text": "Zen (Chan) is Buddhism distilled: no doctrine, just the unmuddied mind present with what is. Its practice — sitting, breath, the koan — is attention as discipline, and its paradox is that the answer and the question are the same moment.  Applies at: focus, deep-work, debugging, rest.",
+      "rationale": "Zen (Chan) is Buddhism distilled: no doctrine, just the unmuddied mind present with what is. Its practice — sitting, breath, the koan — is attention as discipline, and its paradox is that the answer and the question are the same moment.  Applies at: focus, deep-work, debugging, rest.",
+      "moments": [
+        "focus",
+        "deep-work",
+        "debugging",
+        "rest"
+      ],
       "source_file": "quotes/traditions/zen.md"
     },
     {
@@ -748,8 +979,13 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "ubuntu & communal philosophy",
-      "text": "The project is a village; its members are persons-through-others. Shared context, code review, and lifting others are not courtesy — they are how the whole system stays trustworthy.",
-      "rationale": "The project is a village; its members are persons-through-others. Shared context, code review, and lifting others are not courtesy — they are how the whole system stays trustworthy.",
+      "text": "The project is a village; its members are persons-through-others. Shared context, code review, and lifting others are not courtesy — they are how the whole system stays trustworthy.  Applies at: teamwork, gratitude, general-wisdom.",
+      "rationale": "The project is a village; its members are persons-through-others. Shared context, code review, and lifting others are not courtesy — they are how the whole system stays trustworthy.  Applies at: teamwork, gratitude, general-wisdom.",
+      "moments": [
+        "teamwork",
+        "gratitude",
+        "general-wisdom"
+      ],
       "source_file": "quotes/ubuntu.md"
     },
     {
@@ -760,8 +996,12 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "validation & tests",
-      "text": "Prove the real behavior, not a convenient mock. A green build that doesn't exercise real behavior is a lie — the test is the honest contract.",
-      "rationale": "Prove the real behavior, not a convenient mock. A green build that doesn't exercise real behavior is a lie — the test is the honest contract.",
+      "text": "Prove the real behavior, not a convenient mock. A green build that doesn't exercise real behavior is a lie — the test is the honest contract.  Applies at: tests-passing, validation.",
+      "rationale": "Prove the real behavior, not a convenient mock. A green build that doesn't exercise real behavior is a lie — the test is the honest contract.  Applies at: tests-passing, validation.",
+      "moments": [
+        "tests-passing",
+        "validation"
+      ],
       "source_file": "quotes/validation.md"
     },
     {
@@ -772,8 +1012,14 @@
       "file_type": "document",
       "node_kind": "document",
       "norm_label": "words, speech & silence",
-      "text": "Names, error messages, and documentation are speech — they seed the next engineer's understanding. Be precise, be kind, and let well-timed silence (rest from churn) have its place. A good error message is worth two lines of guesswork.",
-      "rationale": "Names, error messages, and documentation are speech — they seed the next engineer's understanding. Be precise, be kind, and let well-timed silence (rest from churn) have its place. A good error message is worth two lines of guesswork.",
+      "text": "Names, error messages, and documentation are speech — they seed the next engineer's understanding. Be precise, be kind, and let well-timed silence (rest from churn) have its place. A good error message is worth two lines of guesswork.  Applies at: integrity, teamwork, git, preserving-work.",
+      "rationale": "Names, error messages, and documentation are speech — they seed the next engineer's understanding. Be precise, be kind, and let well-timed silence (rest from churn) have its place. A good error message is worth two lines of guesswork.  Applies at: integrity, teamwork, git, preserving-work.",
+      "moments": [
+        "integrity",
+        "teamwork",
+        "git",
+        "preserving-work"
+      ],
       "source_file": "quotes/words.md"
     },
     {
@@ -786,6 +1032,7 @@
       "norm_label": "api contract design",
       "text": "1. Is this shape the minimal flat form that serves the client? simplicity 2. Is every field validated and every failure mode explicit? prudence 3. Is the contract doc truthful and current? truth-and-integrity 4. Is the version clear and the change non-breaking? reliability 5. Was the shape agreed before implementation? preparation",
       "rationale": "1. Is this shape the minimal flat form that serves the client? simplicity 2. Is every field validated and every failure mode explicit? prudence 3. Is the contract doc truthful and current? truth-and-integrity 4. Is the version clear and the change non-breaking? reliability 5. Was the shape agreed before implementation? preparation",
+      "moments": [],
       "source_file": "tech-mappings/api-contract-design.md"
     },
     {
@@ -798,6 +1045,7 @@
       "norm_label": "capacitor mobile performance",
       "text": "1. Is this render/bridge call necessary, or removable? simplicity 2. Have I measured the hotspot before optimizing? kaizen 3. Does the change ship as a landable increment? kaizen 4. Has it passed an emulator smoke test? preparation 5. Does it degrade gracefully on a low-end device? resilience",
       "rationale": "1. Is this render/bridge call necessary, or removable? simplicity 2. Have I measured the hotspot before optimizing? kaizen 3. Does the change ship as a landable increment? kaizen 4. Has it passed an emulator smoke test? preparation 5. Does it degrade gracefully on a low-end device? resilience",
+      "moments": [],
       "source_file": "tech-mappings/capacitor-mobile-perf.md"
     },
     {
@@ -810,6 +1058,7 @@
       "norm_label": "micro saas architecture",
       "text": "1. Does this component answer a first-principles question? first-principles 2. Is there a real user or requirement demanding it now? yagni 3. Is this the simplest structure that works? simplicity 4. What failure mode does it introduce, and is it anticipated? prudence 5. Can it ship incrementally this week? kaizen",
       "rationale": "1. Does this component answer a first-principles question? first-principles 2. Is there a real user or requirement demanding it now? yagni 3. Is this the simplest structure that works? simplicity 4. What failure mode does it introduce, and is it anticipated? prudence 5. Can it ship incrementally this week? kaizen",
+      "moments": [],
       "source_file": "tech-mappings/micro-saas-architecture.md"
     },
     {
@@ -822,6 +1071,7 @@
       "norm_label": "monorepo policy",
       "text": "1. Can this change land atomically with its deps? collaboration 2. Is it one commit / one logical change? kaizen 3. Is the \"why\" recorded for the next reader? collaboration 4. Is this a premature shared-package, or a real second consumer? yagni 5. Does it pass review and the test gate? reliability",
       "rationale": "1. Can this change land atomically with its deps? collaboration 2. Is it one commit / one logical change? kaizen 3. Is the \"why\" recorded for the next reader? collaboration 4. Is this a premature shared-package, or a real second consumer? yagni 5. Does it pass review and the test gate? reliability",
+      "moments": [],
       "source_file": "tech-mappings/monorepo-policy.md"
     },
     {
@@ -834,6 +1084,7 @@
       "norm_label": "odoo module design",
       "text": "1. Is this on the ORM the idiomatic way — no fighting the framework? first-principles 2. Is the model the minimal field set for the requirement? simplicity 3. Is every field/workflow consumed by a real path? yagni 4. Are invariants enforced in the model, not the view? reliability 5. Does it restart clean and pass a smoke test before handoff? preparation",
       "rationale": "1. Is this on the ORM the idiomatic way — no fighting the framework? first-principles 2. Is the model the minimal field set for the requirement? simplicity 3. Is every field/workflow consumed by a real path? yagni 4. Are invariants enforced in the model, not the view? reliability 5. Does it restart clean and pass a smoke test before handoff? preparation",
+      "moments": [],
       "source_file": "tech-mappings/odoo-module-design.md"
     },
     {
@@ -846,6 +1097,7 @@
       "norm_label": "refactoring policy",
       "text": "1. Is this one behavior-preserving slice, mergeable now? kaizen 2. Does the existing suite prove the behavior before and after? reliability 3. Is dead code removed before simplifying? simplicity 4. Have I understood why the complexity arose? humility-and-learning 5. Does it stay green and landable? kaizen",
       "rationale": "1. Is this one behavior-preserving slice, mergeable now? kaizen 2. Does the existing suite prove the behavior before and after? reliability 3. Is dead code removed before simplifying? simplicity 4. Have I understood why the complexity arose? humility-and-learning 5. Does it stay green and landable? kaizen",
+      "moments": [],
       "source_file": "tech-mappings/refactoring-policy.md"
     },
     {
@@ -858,6 +1110,7 @@
       "norm_label": "security hardening",
       "text": "1. Is every input validated at its trust boundary? prudence 2. Are all secrets externalized and access least-privileged? integrity 3. Does it fail closed, not open, on ambiguity? prudence 4. Is the failure mode anticipated before impact? preparation 5. Is behavior observable (logged/altered) so abuse surfaces? reliability",
       "rationale": "1. Is every input validated at its trust boundary? prudence 2. Are all secrets externalized and access least-privileged? integrity 3. Does it fail closed, not open, on ambiguity? prudence 4. Is the failure mode anticipated before impact? preparation 5. Is behavior observable (logged/altered) so abuse surfaces? reliability",
+      "moments": [],
       "source_file": "tech-mappings/security-hardening.md"
     },
     {
@@ -870,55 +1123,8 @@
       "norm_label": "testing strategy",
       "text": "1. Does this test prove real, observable behavior? truth-and-integrity 2. Was it written to reproduce a real failure? preparation 3. Is it fast, deterministic, and run on every change? kaizen 4. Does it fail loudly and recoverably? resilience 5. Does passing it actually mean the requirement is met? truth-and-integrity",
       "rationale": "1. Does this test prove real, observable behavior? truth-and-integrity 2. Was it written to reproduce a real failure? preparation 3. Is it fast, deterministic, and run on every change? kaizen 4. Does it fail loudly and recoverably? resilience 5. Does passing it actually mean the requirement is met? truth-and-integrity",
+      "moments": [],
       "source_file": "tech-mappings/testing-strategy.md"
-    },
-    {
-      "id": "obj_author",
-      "label": "Author",
-      "community": 2,
-      "community_name": "concepts",
-      "file_type": "concept",
-      "node_kind": "concept",
-      "norm_label": "author",
-      "text": "",
-      "rationale": "",
-      "source_file": null
-    },
-    {
-      "id": "obj_simplicity",
-      "label": "Simplicity",
-      "community": 2,
-      "community_name": "concepts",
-      "file_type": "concept",
-      "node_kind": "concept",
-      "norm_label": "simplicity",
-      "text": "",
-      "rationale": "",
-      "source_file": null
-    },
-    {
-      "id": "obj_micro_saas_architecture",
-      "label": "Micro-Saas Architecture",
-      "community": 2,
-      "community_name": "concepts",
-      "file_type": "concept",
-      "node_kind": "concept",
-      "norm_label": "micro saas architecture",
-      "text": "",
-      "rationale": "",
-      "source_file": null
-    },
-    {
-      "id": "obj_yagni",
-      "label": "Yagni",
-      "community": 2,
-      "community_name": "concepts",
-      "file_type": "concept",
-      "node_kind": "concept",
-      "norm_label": "yagni",
-      "text": "",
-      "rationale": "",
-      "source_file": null
     },
     {
       "id": "obj_ken_blanchard",
@@ -1317,13 +1523,13 @@
       "source_file": null
     },
     {
-      "id": "obj_ralph_waldo_emerson",
-      "label": "Ralph Waldo Emerson",
+      "id": "obj_henry_stanley_haskins",
+      "label": "Henry Stanley Haskins",
       "community": 2,
       "community_name": "concepts",
       "file_type": "concept",
       "node_kind": "concept",
-      "norm_label": "ralph waldo emerson",
+      "norm_label": "henry stanley haskins",
       "text": "",
       "rationale": "",
       "source_file": null
@@ -1377,6 +1583,18 @@
       "source_file": null
     },
     {
+      "id": "obj_oliver_goldsmith",
+      "label": "Oliver Goldsmith",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "oliver goldsmith",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
       "id": "obj_napoleon_hill",
       "label": "Napoleon Hill",
       "community": 2,
@@ -1384,18 +1602,6 @@
       "file_type": "concept",
       "node_kind": "concept",
       "norm_label": "napoleon hill",
-      "text": "",
-      "rationale": "",
-      "source_file": null
-    },
-    {
-      "id": "obj_leonardo_da_vinci",
-      "label": "Leonardo Da Vinci",
-      "community": 2,
-      "community_name": "concepts",
-      "file_type": "concept",
-      "node_kind": "concept",
-      "norm_label": "leonardo da vinci",
       "text": "",
       "rationale": "",
       "source_file": null
@@ -1905,6 +2111,18 @@
       "source_file": null
     },
     {
+      "id": "obj_paul_val_ry",
+      "label": "Paul Valéry",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "paul valéry",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
       "id": "obj_john_ruskin",
       "label": "John Ruskin",
       "community": 2,
@@ -1924,6 +2142,42 @@
       "file_type": "concept",
       "node_kind": "concept",
       "norm_label": "rumi",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
+      "id": "obj_ralph_waldo_emerson",
+      "label": "Ralph Waldo Emerson",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "ralph waldo emerson",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
+      "id": "obj_john_anster",
+      "label": "John Anster",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "john anster",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
+      "id": "obj_goethe",
+      "label": "Goethe",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "goethe",
       "text": "",
       "rationale": "",
       "source_file": null
@@ -2037,6 +2291,18 @@
       "source_file": null
     },
     {
+      "id": "obj_h_jackson_brown_jr",
+      "label": "H. Jackson Brown Jr.",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "h. jackson brown jr.",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
       "id": "obj_j_r_r_tolkien",
       "label": "J.R.R. Tolkien",
       "community": 2,
@@ -2085,6 +2351,18 @@
       "source_file": null
     },
     {
+      "id": "obj_jack_kornfield",
+      "label": "Jack Kornfield",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "jack kornfield",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
       "id": "obj_paulo_freire",
       "label": "Paulo Freire",
       "community": 2,
@@ -2121,13 +2399,25 @@
       "source_file": null
     },
     {
-      "id": "obj_eliphas_levi",
-      "label": "Eliphas Levi",
+      "id": "obj_eliud_kipchoge",
+      "label": "Eliud Kipchoge",
       "community": 2,
       "community_name": "concepts",
       "file_type": "concept",
       "node_kind": "concept",
-      "norm_label": "eliphas levi",
+      "norm_label": "eliud kipchoge",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
+      "id": "obj_frank_outlaw",
+      "label": "Frank Outlaw",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "frank outlaw",
       "text": "",
       "rationale": "",
       "source_file": null
@@ -2253,18 +2543,6 @@
       "source_file": null
     },
     {
-      "id": "obj_dalai_lama",
-      "label": "Dalai Lama",
-      "community": 2,
-      "community_name": "concepts",
-      "file_type": "concept",
-      "node_kind": "concept",
-      "norm_label": "dalai lama",
-      "text": "",
-      "rationale": "",
-      "source_file": null
-    },
-    {
       "id": "obj_thomas_carlyle",
       "label": "Thomas Carlyle",
       "community": 2,
@@ -2272,6 +2550,18 @@
       "file_type": "concept",
       "node_kind": "concept",
       "norm_label": "thomas carlyle",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
+      "id": "obj_john_vance_cheney",
+      "label": "John Vance Cheney",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "john vance cheney",
       "text": "",
       "rationale": "",
       "source_file": null
@@ -2332,6 +2622,18 @@
       "file_type": "concept",
       "node_kind": "concept",
       "norm_label": "dr. seuss",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
+      "id": "obj_leonardo_da_vinci",
+      "label": "Leonardo Da Vinci",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "leonardo da vinci",
       "text": "",
       "rationale": "",
       "source_file": null
@@ -2529,6 +2831,18 @@
       "source_file": null
     },
     {
+      "id": "obj_leon_c_megginson",
+      "label": "Leon C. Megginson",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "leon c. megginson",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
       "id": "obj_charles_darwin",
       "label": "Charles Darwin",
       "community": 2,
@@ -2721,6 +3035,18 @@
       "source_file": null
     },
     {
+      "id": "obj_abraham_maslow",
+      "label": "Abraham Maslow",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "abraham maslow",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
       "id": "obj_julius_caesar",
       "label": "Julius Caesar",
       "community": 2,
@@ -2872,6 +3198,30 @@
       "file_type": "concept",
       "node_kind": "concept",
       "norm_label": "ijeoma umebinyuo",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
+      "id": "obj_willa_a_foster",
+      "label": "Willa A. Foster",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "willa a. foster",
+      "text": "",
+      "rationale": "",
+      "source_file": null
+    },
+    {
+      "id": "obj_dalai_lama",
+      "label": "Dalai Lama",
+      "community": 2,
+      "community_name": "concepts",
+      "file_type": "concept",
+      "node_kind": "concept",
+      "norm_label": "dalai lama",
       "text": "",
       "rationale": "",
       "source_file": null
@@ -3686,7 +4036,7 @@
     },
     {
       "id": "quote_when_you_have_eliminated_the_impossible_whatever",
-      "label": "When you have eliminated the impossible, whatever remains, however improbable, must be th…",
+      "label": "When you have eliminated the impossible, whatever remains, however improbable, must be the truth.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -3714,7 +4064,7 @@
     },
     {
       "id": "quote_the_first_principle_is_that_you_must_not_fool_yo",
-      "label": "The first principle is that you must not fool yourself — and you are the easiest person t…",
+      "label": "The first principle is that you must not fool yourself — and you are the easiest person to fool.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -3756,7 +4106,7 @@
     },
     {
       "id": "quote_concentrate_all_your_thoughts_upon_the_work_in_h",
-      "label": "Concentrate all your thoughts upon the work in hand. The sun's rays do not burn until bro…",
+      "label": "Concentrate all your thoughts upon the work in hand. The sun's rays do not burn until brought to a focus.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -3882,7 +4232,7 @@
     },
     {
       "id": "quote_to_make_no_mistakes_is_not_in_the_power_of_man_b",
-      "label": "To make no mistakes is not in the power of man; but from their errors the wise and good l…",
+      "label": "To make no mistakes is not in the power of man; but from their errors the wise and good learn wisdom for the future.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -4064,7 +4414,7 @@
     },
     {
       "id": "quote_one_moment_of_patience_may_ward_off_great_disast",
-      "label": "One moment of patience may ward off great disaster. One moment of impatience may ruin a w…",
+      "label": "One moment of patience may ward off great disaster. One moment of impatience may ruin a whole life.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -4112,10 +4462,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "luck is what happens when preparation meets opportunity.",
-      "text": "\"Luck is what happens when preparation meets opportunity.\" — Seneca",
-      "rationale": "\"Luck is what happens when preparation meets opportunity.\" — Seneca",
+      "text": "\"Luck is what happens when preparation meets opportunity.\" — modern aphorism; no locus in Seneca",
+      "rationale": "\"Luck is what happens when preparation meets opportunity.\" — modern aphorism; no locus in Seneca",
       "quote": "Luck is what happens when preparation meets opportunity.",
-      "author": "Seneca",
+      "author": "modern aphorism; no locus in Seneca",
       "source_file": "principles/preparation.md"
     },
     {
@@ -4301,20 +4651,6 @@
       "source_file": "principles/reliability.md"
     },
     {
-      "id": "quote_quality_is_not_an_act_it_is_a_habit",
-      "label": "Quality is not an act, it is a habit.",
-      "community": 4,
-      "community_name": "quotes",
-      "file_type": "quote",
-      "node_kind": "quote",
-      "norm_label": "quality is not an act, it is a habit.",
-      "text": "\"Quality is not an act, it is a habit.\" — Aristotle",
-      "rationale": "\"Quality is not an act, it is a habit.\" — Aristotle",
-      "quote": "Quality is not an act, it is a habit.",
-      "author": "Aristotle",
-      "source_file": "principles/reliability.md"
-    },
-    {
       "id": "quote_we_are_what_we_repeatedly_do_excellence_then_is",
       "label": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
       "community": 4,
@@ -4358,16 +4694,16 @@
     },
     {
       "id": "quote_what_lies_behind_us_and_what_lies_before_us_are",
-      "label": "What lies behind us and what lies before us are tiny matters compared to what lies within…",
+      "label": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "what lies behind us and what lies before us are tiny matters compared to what lies within us.",
-      "text": "\"What lies behind us and what lies before us are tiny matters compared to what lies within us.\" — attributed to Ralph Waldo Emerson",
-      "rationale": "\"What lies behind us and what lies before us are tiny matters compared to what lies within us.\" — attributed to Ralph Waldo Emerson",
+      "text": "\"What lies behind us and what lies before us are tiny matters compared to what lies within us.\" — Henry Stanley Haskins, *Meditations in Wall Street* (1940)",
+      "rationale": "\"What lies behind us and what lies before us are tiny matters compared to what lies within us.\" — Henry Stanley Haskins, *Meditations in Wall Street* (1940)",
       "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
-      "author": "attributed to Ralph Waldo Emerson",
+      "author": "Henry Stanley Haskins, *Meditations in Wall Street* (1940)",
       "source_file": "principles/resilience.md"
     },
     {
@@ -4434,10 +4770,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "our greatest glory is not in never falling, but in rising every time we fall.",
-      "text": "\"Our greatest glory is not in never falling, but in rising every time we fall.\" — Confucius",
-      "rationale": "\"Our greatest glory is not in never falling, but in rising every time we fall.\" — Confucius",
+      "text": "\"Our greatest glory is not in never falling, but in rising every time we fall.\" — Oliver Goldsmith, *The Citizen of the World",
+      "rationale": "\"Our greatest glory is not in never falling, but in rising every time we fall.\" — Oliver Goldsmith, *The Citizen of the World",
       "quote": "Our greatest glory is not in never falling, but in rising every time we fall.",
-      "author": "Confucius",
+      "author": "Oliver Goldsmith, *The Citizen of the World",
       "source_file": "principles/resilience.md"
     },
     {
@@ -4462,10 +4798,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "simplicity is the ultimate sophistication.",
-      "text": "\"Simplicity is the ultimate sophistication.\" — attributed to Leonardo da Vinci",
-      "rationale": "\"Simplicity is the ultimate sophistication.\" — attributed to Leonardo da Vinci",
+      "text": "\"Simplicity is the ultimate sophistication.\" — Apple II brochure (1977), after Clare Boothe Luce; no da Vinci source",
+      "rationale": "\"Simplicity is the ultimate sophistication.\" — Apple II brochure (1977), after Clare Boothe Luce; no da Vinci source",
       "quote": "Simplicity is the ultimate sophistication.",
-      "author": "attributed to Leonardo da Vinci",
+      "author": "Apple II brochure (1977), after Clare Boothe Luce; no da Vinci source",
       "source_file": "principles/simplicity.md"
     },
     {
@@ -4540,7 +4876,7 @@
     },
     {
       "id": "quote_truth_is_ever_to_be_found_in_simplicity_and_not",
-      "label": "Truth is ever to be found in simplicity, and not in the multiplicity and confusion of thi…",
+      "label": "Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -4568,7 +4904,7 @@
     },
     {
       "id": "quote_real_integrity_is_doing_the_right_thing_knowing",
-      "label": "Real integrity is doing the right thing, knowing that nobody's going to know whether you…",
+      "label": "Real integrity is doing the right thing, knowing that nobody's going to know whether you did it or not.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -4638,7 +4974,7 @@
     },
     {
       "id": "quote_perfection_is_achieved_not_when_there_is_nothing",
-      "label": "Perfection is achieved not when there is nothing more to add, but when there is nothing l…",
+      "label": "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -4680,7 +5016,7 @@
     },
     {
       "id": "quote_besides_the_noble_art_of_getting_things_done_the",
-      "label": "Besides the noble art of getting things done, there is the noble art of leaving things un…",
+      "label": "Besides the noble art of getting things done, there is the noble art of leaving things undone.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -4820,7 +5156,7 @@
     },
     {
       "id": "quote_take_the_first_step_in_faith_you_don_t_have_to_s",
-      "label": "Take the first step in faith. You don't have to see the whole staircase, just take the fi…",
+      "label": "Take the first step in faith. You don't have to see the whole staircase, just take the first step.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -5156,16 +5492,16 @@
     },
     {
       "id": "quote_in_separateness_lies_the_world_s_greatest_misery",
-      "label": "In separateness lies the world's greatest misery; in compassion lies the world's true str…",
+      "label": "In separateness lies the world's greatest misery; in compassion lies the world's true strength.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "in separateness lies the world's greatest misery; in compassion lies the world's true strength.",
-      "text": "\"In separateness lies the world's greatest misery; in compassion lies the world's true strength.\" — Buddha",
-      "rationale": "\"In separateness lies the world's greatest misery; in compassion lies the world's true strength.\" — Buddha",
+      "text": "\"In separateness lies the world's greatest misery; in compassion lies the world's true strength.\" — modern coinage; no canonical source, widely misattributed to the Buddha",
+      "rationale": "\"In separateness lies the world's greatest misery; in compassion lies the world's true strength.\" — modern coinage; no canonical source, widely misattributed to the Buddha",
       "quote": "In separateness lies the world's greatest misery; in compassion lies the world's true strength.",
-      "author": "Buddha",
+      "author": "modern coinage; no canonical source, widely misattributed to the Buddha",
       "source_file": "quotes/compassion.md"
     },
     {
@@ -5240,7 +5576,7 @@
     },
     {
       "id": "quote_he_who_is_not_satisfied_with_himself_will_grow_h",
-      "label": "He who is not satisfied with himself will grow; he who does not doubt himself will never…",
+      "label": "He who is not satisfied with himself will grow; he who does not doubt himself will never grow.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -5478,7 +5814,7 @@
     },
     {
       "id": "quote_you_gain_strength_courage_and_confidence_by_ever",
-      "label": "You gain strength, courage, and confidence by every experience in which you really stop t…",
+      "label": "You gain strength, courage, and confidence by every experience in which you really stop to look fear in the face.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -5506,7 +5842,7 @@
     },
     {
       "id": "quote_it_is_not_the_critic_who_counts_the_credit_belon",
-      "label": "It is not the critic who counts… the credit belongs to the man who is actually in the are…",
+      "label": "It is not the critic who counts… the credit belongs to the man who is actually in the arena.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -5562,7 +5898,7 @@
     },
     {
       "id": "quote_a_society_grows_great_when_old_men_plant_trees_w",
-      "label": "A society grows great when old men plant trees whose shade they know they shall never sit…",
+      "label": "A society grows great when old men plant trees whose shade they know they shall never sit in.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -5576,7 +5912,7 @@
     },
     {
       "id": "quote_he_who_works_with_his_hands_is_a_laborer_he_who",
-      "label": "He who works with his hands is a laborer. He who works with his hands and his head is a c…",
+      "label": "He who works with his hands is a laborer. He who works with his hands and his head is a craftsman. He who works with his hands and his head and his heart is an artist.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -5590,7 +5926,7 @@
     },
     {
       "id": "quote_first_have_a_definite_clear_practical_ideal_a_go",
-      "label": "First, have a definite, clear practical ideal — a goal. Second, have the necessary means:…",
+      "label": "First, have a definite, clear practical ideal — a goal. Second, have the necessary means: wisdom, money, materials, and methods. Third, adjust all your means to that end.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -5610,10 +5946,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "art is never finished, only abandoned.",
-      "text": "\"Art is never finished, only abandoned.\" — attributed to Leonardo da Vinci",
-      "rationale": "\"Art is never finished, only abandoned.\" — attributed to Leonardo da Vinci",
+      "text": "\"Art is never finished, only abandoned.\" — Paul Valéry (of poems); widely misattributed to da Vinci",
+      "rationale": "\"Art is never finished, only abandoned.\" — Paul Valéry (of poems); widely misattributed to da Vinci",
       "quote": "Art is never finished, only abandoned.",
-      "author": "attributed to Leonardo da Vinci",
+      "author": "Paul Valéry (of poems); widely misattributed to da Vinci",
       "source_file": "quotes/craft.md"
     },
     {
@@ -5688,16 +6024,16 @@
     },
     {
       "id": "quote_whatever_you_can_do_or_dream_you_can_begin_it_bo",
-      "label": "Whatever you can do or dream you can, begin it. Boldness has genius, power, and magic in…",
+      "label": "Whatever you can do or dream you can, begin it. Boldness has genius, power, and magic in it.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "whatever you can do or dream you can, begin it. boldness has genius, power, and magic in it.",
-      "text": "\"Whatever you can do or dream you can, begin it. Boldness has genius, power, and magic in it.\" — Johann Wolfgang von Goethe",
-      "rationale": "\"Whatever you can do or dream you can, begin it. Boldness has genius, power, and magic in it.\" — Johann Wolfgang von Goethe",
+      "text": "\"Whatever you can do or dream you can, begin it. Boldness has genius, power, and magic in it.\" — John Anster (1835), loosely rendering Goethe's *Faust",
+      "rationale": "\"Whatever you can do or dream you can, begin it. Boldness has genius, power, and magic in it.\" — John Anster (1835), loosely rendering Goethe's *Faust",
       "quote": "Whatever you can do or dream you can, begin it. Boldness has genius, power, and magic in it.",
-      "author": "Johann Wolfgang von Goethe",
+      "author": "John Anster (1835), loosely rendering Goethe's *Faust",
       "source_file": "quotes/creation.md"
     },
     {
@@ -5744,7 +6080,7 @@
     },
     {
       "id": "quote_if_you_know_the_enemy_and_know_yourself_you_need",
-      "label": "If you know the enemy and know yourself, you need not fear the result of a hundred battle…",
+      "label": "If you know the enemy and know yourself, you need not fear the result of a hundred battles.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -5996,7 +6332,7 @@
     },
     {
       "id": "quote_the_real_voyage_of_discovery_consists_not_in_see",
-      "label": "The real voyage of discovery consists not in seeking new landscapes, but in having new ey…",
+      "label": "The real voyage of discovery consists not in seeking new landscapes, but in having new eyes.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6010,16 +6346,16 @@
     },
     {
       "id": "quote_twenty_years_from_now_you_will_be_more_disappoin",
-      "label": "Twenty years from now you will be more disappointed by the things that you didn't do than…",
+      "label": "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from the safe harbor.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. so throw off the bowlines, sail away from the safe harbor.",
-      "text": "\"Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from the safe harbor.\" — attributed to Mark Twain",
-      "rationale": "\"Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from the safe harbor.\" — attributed to Mark Twain",
+      "text": "\"Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from the safe harbor.\" — H. Jackson Brown Jr., *P.S. I Love You",
+      "rationale": "\"Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from the safe harbor.\" — H. Jackson Brown Jr., *P.S. I Love You",
       "quote": "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from the safe harbor.",
-      "author": "attributed to Mark Twain",
+      "author": "H. Jackson Brown Jr., *P.S. I Love You",
       "source_file": "quotes/exploration.md"
     },
     {
@@ -6156,10 +6492,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "the trouble is, you think you have time.",
-      "text": "\"The trouble is, you think you have time.\" — attributed to the Buddha",
-      "rationale": "\"The trouble is, you think you have time.\" — attributed to the Buddha",
+      "text": "\"The trouble is, you think you have time.\" — Jack Kornfield, *Buddha's Little Instruction Book* (1994)",
+      "rationale": "\"The trouble is, you think you have time.\" — Jack Kornfield, *Buddha's Little Instruction Book* (1994)",
       "quote": "The trouble is, you think you have time.",
-      "author": "attributed to the Buddha",
+      "author": "Jack Kornfield, *Buddha's Little Instruction Book* (1994)",
       "source_file": "quotes/focus.md"
     },
     {
@@ -6178,7 +6514,7 @@
     },
     {
       "id": "quote_think_of_yourself_as_dead_you_have_lived_your_li",
-      "label": "Think of yourself as dead. You have lived your life. Now take what's left and live it pro…",
+      "label": "Think of yourself as dead. You have lived your life. Now take what's left and live it properly.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6206,7 +6542,7 @@
     },
     {
       "id": "quote_freedom_is_not_the_absence_of_commitments_but_th",
-      "label": "Freedom is not the absence of commitments, but the ability to choose what I commit myself…",
+      "label": "Freedom is not the absence of commitments, but the ability to choose what I commit myself to.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6248,16 +6584,16 @@
     },
     {
       "id": "quote_only_the_disciplined_ones_in_life_are_free_the_u",
-      "label": "Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravin…",
+      "label": "Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravings, and passions.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "only the disciplined ones in life are free. the undisciplined are slaves to moods, cravings, and passions.",
-      "text": "\"Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravings, and passions.\" — Eliphas Levi (paraphrase popular in Stoic circles)",
-      "rationale": "\"Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravings, and passions.\" — Eliphas Levi (paraphrase popular in Stoic circles)",
+      "text": "\"Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravings, and passions.\" — Eliud Kipchoge",
+      "rationale": "\"Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravings, and passions.\" — Eliud Kipchoge",
       "quote": "Only the disciplined ones in life are free. The undisciplined are slaves to moods, cravings, and passions.",
-      "author": "Eliphas Levi (paraphrase popular in Stoic circles)",
+      "author": "Eliud Kipchoge",
       "source_file": "quotes/freedom.md"
     },
     {
@@ -6276,7 +6612,7 @@
     },
     {
       "id": "quote_you_have_power_over_your_mind_not_outside_events",
-      "label": "You have power over your mind — not outside events. Realize this, and you will find stren…",
+      "label": "You have power over your mind — not outside events. Realize this, and you will find strength.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6332,7 +6668,7 @@
     },
     {
       "id": "quote_very_little_is_needed_to_make_a_happy_life_it_is",
-      "label": "Very little is needed to make a happy life; it is all within yourself, in your way of thi…",
+      "label": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6346,7 +6682,7 @@
     },
     {
       "id": "quote_yesterday_i_was_clever_so_i_wanted_to_change_the",
-      "label": "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changin…",
+      "label": "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6388,16 +6724,16 @@
     },
     {
       "id": "quote_watch_your_thoughts_they_become_your_words_watch",
-      "label": "Watch your thoughts, they become your words; watch your words, they become your actions;…",
+      "label": "Watch your thoughts, they become your words; watch your words, they become your actions; watch your actions, they become your habits; watch your habits, they become your character.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "watch your thoughts, they become your words; watch your words, they become your actions; watch your actions, they become your habits; watch your habits, they become your character.",
-      "text": "\"Watch your thoughts, they become your words; watch your words, they become your actions; watch your actions, they become your habits; watch your habits, they become your character.\" — attributed to Lao Tzu",
-      "rationale": "\"Watch your thoughts, they become your words; watch your words, they become your actions; watch your actions, they become your habits; watch your habits, they become your character.\" — attributed to Lao Tzu",
+      "text": "\"Watch your thoughts, they become your words; watch your words, they become your actions; watch your actions, they become your habits; watch your habits, they become your character.\" — Frank Outlaw (1977); widely misattributed to Lao Tzu",
+      "rationale": "\"Watch your thoughts, they become your words; watch your words, they become your actions; watch your actions, they become your habits; watch your habits, they become your character.\" — Frank Outlaw (1977); widely misattributed to Lao Tzu",
       "quote": "Watch your thoughts, they become your words; watch your words, they become your actions; watch your actions, they become your habits; watch your habits, they become your character.",
-      "author": "attributed to Lao Tzu",
+      "author": "Frank Outlaw (1977); widely misattributed to Lao Tzu",
       "source_file": "quotes/general-wisdom.md"
     },
     {
@@ -6486,7 +6822,7 @@
     },
     {
       "id": "quote_do_not_dwell_in_the_past_do_not_dream_of_the_fut",
-      "label": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present…",
+      "label": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6696,7 +7032,7 @@
     },
     {
       "id": "quote_the_present_moment_is_filled_with_joy_and_happin",
-      "label": "The present moment is filled with joy and happiness. If you are attentive, you will see i…",
+      "label": "The present moment is filled with joy and happiness. If you are attentive, you will see it.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6724,7 +7060,7 @@
     },
     {
       "id": "quote_when_you_arise_in_the_morning_think_of_what_a_pr",
-      "label": "When you arise in the morning, think of what a precious privilege it is to be alive — to…",
+      "label": "When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6738,7 +7074,7 @@
     },
     {
       "id": "quote_enjoy_the_little_things_for_one_day_you_may_look",
-      "label": "Enjoy the little things, for one day you may look back and realize they were the big thin…",
+      "label": "Enjoy the little things, for one day you may look back and realize they were the big things.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6892,7 +7228,7 @@
     },
     {
       "id": "quote_a_man_must_be_big_enough_to_admit_his_mistakes_s",
-      "label": "A man must be big enough to admit his mistakes, smart enough to profit from them, and str…",
+      "label": "A man must be big enough to admit his mistakes, smart enough to profit from them, and strong enough to correct them.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -6940,10 +7276,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "when you realize you've made a mistake, take immediate steps to correct it.",
-      "text": "\"When you realize you've made a mistake, take immediate steps to correct it.\" — Dalai Lama",
-      "rationale": "\"When you realize you've made a mistake, take immediate steps to correct it.\" — Dalai Lama",
+      "text": "\"When you realize you've made a mistake, take immediate steps to correct it.\" — H. Jackson Brown Jr., \"Instructions for Life\"; widely misattributed to the Dalai Lama",
+      "rationale": "\"When you realize you've made a mistake, take immediate steps to correct it.\" — H. Jackson Brown Jr., \"Instructions for Life\"; widely misattributed to the Dalai Lama",
       "quote": "When you realize you've made a mistake, take immediate steps to correct it.",
-      "author": "Dalai Lama",
+      "author": "H. Jackson Brown Jr., \"Instructions for Life\"; widely misattributed to the Dalai Lama",
       "source_file": "quotes/humility.md"
     },
     {
@@ -6990,7 +7326,7 @@
     },
     {
       "id": "quote_when_you_were_born_you_cried_and_the_world_rejoi",
-      "label": "When you were born, you cried and the world rejoiced. Live your life so that when you die…",
+      "label": "When you were born, you cried and the world rejoiced. Live your life so that when you die, the world cries and you rejoice.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7018,7 +7354,7 @@
     },
     {
       "id": "quote_listen_to_the_wind_it_talks_listen_to_the_silenc",
-      "label": "Listen to the wind, it talks. Listen to the silence, it speaks. Listen to your heart, it…",
+      "label": "Listen to the wind, it talks. Listen to the silence, it speaks. Listen to your heart, it knows.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7038,15 +7374,15 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "the soul would have no rainbow if the eyes had no tears.",
-      "text": "\"The soul would have no rainbow if the eyes had no tears.\" — Native American (Cherokee) proverb, folk-attributed",
-      "rationale": "\"The soul would have no rainbow if the eyes had no tears.\" — Native American (Cherokee) proverb, folk-attributed",
+      "text": "\"The soul would have no rainbow if the eyes had no tears.\" — John Vance Cheney, *Poems* (1905); widely folk-attributed to the Cherokee",
+      "rationale": "\"The soul would have no rainbow if the eyes had no tears.\" — John Vance Cheney, *Poems* (1905); widely folk-attributed to the Cherokee",
       "quote": "The soul would have no rainbow if the eyes had no tears.",
-      "author": "Native American (Cherokee) proverb, folk-attributed",
+      "author": "John Vance Cheney, *Poems* (1905); widely folk-attributed to the Cherokee",
       "source_file": "quotes/indigenous-wisdom.md"
     },
     {
       "id": "quote_he_who_has_gone_so_we_but_cherish_his_memory_abi",
-      "label": "He who has gone, so we but cherish his memory, abides with us, more potent, nay, more pre…",
+      "label": "He who has gone, so we but cherish his memory, abides with us, more potent, nay, more present than the living man.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7130,7 +7466,7 @@
     },
     {
       "id": "quote_what_is_written_without_effort_is_in_general_rea",
-      "label": "What is written without effort is in general read without pleasure — but what is preserve…",
+      "label": "What is written without effort is in general read without pleasure — but what is preserved with care is read with gratitude.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7340,7 +7676,7 @@
     },
     {
       "id": "quote_employ_your_time_in_improving_yourself_by_other",
-      "label": "Employ your time in improving yourself by other men's writings, so that you shall gain ea…",
+      "label": "Employ your time in improving yourself by other men's writings, so that you shall gain easily what others have labored hard for.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7382,7 +7718,7 @@
     },
     {
       "id": "quote_he_who_learns_but_does_not_think_is_lost_he_who",
-      "label": "He who learns but does not think is lost; he who thinks but does not learn is in great da…",
+      "label": "He who learns but does not think is lost; he who thinks but does not learn is in great danger.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7640,10 +7976,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "in all things, success depends on previous preparation.",
-      "text": "\"In all things, success depends on previous preparation.\" — Confucius (*Analects*)",
-      "rationale": "\"In all things, success depends on previous preparation.\" — Confucius (*Analects*)",
+      "text": "\"In all things, success depends on previous preparation.\" — Confucius, *Doctrine of the Mean* 20 (tr. Legge)",
+      "rationale": "\"In all things, success depends on previous preparation.\" — Confucius, *Doctrine of the Mean* 20 (tr. Legge)",
       "quote": "In all things, success depends on previous preparation.",
-      "author": "Confucius (*Analects*)",
+      "author": "Confucius, *Doctrine of the Mean* 20 (tr. Legge)",
       "source_file": "quotes/preparation.md"
     },
     {
@@ -7662,7 +7998,7 @@
     },
     {
       "id": "quote_strategy_without_tactics_is_the_slowest_route_to",
-      "label": "Strategy without tactics is the slowest route to victory; tactics without strategy is the…",
+      "label": "Strategy without tactics is the slowest route to victory; tactics without strategy is the noise before defeat.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7690,7 +8026,7 @@
     },
     {
       "id": "quote_the_wise_man_bridges_the_gap_by_laying_out_the_p",
-      "label": "The wise man bridges the gap by laying out the path by means of which he can get from whe…",
+      "label": "The wise man bridges the gap by laying out the path by means of which he can get from where he is to where he wants to go.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7802,7 +8138,7 @@
     },
     {
       "id": "quote_a_life_spent_making_mistakes_is_not_only_more_ho",
-      "label": "A life spent making mistakes is not only more honorable, but more useful than a life spen…",
+      "label": "A life spent making mistakes is not only more honorable, but more useful than a life spent doing nothing.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7858,7 +8194,7 @@
     },
     {
       "id": "quote_how_wonderful_it_is_that_nobody_need_wait_a_sing",
-      "label": "How wonderful it is that nobody need wait a single moment before starting to improve the…",
+      "label": "How wonderful it is that nobody need wait a single moment before starting to improve the world.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7914,7 +8250,7 @@
     },
     {
       "id": "quote_what_you_leave_behind_is_not_what_is_engraved_in",
-      "label": "What you leave behind is not what is engraved in stone monuments, but what is woven into…",
+      "label": "What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -7948,10 +8284,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "the meaning of life is to find your gift. the purpose of life is to give it away.",
-      "text": "\"The meaning of life is to find your gift. The purpose of life is to give it away.\" — attributed to Pablo Picasso",
-      "rationale": "\"The meaning of life is to find your gift. The purpose of life is to give it away.\" — attributed to Pablo Picasso",
+      "text": "\"The meaning of life is to find your gift. The purpose of life is to give it away.\" — David Viscott, *Finding Your Strength in Difficult Times",
+      "rationale": "\"The meaning of life is to find your gift. The purpose of life is to give it away.\" — David Viscott, *Finding Your Strength in Difficult Times",
       "quote": "The meaning of life is to find your gift. The purpose of life is to give it away.",
-      "author": "attributed to Pablo Picasso",
+      "author": "David Viscott, *Finding Your Strength in Difficult Times",
       "source_file": "quotes/purpose.md"
     },
     {
@@ -8012,7 +8348,7 @@
     },
     {
       "id": "quote_no_man_ever_steps_in_the_same_river_twice_for_it",
-      "label": "No man ever steps in the same river twice, for it's not the same river and he's not the s…",
+      "label": "No man ever steps in the same river twice, for it's not the same river and he's not the same man.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -8068,16 +8404,16 @@
     },
     {
       "id": "quote_it_is_not_the_strongest_of_the_species_that_surv",
-      "label": "It is not the strongest of the species that survives, but the one most responsive to chan…",
+      "label": "It is not the strongest of the species that survives, but the one most responsive to change.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "it is not the strongest of the species that survives, but the one most responsive to change.",
-      "text": "\"It is not the strongest of the species that survives, but the one most responsive to change.\" — attributed to Charles Darwin",
-      "rationale": "\"It is not the strongest of the species that survives, but the one most responsive to change.\" — attributed to Charles Darwin",
+      "text": "\"It is not the strongest of the species that survives, but the one most responsive to change.\" — Leon C. Megginson (1963), paraphrasing Charles Darwin",
+      "rationale": "\"It is not the strongest of the species that survives, but the one most responsive to change.\" — Leon C. Megginson (1963), paraphrasing Charles Darwin",
       "quote": "It is not the strongest of the species that survives, but the one most responsive to change.",
-      "author": "attributed to Charles Darwin",
+      "author": "Leon C. Megginson (1963), paraphrasing Charles Darwin",
       "source_file": "quotes/refactoring.md"
     },
     {
@@ -8166,7 +8502,7 @@
     },
     {
       "id": "quote_life_s_challenges_are_not_supposed_to_paralyze_y",
-      "label": "Life's challenges are not supposed to paralyze you; they're supposed to help you discover…",
+      "label": "Life's challenges are not supposed to paralyze you; they're supposed to help you discover who you are.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -8362,7 +8698,7 @@
     },
     {
       "id": "quote_it_is_not_because_things_are_difficult_that_we_d",
-      "label": "It is not because things are difficult that we do not dare; it is because we do not dare…",
+      "label": "It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -8418,7 +8754,7 @@
     },
     {
       "id": "quote_do_not_judge_me_by_my_successes_judge_me_by_how",
-      "label": "Do not judge me by my successes, judge me by how many times I fell down and got back up a…",
+      "label": "Do not judge me by my successes, judge me by how many times I fell down and got back up again.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -8446,7 +8782,7 @@
     },
     {
       "id": "quote_rest_is_not_idleness_to_sit_sometimes_and_watch",
-      "label": "Rest is not idleness… to sit sometimes and watch the clouds float across the sky is by no…",
+      "label": "Rest is not idleness… to sit sometimes and watch the clouds float across the sky is by no means a waste of time.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -8572,7 +8908,7 @@
     },
     {
       "id": "quote_a_wise_man_in_a_storm_prays_to_god_not_for_safet",
-      "label": "A wise man in a storm prays to God, not for safety from danger, but for deliverance from…",
+      "label": "A wise man in a storm prays to God, not for safety from danger, but for deliverance from fear.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -8614,7 +8950,7 @@
     },
     {
       "id": "quote_the_ability_to_simplify_means_to_eliminate_the_u",
-      "label": "The ability to simplify means to eliminate the unnecessary so that the necessary may spea…",
+      "label": "The ability to simplify means to eliminate the unnecessary so that the necessary may speak.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -8712,7 +9048,7 @@
     },
     {
       "id": "quote_coming_together_is_a_beginning_staying_together",
-      "label": "Coming together is a beginning, staying together is progress, and working together is suc…",
+      "label": "Coming together is a beginning, staying together is progress, and working together is success.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -8760,10 +9096,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "when you have a hammer, all problems look like nails.",
-      "text": "\"When you have a hammer, all problems look like nails.\" — Chinese folk proverb (later attributed variety)",
-      "rationale": "\"When you have a hammer, all problems look like nails.\" — Chinese folk proverb (later attributed variety)",
+      "text": "\"When you have a hammer, all problems look like nails.\" — the law of the instrument, Abraham Maslow (1966), after Kaplan (1964)",
+      "rationale": "\"When you have a hammer, all problems look like nails.\" — the law of the instrument, Abraham Maslow (1966), after Kaplan (1964)",
       "quote": "When you have a hammer, all problems look like nails.",
-      "author": "Chinese folk proverb (later attributed variety)",
+      "author": "the law of the instrument, Abraham Maslow (1966), after Kaplan (1964)",
       "source_file": "quotes/traditions/chinese-philosophy.md"
     },
     {
@@ -9040,10 +9376,10 @@
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "in separateness lies the world's greatest misery; in compassion the world's true strength.",
-      "text": "\"In separateness lies the world's greatest misery; in compassion the world's true strength.\" — Buddha → see compassion",
-      "rationale": "\"In separateness lies the world's greatest misery; in compassion the world's true strength.\" — Buddha → see compassion",
+      "text": "\"In separateness lies the world's greatest misery; in compassion the world's true strength.\" — modern coinage; no canonical source, widely misattributed to the Buddha → see compassion",
+      "rationale": "\"In separateness lies the world's greatest misery; in compassion the world's true strength.\" — modern coinage; no canonical source, widely misattributed to the Buddha → see compassion",
       "quote": "In separateness lies the world's greatest misery; in compassion the world's true strength.",
-      "author": "Buddha → see compassion",
+      "author": "modern coinage; no canonical source, widely misattributed to the Buddha → see compassion",
       "source_file": "quotes/traditions/world-philosophers.md"
     },
     {
@@ -9062,7 +9398,7 @@
     },
     {
       "id": "quote_i_slept_and_dreamt_that_life_was_joy_i_woke_and",
-      "label": "I slept and dreamt that life was joy. I woke and saw that life was service. I acted, and…",
+      "label": "I slept and dreamt that life was joy. I woke and saw that life was service. I acted, and behold, service was joy.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -9244,16 +9580,16 @@
     },
     {
       "id": "quote_excellence_is_never_an_accident_it_is_always_the",
-      "label": "Excellence is never an accident. It is always the result of high intention and sincere ef…",
+      "label": "Excellence is never an accident. It is always the result of high intention and sincere effort.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
       "node_kind": "quote",
       "norm_label": "excellence is never an accident. it is always the result of high intention and sincere effort.",
-      "text": "\"Excellence is never an accident. It is always the result of high intention and sincere effort.\" — attributed to Aristotle",
-      "rationale": "\"Excellence is never an accident. It is always the result of high intention and sincere effort.\" — attributed to Aristotle",
+      "text": "\"Excellence is never an accident. It is always the result of high intention and sincere effort.\" — Willa A. Foster",
+      "rationale": "\"Excellence is never an accident. It is always the result of high intention and sincere effort.\" — Willa A. Foster",
       "quote": "Excellence is never an accident. It is always the result of high intention and sincere effort.",
-      "author": "attributed to Aristotle",
+      "author": "Willa A. Foster",
       "source_file": "quotes/validation.md"
     },
     {
@@ -9384,7 +9720,7 @@
     },
     {
       "id": "quote_think_twice_before_you_speak_because_your_words",
-      "label": "Think twice before you speak, because your words and influence will plant the seed of eit…",
+      "label": "Think twice before you speak, because your words and influence will plant the seed of either success or failure in the mind of another.",
       "community": 4,
       "community_name": "quotes",
       "file_type": "quote",
@@ -9538,7 +9874,7 @@
     },
     {
       "id": "directive_principles_first_principles_md_7",
-      "label": "Reduce every bug to its irreducible cause; treat observed symptoms as hypotheses, not con…",
+      "label": "Reduce every bug to its irreducible cause; treat observed symptoms as hypotheses, not conclusions.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -9706,7 +10042,7 @@
     },
     {
       "id": "directive_principles_patience_md_21",
-      "label": "Stay with an intermittent bug; gather data over several reproductions before changing hyp…",
+      "label": "Stay with an intermittent bug; gather data over several reproductions before changing hypotheses.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10066,7 +10402,7 @@
     },
     {
       "id": "directive_principles_yagni_md_51",
-      "label": "Do not abstract a store, an adapter, or a gateway until a real second implementation exis…",
+      "label": "Do not abstract a store, an adapter, or a gateway until a real second implementation exists.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10090,7 +10426,7 @@
     },
     {
       "id": "directive_tech_mappings_api_contract_design_md_53",
-      "label": "Define the contract before code. Agree on endpoints, shapes, and error semantics first —…",
+      "label": "Define the contract before code. Agree on endpoints, shapes, and error semantics first — preparation. Both the server and the client then build to a shared, fixed surface — first-principles.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10102,7 +10438,7 @@
     },
     {
       "id": "directive_tech_mappings_api_contract_design_md_54",
-      "label": "Version explicitly. Never break a shipped contract silently. Add `/v2` rather than mutati…",
+      "label": "Version explicitly. Never break a shipped contract silently. Add `/v2` rather than mutating request/response shape under a live client.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10114,7 +10450,7 @@
     },
     {
       "id": "directive_tech_mappings_api_contract_design_md_55",
-      "label": "Validate at the boundary. Sanitize and validate every input at the trust boundary; return…",
+      "label": "Validate at the boundary. Sanitize and validate every input at the trust boundary; return explicit, structured errors — prudence. Fail closed on ambiguity rather than guessing.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10126,7 +10462,7 @@
     },
     {
       "id": "directive_tech_mappings_api_contract_design_md_56",
-      "label": "Keep the surface small and flat. Fewer endpoints, flat payloads, no nested surprises — si…",
+      "label": "Keep the surface small and flat. Fewer endpoints, flat payloads, no nested surprises — simplicity. The smallest surface is the most reliable.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10138,7 +10474,7 @@
     },
     {
       "id": "directive_tech_mappings_api_contract_design_md_57",
-      "label": "Document the truth. The contract doc must describe what the API actually does — no gloss…",
+      "label": "Document the truth. The contract doc must describe what the API actually does — no gloss — truth-and-integrity. A lying doc is a live bug.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10150,7 +10486,7 @@
     },
     {
       "id": "directive_tech_mappings_capacitor_mobile_perf_md_58",
-      "label": "Performance is subtraction. Profile first, then remove — reduce re-renders, payloads, and…",
+      "label": "Performance is subtraction. Profile first, then remove — reduce re-renders, payloads, and bridge round-trips — simplicity. \"Less is more.\"",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10162,7 +10498,7 @@
     },
     {
       "id": "directive_tech_mappings_capacitor_mobile_perf_md_59",
-      "label": "The WebView bridge is the bottleneck. Batch native-plugin calls and state syncs; a chatty…",
+      "label": "The WebView bridge is the bottleneck. Batch native-plugin calls and state syncs; a chatty bridge is the prime latency source. Minimize and coalesce.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10174,7 +10510,7 @@
     },
     {
       "id": "directive_tech_mappings_capacitor_mobile_perf_md_60",
-      "label": "Measure against evidence. Optimize only what profiling shows is slow, and verify each cha…",
+      "label": "Measure against evidence. Optimize only what profiling shows is slow, and verify each change moves the measured number — kaizen. Never earlier, never by feel.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10186,7 +10522,7 @@
     },
     {
       "id": "directive_tech_mappings_capacitor_mobile_perf_md_61",
-      "label": "Incremental delivery to the device. Every screen change ships as a small, testable increm…",
+      "label": "Incremental delivery to the device. Every screen change ships as a small, testable increment — kaizen — with a device/emulator smoke test before release.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10198,7 +10534,7 @@
     },
     {
       "id": "directive_tech_mappings_capacitor_mobile_perf_md_62",
-      "label": "Stay focused per screen. Build one screen's flow to completion before the next — focus —…",
+      "label": "Stay focused per screen. Build one screen's flow to completion before the next — focus — so each landable slice is coherent and fast.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10210,7 +10546,7 @@
     },
     {
       "id": "directive_tech_mappings_micro_saas_architecture_md_63",
-      "label": "Flat architecture. Favor a flat structure over deep class hierarchies — simplicity. A sin…",
+      "label": "Flat architecture. Favor a flat structure over deep class hierarchies — simplicity. A single table, a single handler, a single service is easier to reason about and therefore more reliable reliability.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10222,7 +10558,7 @@
     },
     {
       "id": "directive_tech_mappings_micro_saas_architecture_md_64",
-      "label": "Ship the minimum. Build for the requirement that exists today, not the one you imagine in…",
+      "label": "Ship the minimum. Build for the requirement that exists today, not the one you imagine in six months — yagni. Defer billing, multi-tenancy, and role systems until a real need arrives.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10234,7 +10570,7 @@
     },
     {
       "id": "directive_tech_mappings_micro_saas_architecture_md_65",
-      "label": "Composite over speculative abstraction. Do not add a store adapter, a message queue, or a…",
+      "label": "Composite over speculative abstraction. Do not add a store adapter, a message queue, or an event bus until a second, concrete consumer exists.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10246,7 +10582,7 @@
     },
     {
       "id": "directive_tech_mappings_micro_saas_architecture_md_66",
-      "label": "Compounding delivery. Release small, working increments continuously — kaizen — rather th…",
+      "label": "Compounding delivery. Release small, working increments continuously — kaizen — rather than a single heroic launch. Each small release tightens the feedback loop.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10258,7 +10594,7 @@
     },
     {
       "id": "directive_tech_mappings_micro_saas_architecture_md_67",
-      "label": "Prudent defaults. Validate all inputs, least-privilege credentials, fail closed on ambigu…",
+      "label": "Prudent defaults. Validate all inputs, least-privilege credentials, fail closed on ambiguity — prudence. Do the secure thing by default so safety is never an afterthought.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10270,7 +10606,7 @@
     },
     {
       "id": "directive_tech_mappings_monorepo_policy_md_68",
-      "label": "Shared code is shared context. Changes that must land together belong in the same change…",
+      "label": "Shared code is shared context. Changes that must land together belong in the same change set so review and release stay atomic — collaboration.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10282,7 +10618,7 @@
     },
     {
       "id": "directive_tech_mappings_monorepo_policy_md_69",
-      "label": "Small, safe increments everywhere. Commit one logical fix or feature at a time with a cle…",
+      "label": "Small, safe increments everywhere. Commit one logical fix or feature at a time with a clear message; keep each change landable — kaizen. \"Step by step walk the thousand-mile road.\"",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10294,7 +10630,7 @@
     },
     {
       "id": "directive_tech_mappings_monorepo_policy_md_70",
-      "label": "Document the why. Write the reasoning behind a change in the commit and the design note,…",
+      "label": "Document the why. Write the reasoning behind a change in the commit and the design note, not only the mechanism — collaboration.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10306,7 +10642,7 @@
     },
     {
       "id": "directive_tech_mappings_monorepo_policy_md_71",
-      "label": "Don't spin up a package for one consumer. Extract a shared library only when a second rea…",
+      "label": "Don't spin up a package for one consumer. Extract a shared library only when a second real consumer appears — yagni.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10318,7 +10654,7 @@
     },
     {
       "id": "directive_tech_mappings_monorepo_policy_md_72",
-      "label": "Review is a gate. Non-trivial changes pass review before merge; the second viewpoint is a…",
+      "label": "Review is a gate. Non-trivial changes pass review before merge; the second viewpoint is a reliability control — collaboration · reliability.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10330,7 +10666,7 @@
     },
     {
       "id": "directive_tech_mappings_odoo_module_design_md_73",
-      "label": "One concept, one model. Model each concept once, with the minimal field set — simplicity.…",
+      "label": "One concept, one model. Model each concept once, with the minimal field set — simplicity. Extend a base model with inheritance where the domain demands it, not where convenience tempts.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10342,7 +10678,7 @@
     },
     {
       "id": "directive_tech_mappings_odoo_module_design_md_74",
-      "label": "Respect the framework grain. Odoo provides search, security (`ir.rule`), and ORM persiste…",
+      "label": "Respect the framework grain. Odoo provides search, security (`ir.rule`), and ORM persistence. Build on these instead of re-implementing them — first-principles says know what the platform already answers.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10354,7 +10690,7 @@
     },
     {
       "id": "directive_tech_mappings_odoo_module_design_md_75",
-      "label": "No speculative fields/workflows. Add a status, a state machine, or a field only when a re…",
+      "label": "No speculative fields/workflows. Add a status, a state machine, or a field only when a real workflow requires it — yagni. Remove an unused computed field the day nothing consumes it.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10366,7 +10702,7 @@
     },
     {
       "id": "directive_tech_mappings_odoo_module_design_md_76",
-      "label": "Views mirror the model. Keep views as thin as possible over the model; complex view logic…",
+      "label": "Views mirror the model. Keep views as thin as possible over the model; complex view logic is a smell that belongs in the model or a computed field.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10378,7 +10714,7 @@
     },
     {
       "id": "directive_tech_mappings_odoo_module_design_md_77",
-      "label": "Reliability by construction. Use `@api.constrains` for invariants and `ir.rule`/record ru…",
+      "label": "Reliability by construction. Use `@api.constrains` for invariants and `ir.rule`/record rules for access — prudence. Never trust the UI to keep data consistent.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10390,7 +10726,7 @@
     },
     {
       "id": "directive_tech_mappings_refactoring_policy_md_78",
-      "label": "Small slices, always green. Refactor in increments that keep the build and tests passing…",
+      "label": "Small slices, always green. Refactor in increments that keep the build and tests passing — kaizen. \"Little strokes fell great oaks.\"",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10402,7 +10738,7 @@
     },
     {
       "id": "directive_tech_mappings_refactoring_policy_md_79",
-      "label": "Behavior-preserving. A refactor changes structure, not semantics. Profilers and the exist…",
+      "label": "Behavior-preserving. A refactor changes structure, not semantics. Profilers and the existing test suite guard that — reliability.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10414,7 +10750,7 @@
     },
     {
       "id": "directive_tech_mappings_refactoring_policy_md_80",
-      "label": "Remove, then simplify. \"To attain wisdom, remove things every day\" Lao Tzu — delete dead…",
+      "label": "Remove, then simplify. \"To attain wisdom, remove things every day\" Lao Tzu — delete dead code, then simplify what remains — simplicity.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10426,7 +10762,7 @@
     },
     {
       "id": "directive_tech_mappings_refactoring_policy_md_81",
-      "label": "Improve the loop, not just the code. Refactor also the tooling and process that produced…",
+      "label": "Improve the loop, not just the code. Refactor also the tooling and process that produced the mess — shortens the next cycle — kaizen.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10438,7 +10774,7 @@
     },
     {
       "id": "directive_tech_mappings_refactoring_policy_md_82",
-      "label": "Learn from the old shape. Understand *why* the code became complex before simplifying, so…",
+      "label": "Learn from the old shape. Understand *why* the code became complex before simplifying, so the same mistake isn't repeated — humility-and-learning.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10450,7 +10786,7 @@
     },
     {
       "id": "directive_tech_mappings_security_hardening_md_83",
-      "label": "Prevention before cure. Engage the risk while it is cheap — prudence. Seal the crack befo…",
+      "label": "Prevention before cure. Engage the risk while it is cheap — prudence. Seal the crack before it becomes a wall (\"Usipoziba ufa, utajenga ukuta\").",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10462,7 +10798,7 @@
     },
     {
       "id": "directive_tech_mappings_security_hardening_md_84",
-      "label": "Trust, but verify. Never assume a dependency, a layer, or an upstream behaves — validate…",
+      "label": "Trust, but verify. Never assume a dependency, a layer, or an upstream behaves — validate at every trust boundary — prudence · reliability.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10474,7 +10810,7 @@
     },
     {
       "id": "directive_tech_mappings_security_hardening_md_85",
-      "label": "Secrets are never code. No hardcoded keys, tokens, or passwords; keep them in scoped env/…",
+      "label": "Secrets are never code. No hardcoded keys, tokens, or passwords; keep them in scoped env/secret stores, chmod-secured, and never committed — integrity.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10486,7 +10822,7 @@
     },
     {
       "id": "directive_tech_mappings_security_hardening_md_86",
-      "label": "Least privilege. Grant the minimum access a credential or role needs; scope it, rotate it…",
+      "label": "Least privilege. Grant the minimum access a credential or role needs; scope it, rotate it, and revoke it when unused.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10498,7 +10834,7 @@
     },
     {
       "id": "directive_tech_mappings_security_hardening_md_87",
-      "label": "Fail closed. On ambiguity — unidentified input, missing auth, unclear state — refuse, log…",
+      "label": "Fail closed. On ambiguity — unidentified input, missing auth, unclear state — refuse, log, and alert rather than guess — prudence.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10510,7 +10846,7 @@
     },
     {
       "id": "directive_tech_mappings_testing_strategy_md_88",
-      "label": "Prove the real behavior. Test what the code actually does at its real boundary, not an ov…",
+      "label": "Prove the real behavior. Test what the code actually does at its real boundary, not an over-mocked happy path — truth-and-integrity. \"The proof of the pudding is in the eating.\"",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10522,7 +10858,7 @@
     },
     {
       "id": "directive_tech_mappings_testing_strategy_md_89",
-      "label": "Reproduce before you fix. A bug is not understood until its failing test is written — pre…",
+      "label": "Reproduce before you fix. A bug is not understood until its failing test is written — preparation. \"A problem well stated is a problem half solved.\"",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10534,7 +10870,7 @@
     },
     {
       "id": "directive_tech_mappings_testing_strategy_md_90",
-      "label": "Make failure a gift. Every test that catches a real regression is a portal — turn each ca…",
+      "label": "Make failure a gift. Every test that catches a real regression is a portal — turn each caught mistake into a permanent guard — resilience · humility-and-learning.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10546,7 +10882,7 @@
     },
     {
       "id": "directive_tech_mappings_testing_strategy_md_91",
-      "label": "Tighten the loop. Prefer fast, deterministic tests that run in seconds so the feedback lo…",
+      "label": "Tighten the loop. Prefer fast, deterministic tests that run in seconds so the feedback loop is short and run often — kaizen.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10558,7 +10894,7 @@
     },
     {
       "id": "directive_tech_mappings_testing_strategy_md_92",
-      "label": "Test the truth, not the number. A green build that doesn't exercise real behavior is a li…",
+      "label": "Test the truth, not the number. A green build that doesn't exercise real behavior is a lie; low-value tests that pass on noise are worse than none — truth-and-integrity.",
       "community": 5,
       "community_name": "directives",
       "file_type": "directive",
@@ -10570,998 +10906,6 @@
     }
   ],
   "links": [
-    {
-      "source": "readme",
-      "target": "obj_author",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "obj_simplicity",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "obj_micro_saas_architecture",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "obj_yagni",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_simplicity",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "principles_first_principles",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "principles_yagni",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "principles_reliability",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_preparation",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_focus",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_patience",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_resilience",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "principles_prudence",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "principles_kaizen",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "principles_collaboration",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "principles_humility_and_learning",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "principles_truth_and_integrity",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_action",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_learning",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_debugging",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_craft",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_progress",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_integrity",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_refactoring",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_security",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_validation",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_teamwork",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_humility",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_courage",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_rest",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_gratitude",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_general_wisdom",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_contentment",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_ubuntu",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_love",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_freedom",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_justice",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_words",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_emotional_mastery",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_solitude",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_purpose",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_compassion",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_bushido",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_hebrew_wisdom",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_indigenous_wisdom",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_nature",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_exploration",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_creation",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_euphoria",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_chinese_philosophy",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_zen",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_taoism",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_greco_roman",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_nordic",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_japanese",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_old_english",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_french",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_german",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_romanian",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_world_philosophers",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "quotes_traditions_folk_sayings",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "tech_mappings_micro_saas_architecture",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "tech_mappings_odoo_module_design",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "tech_mappings_capacitor_mobile_perf",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "tech_mappings_api_contract_design",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "tech_mappings_monorepo_policy",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "tech_mappings_security_hardening",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "tech_mappings_testing_strategy",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "readme",
-      "target": "tech_mappings_refactoring_policy",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_patience",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_compassion",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_preparation",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_craft",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_learning",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_action",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_general_wisdom",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_debugging",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "principles_humility_and_learning",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_humility",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "principles_yagni",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_exploration",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_focus",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_freedom",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_courage",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_rest",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_progress",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_resilience",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_indigenous_wisdom",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_simplicity",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_nature",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "readme",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "tech_mappings_capacitor_mobile_perf",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_integrity",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_justice",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "tech_mappings_micro_saas_architecture",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "tech_mappings_odoo_module_design",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "principles_prudence",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "principles_reliability",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "tech_mappings_security_hardening",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_security",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "principles_truth_and_integrity",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_words",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_gratitude",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_teamwork",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_validation",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "principles_first_principles",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_contentment",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_refactoring",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_emotional_mastery",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "tech_mappings_api_contract_design",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "principles_kaizen",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "tech_mappings_testing_strategy",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "tech_mappings_monorepo_policy",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_ubuntu",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_love",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_purpose",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_traditions_zen",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_solitude",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "principles_collaboration",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "tech_mappings_refactoring_policy",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_creation",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_traditions_greco_roman",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_euphoria",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
-    {
-      "source": "authors",
-      "target": "quotes_bushido",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "authors.md"
-    },
     {
       "source": "principles_collaboration",
       "target": "obj_ken_blanchard",
@@ -12260,7 +11604,7 @@
     },
     {
       "source": "principles_reliability",
-      "target": "obj_aristotle",
+      "target": "obj_will_durant",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -12268,7 +11612,7 @@
     },
     {
       "source": "principles_reliability",
-      "target": "obj_will_durant",
+      "target": "obj_aristotle",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -12332,7 +11676,7 @@
     },
     {
       "source": "principles_resilience",
-      "target": "obj_ralph_waldo_emerson",
+      "target": "obj_henry_stanley_haskins",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -12380,7 +11724,7 @@
     },
     {
       "source": "principles_resilience",
-      "target": "obj_confucius",
+      "target": "obj_oliver_goldsmith",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -12433,14 +11777,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "principles/resilience.md"
-    },
-    {
-      "source": "principles_simplicity",
-      "target": "obj_leonardo_da_vinci",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "principles/simplicity.md"
     },
     {
       "source": "principles_simplicity",
@@ -13380,7 +12716,7 @@
     },
     {
       "source": "quotes_craft",
-      "target": "obj_aristotle",
+      "target": "obj_will_durant",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -13388,7 +12724,7 @@
     },
     {
       "source": "quotes_craft",
-      "target": "obj_will_durant",
+      "target": "obj_aristotle",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -13428,7 +12764,7 @@
     },
     {
       "source": "quotes_craft",
-      "target": "obj_leonardo_da_vinci",
+      "target": "obj_paul_val_ry",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -13524,7 +12860,15 @@
     },
     {
       "source": "quotes_creation",
-      "target": "obj_johann_wolfgang_von_goethe",
+      "target": "obj_john_anster",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/creation.md"
+    },
+    {
+      "source": "quotes_creation",
+      "target": "obj_goethe",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -13884,7 +13228,7 @@
     },
     {
       "source": "quotes_exploration",
-      "target": "obj_mark_twain",
+      "target": "obj_h_jackson_brown_jr",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -14036,7 +13380,7 @@
     },
     {
       "source": "quotes_focus",
-      "target": "obj_buddha",
+      "target": "obj_jack_kornfield",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -14124,7 +13468,7 @@
     },
     {
       "source": "quotes_freedom",
-      "target": "obj_eliphas_levi",
+      "target": "obj_eliud_kipchoge",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -14229,6 +13573,14 @@
     {
       "source": "quotes_general_wisdom",
       "target": "obj_aristotle",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/general-wisdom.md"
+    },
+    {
+      "source": "quotes_general_wisdom",
+      "target": "obj_frank_outlaw",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -14508,7 +13860,7 @@
     },
     {
       "source": "quotes_humility",
-      "target": "obj_dalai_lama",
+      "target": "obj_h_jackson_brown_jr",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -14557,6 +13909,14 @@
     {
       "source": "quotes_indigenous_wisdom",
       "target": "tech_mappings_micro_saas_architecture",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/indigenous-wisdom.md"
+    },
+    {
+      "source": "quotes_indigenous_wisdom",
+      "target": "obj_john_vance_cheney",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -15476,7 +14836,7 @@
     },
     {
       "source": "quotes_purpose",
-      "target": "obj_pablo_picasso",
+      "target": "obj_david_viscott",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -15581,6 +14941,14 @@
     {
       "source": "quotes_refactoring",
       "target": "obj_henry_david_thoreau",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/refactoring.md"
+    },
+    {
+      "source": "quotes_refactoring",
+      "target": "obj_leon_c_megginson",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -15708,7 +15076,7 @@
     },
     {
       "source": "quotes_resilience",
-      "target": "obj_ralph_waldo_emerson",
+      "target": "obj_henry_stanley_haskins",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -15772,7 +15140,7 @@
     },
     {
       "source": "quotes_resilience",
-      "target": "obj_confucius",
+      "target": "obj_oliver_goldsmith",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -16061,14 +15429,6 @@
     {
       "source": "quotes_simplicity",
       "target": "tech_mappings_api_contract_design",
-      "relation": "cites",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "quotes/simplicity.md"
-    },
-    {
-      "source": "quotes_simplicity",
-      "target": "obj_leonardo_da_vinci",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -16429,6 +15789,14 @@
     {
       "source": "quotes_traditions_chinese_philosophy",
       "target": "obj_lao_tzu",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/traditions/chinese-philosophy.md"
+    },
+    {
+      "source": "quotes_traditions_chinese_philosophy",
+      "target": "obj_abraham_maslow",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -17900,7 +17268,7 @@
     },
     {
       "source": "quotes_validation",
-      "target": "obj_aristotle",
+      "target": "obj_willa_a_foster",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -17917,6 +17285,14 @@
     {
       "source": "quotes_validation",
       "target": "obj_dalai_lama",
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/validation.md"
+    },
+    {
+      "source": "quotes_validation",
+      "target": "obj_aristotle",
       "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -20683,22 +20059,6 @@
       "source_file": "principles/reliability.md"
     },
     {
-      "source": "quote_quality_is_not_an_act_it_is_a_habit",
-      "target": "obj_aristotle",
-      "relation": "attributed_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "principles/reliability.md"
-    },
-    {
-      "source": "principles_reliability",
-      "target": "quote_quality_is_not_an_act_it_is_a_habit",
-      "relation": "quotes",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "principles/reliability.md"
-    },
-    {
       "source": "quote_we_are_what_we_repeatedly_do_excellence_then_is",
       "target": "obj_will_durant",
       "relation": "attributed_to",
@@ -20748,7 +20108,7 @@
     },
     {
       "source": "quote_what_lies_behind_us_and_what_lies_before_us_are",
-      "target": "obj_ralph_waldo_emerson",
+      "target": "obj_henry_stanley_haskins",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -20820,7 +20180,7 @@
     },
     {
       "source": "quote_our_greatest_glory_is_not_in_never_falling_but_i",
-      "target": "obj_confucius",
+      "target": "obj_oliver_goldsmith",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -20849,14 +20209,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "principles/resilience.md"
-    },
-    {
-      "source": "quote_simplicity_is_the_ultimate_sophistication",
-      "target": "obj_leonardo_da_vinci",
-      "relation": "attributed_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "principles/simplicity.md"
     },
     {
       "source": "principles_simplicity",
@@ -22060,14 +21412,6 @@
     },
     {
       "source": "quotes_craft",
-      "target": "quote_quality_is_not_an_act_it_is_a_habit",
-      "relation": "quotes",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "quotes/craft.md"
-    },
-    {
-      "source": "quotes_craft",
       "target": "quote_we_are_what_we_repeatedly_do_excellence_then_is",
       "relation": "quotes",
       "confidence": "EXTRACTED",
@@ -22148,7 +21492,7 @@
     },
     {
       "source": "quote_art_is_never_finished_only_abandoned",
-      "target": "obj_leonardo_da_vinci",
+      "target": "obj_paul_val_ry",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -22252,7 +21596,15 @@
     },
     {
       "source": "quote_whatever_you_can_do_or_dream_you_can_begin_it_bo",
-      "target": "obj_johann_wolfgang_von_goethe",
+      "target": "obj_john_anster",
+      "relation": "attributed_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/creation.md"
+    },
+    {
+      "source": "quote_whatever_you_can_do_or_dream_you_can_begin_it_bo",
+      "target": "obj_goethe",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -22660,7 +22012,7 @@
     },
     {
       "source": "quote_twenty_years_from_now_you_will_be_more_disappoin",
-      "target": "obj_mark_twain",
+      "target": "obj_h_jackson_brown_jr",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -22868,7 +22220,7 @@
     },
     {
       "source": "quote_the_trouble_is_you_think_you_have_time",
-      "target": "obj_buddha",
+      "target": "obj_jack_kornfield",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -22988,7 +22340,7 @@
     },
     {
       "source": "quote_only_the_disciplined_ones_in_life_are_free_the_u",
-      "target": "obj_eliphas_levi",
+      "target": "obj_eliud_kipchoge",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -23148,7 +22500,7 @@
     },
     {
       "source": "quote_watch_your_thoughts_they_become_your_words_watch",
-      "target": "obj_lao_tzu",
+      "target": "obj_frank_outlaw",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -23700,7 +23052,7 @@
     },
     {
       "source": "quote_when_you_realize_you_ve_made_a_mistake_take_imme",
-      "target": "obj_dalai_lama",
+      "target": "obj_h_jackson_brown_jr",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -23766,6 +23118,14 @@
       "source": "quotes_indigenous_wisdom",
       "target": "quote_listen_to_the_wind_it_talks_listen_to_the_silenc",
       "relation": "quotes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/indigenous-wisdom.md"
+    },
+    {
+      "source": "quote_the_soul_would_have_no_rainbow_if_the_eyes_had_n",
+      "target": "obj_john_vance_cheney",
+      "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "quotes/indigenous-wisdom.md"
@@ -24964,7 +24324,7 @@
     },
     {
       "source": "quote_the_meaning_of_life_is_to_find_your_gift_the_pur",
-      "target": "obj_pablo_picasso",
+      "target": "obj_david_viscott",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -25094,6 +24454,14 @@
       "source": "quotes_refactoring",
       "target": "quote_renew_thyself_completely_each_day_do_it_again_an",
       "relation": "quotes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/refactoring.md"
+    },
+    {
+      "source": "quote_it_is_not_the_strongest_of_the_species_that_surv",
+      "target": "obj_leon_c_megginson",
+      "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "quotes/refactoring.md"
@@ -26123,6 +25491,14 @@
       "source_file": "quotes/traditions/chinese-philosophy.md"
     },
     {
+      "source": "quote_when_you_have_a_hammer_all_problems_look_like_na",
+      "target": "obj_abraham_maslow",
+      "relation": "attributed_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "quotes/traditions/chinese-philosophy.md"
+    },
+    {
       "source": "quotes_traditions_chinese_philosophy",
       "target": "quote_when_you_have_a_hammer_all_problems_look_like_na",
       "relation": "quotes",
@@ -26820,7 +26196,7 @@
     },
     {
       "source": "quote_excellence_is_never_an_accident_it_is_always_the",
-      "target": "obj_aristotle",
+      "target": "obj_willa_a_foster",
       "relation": "attributed_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,

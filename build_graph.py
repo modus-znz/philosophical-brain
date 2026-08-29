@@ -73,9 +73,19 @@ if os.path.exists(OUT) and not FORCE and not DRY_RUN:
             f"override."
         )
 
+# Meta files are excluded outright, not merely down-weighted. README
+# describes the vault and authors.md indexes every name in it, so both link to
+# nearly everything; as nodes they became the two highest-degree hubs (70 and
+# 55 edges) and surfaced in the truncated head of almost every query, pushing
+# the actual answer below the budget cutoff. They hold no wisdom of their own
+# -- every author they name is still reached through the quote citing them --
+# so dropping them costs no reachability and buys back the top of every result.
+META_FILES = {"README.md", "authors.md"}
+
 FILES = sorted(glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True))
 FILES = [f for f in FILES
-         if not f.startswith(os.path.join(ROOT, "graphify-out"))]
+         if not f.startswith(os.path.join(ROOT, "graphify-out"))
+         and os.path.relpath(f, ROOT) not in META_FILES]
 
 LINK_RE = re.compile(r"\[\[([^\]|]+)(?:\|[^\]]+)?\]\]")
 # A quotation: a blockquote line, or a "Supporting Quotes" bullet. Both are
@@ -154,6 +164,21 @@ for rel, text in raw.items():
             if p and not p.startswith(("#", "-", "*", ">", "|")):
                 excerpt = strip_links(p)
                 break
+    # Fold the file's session moments into its own text. Without this, a query
+    # like "wisdom for debugging a hard failure" anchors on the bare `debugging`
+    # moment node and never ranks the document that answers it -- measured as
+    # zero directives returned for exactly that phrasing. The moment words
+    # describe the document too; saying so lets it match directly instead of
+    # depending on a second hop the ranker may not take.
+    moments_here = []
+    for _m in MOMENT_RE.finditer(text):
+        for _t in re.split(r"[\u00b7\u2022|,/]", _m.group(1)):
+            _t = strip_links(_t).strip(" .*_`")
+            if _t and len(_t) <= 60 and _t not in moments_here:
+                moments_here.append(_t)
+    body = clip(excerpt, 400)
+    if moments_here:
+        body += "  Applies at: " + ", ".join(moments_here) + "."
     add_node(
         node_id(rel),
         label=label,
@@ -162,8 +187,9 @@ for rel, text in raw.items():
         file_type="document",
         node_kind="document",
         norm_label=norm(label),
-        text=clip(excerpt, 400),
-        rationale=clip(excerpt, 400),
+        text=body,
+        rationale=body,
+        moments=moments_here,
         source_file=rel,
     )
 
@@ -213,8 +239,6 @@ for rel, text in raw.items():
 # entirely: a dev situation resolves to a moment, the moment to its documents.
 moment_id = {}
 for rel, text in raw.items():
-    if os.path.basename(rel) == "README.md":
-        continue  # its line documents the schema, it is not data
     for m in MOMENT_RE.finditer(text):
         # Split on separators AND on "/" -- authors write "blocked/waiting"
         # and "focus/deep-work" as alternates, not as compound names, so the
@@ -241,8 +265,6 @@ for rel, text in raw.items():
 # gap in the graphify graph: no node there held any content at all.
 quote_id = {}
 for rel, text in raw.items():
-    if os.path.basename(rel) == "README.md":
-        continue
     src = node_id(rel)
     for line in text.splitlines():
         s = line.strip()
@@ -266,7 +288,7 @@ for rel, text in raw.items():
                 nid += "_x"
             quote_id[key] = nid
             add_node(
-                nid, label=clip(body, 90), community=4,
+                nid, label=body, community=4,
                 community_name="quotes", file_type="quote",
                 node_kind="quote", norm_label=body.lower(),
                 text=f'"{body}"' + (f" — {attrib}" if attrib else ""),
@@ -284,9 +306,8 @@ for rel, text in raw.items():
 # ------------------------------------------------------- 6. directives
 # The actionable half of the vault: what the philosophy tells you to DO.
 DIRECTIVE_H = re.compile(r"^#{2,3}\s*.*Directives?\s*$", re.I)
+directive_seq = 0
 for rel, text in raw.items():
-    if os.path.basename(rel) == "README.md":
-        continue
     src = node_id(rel)
     lines = text.splitlines()
     inside = False
@@ -310,10 +331,10 @@ for rel, text in raw.items():
         if len(body) < 12:
             continue
         body = strip_links(body).replace("**", "").strip()
-        nid = "directive_" + slug(rel) + "_" + str(len(
-            [n for n in nodes if n.get("node_kind") == "directive"]))
+        nid = "directive_" + slug(rel) + "_" + str(directive_seq)
+        directive_seq += 1
         add_node(
-            nid, label=clip(body, 90), community=5,
+            nid, label=body, community=5,
             community_name="directives", file_type="directive",
             node_kind="directive", norm_label=body.lower()[:120],
             text=body, rationale=body, source_file=rel,
@@ -334,7 +355,7 @@ graph = {
     "graph": {
         "generator": GENERATOR,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "vault_root": ROOT,
+        "vault_root": os.path.basename(ROOT),
         "source_files": len(FILES),
     },
     "nodes": nodes,
