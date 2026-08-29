@@ -41,8 +41,15 @@ OUT = os.path.join(OUT_DIR, "probe.jsonl")
 # Payload values worth keeping. The full tool_input is deliberately NOT
 # recorded: it carries file contents and command lines, and this file is a
 # plain unencrypted log. Shape and size are enough to answer the questions.
+#
+# prompt_id is the find that changes the ledger design. The plan scoped a turn
+# by parsing the transcript for origin.kind == "human" -- reading a file that is
+# written asynchronously and lags the live turn. PostToolUse hands us a turn key
+# directly. All three added here are opaque identifiers and a duration; none
+# carry content.
 KEEP = ("hook_event_name", "session_id", "cwd", "transcript_path",
-        "tool_name", "stop_hook_active", "permission_mode")
+        "tool_name", "stop_hook_active", "permission_mode",
+        "prompt_id", "tool_use_id", "duration_ms")
 
 
 def summarize(value, depth=0):
