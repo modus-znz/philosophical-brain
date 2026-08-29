@@ -58,9 +58,27 @@ def summarize(value, depth=0):
     return value
 
 
+def disabled():
+    """The kill switch policy/checks.json advertises, honored by the only
+    component that is actually wired into settings.json. An off switch that
+    turns nothing off is worse than no off switch at all.
+
+        BRAIN_ENGINE_OFF=1              one command, one session
+        touch ~/.claude/brain-engine-off   this machine, until removed
+    """
+    if os.environ.get("BRAIN_ENGINE_OFF"):
+        return True
+    return os.path.isfile(os.path.expanduser("~/.claude/brain-engine-off"))
+
+
 def main():
     event = sys.argv[1] if len(sys.argv) > 1 else "?"
+    # Drain stdin before deciding anything: exiting on a pipe the caller is
+    # still writing to earns an EPIPE for a hook that promised to be inert.
     raw = sys.stdin.read()
+
+    if disabled():
+        return 0
 
     try:
         payload = json.loads(raw)
