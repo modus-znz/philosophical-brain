@@ -54,6 +54,13 @@ GROUPS = OrderedDict([
 ])
 FALLBACK = "General Wisdom — any moment"
 
+# Uncapped by default: a quote whose file declares three moments belongs in all
+# three groups, and CLAUDE.md reads one group on demand rather than the whole
+# file, so the duplication costs nothing at read time. Capping was measured to
+# drop 85 curated quotes from the persona's reach to save 30 KB nobody loads.
+# `--cap N` is kept for anyone who wants a smaller sample.
+DEFAULT_CAP = 0
+
 PREAMBLE = """# The Fountain of Knowledge — Wisdom & Positivity Quote Library
 
 > **Generated file — do not edit by hand.** The session-moment groups below are
@@ -98,7 +105,7 @@ def moment_keys(raw):
 
 
 def read_vault(root):
-    """-> list of (moment_keys, quote_text, attribution) in stable order."""
+    """-> list of (moment_keys, quote_text, attribution, source) in stable order."""
     entries = []
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = sorted(d for d in dirnames if not d.startswith((".", "__")))
@@ -119,23 +126,48 @@ def read_vault(root):
                         continue
                     q = QUOTE_RX.match(line.strip())
                     if q and len(q.group(1).strip()) > 15:
-                        entries.append((keys, q.group(1).strip(), q.group(2).strip()))
+                        entries.append((keys, q.group(1).strip(),
+                                        q.group(2).strip(),
+                                        os.path.relpath(path, root)))
     return entries
 
 
-def render(root):
+def interleave(by_source, cap):
+    """Round-robin across source files, so a capped group stays varied instead
+    of being dominated by whichever file happens to sort first."""
+    picked, seen, queues = [], set(), [list(v) for v in by_source.values()]
+    while queues and (cap is None or len(picked) < cap):
+        for q in queues:
+            if cap is not None and len(picked) >= cap:
+                break
+            if q:
+                key, line = q.pop(0)
+                if key not in seen:
+                    seen.add(key)
+                    picked.append(line)
+        queues = [q for q in queues if q]
+    return picked
+
+
+def render(root, cap=DEFAULT_CAP):
     entries = read_vault(root)
     buckets = OrderedDict((h, OrderedDict()) for h in GROUPS)
 
-    for keys, quote, attribution in entries:
+    def add(heading, source, key, line):
+        buckets[heading].setdefault(source, []).append((key, line))
+
+    for keys, quote, attribution, source in entries:
         line = '- "%s" — %s' % (strip_links(quote), strip_links(attribution))
+        key = normalise(quote)
         placed = False
         for heading, wanted in GROUPS.items():
             if keys & set(wanted):
-                buckets[heading].setdefault(normalise(quote), line)
+                add(heading, source, key, line)
                 placed = True
         if not placed:
-            buckets[FALLBACK].setdefault(normalise(quote), line)
+            add(FALLBACK, source, key, line)
+
+    buckets = OrderedDict((h, interleave(by_src, cap)) for h, by_src in buckets.items())
 
     out = [PREAMBLE.format(vault=root)]
     for heading, quotes in buckets.items():
@@ -143,7 +175,7 @@ def render(root):
             raise SystemExit("render_persona: group %r came out empty — check "
                              "its moment keys against `ask.py --moments`" % heading)
         out.append("## %s\n" % heading)
-        out.extend(quotes.values())
+        out.extend(quotes)
         out.append("")
 
     tree = os.path.join(root, THEME_TREE)
@@ -159,6 +191,8 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--vault", default=os.path.dirname(os.path.abspath(__file__)))
     ap.add_argument("--out", default=os.path.expanduser("~/.claude/knowledge/wisdom-quotes.md"))
+    ap.add_argument("--cap", type=int, default=DEFAULT_CAP,
+                    help="max quotes per group; 0 (the default) is uncapped")
     ap.add_argument("--check", action="store_true",
                     help="exit 1 if the artifact is stale; write nothing")
     args = ap.parse_args()
@@ -167,7 +201,7 @@ def main():
     if os.path.exists(args.out):
         previous = io.open(args.out, encoding="utf-8").read()
 
-    text = render(args.vault)
+    text = render(args.vault, args.cap or None)
 
     if args.check:
         if text != previous:
