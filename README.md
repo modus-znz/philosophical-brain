@@ -1,17 +1,87 @@
 # Philosophical Brain — Modus Labs
 
-A queryable, localized semantic knowledge graph distilled from the raw
-philosophical-quote collection. Serves as the core decision-making and logic
-library for development workflows across Claude Code CLI and Opencode.
+A knowledge graph of 600 attributed quotations, 13 engineering principles and
+93 code directives, built so an agent can ask it a question in the words of the
+moment — "the tests are failing", "guide me through a refactor" — and get back
+the handful of lines that actually apply, with their provenance attached.
 
-Built on **Graphify** (`graphifyy` via PyPI) — query it with:
+## Quickstart
+
+```bash
+git clone <repo> philosophical-brain && cd philosophical-brain
+python3 ask.py "the tests are failing"
+```
+
+No build step and no dependencies: `ask.py` is standard-library Python and
+`graphify-out/graph.json` is committed. A clone is queryable immediately.
+
+```
+Moment: tests-failing, tests-passing
+
+  "Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."
+      — Samuel Beckett   [quotes/resilience.md]
+
+  "I have not failed. I've just found 10,000 ways that won't work."
+      — Thomas Edison   [principles/resilience.md]
+```
+
+| Flag | Effect |
+|---|---|
+| `-n N` | how many quotes to return (default 6) |
+| `--no-directives` | omit the `Code directives` block |
+| `--json` | machine-readable, for wiring into an agent |
+| `--moments` | list the 55 session moments the vault indexes |
+| `--graph PATH` | query a graph other than the default |
+
+## What it is for, and what it is not
+
+The vault is plain markdown, so `grep` can search it — and in fact **grep finds
+every file `ask.py` returns.** Each theme file names its own session moments in
+plain text, so keyword search reaches them. This project makes no claim to find
+things keywords cannot.
+
+What it does instead is decide *which* of the matches answer the question, pull
+out the specific lines rather than the files containing them, and carry the
+attribution along. Measured against the flat-file baseline — grep the vault for
+the query's content words, then read every file that matched, which is what an
+agent without the graph does:
+
+| Query | `ask.py` | grep + read | |
+|---|---:|---:|---:|
+| the tests are failing | 338 | 5,926 | 18x |
+| guide me through a refactor | 355 | 16,315 | 46x |
+| how should I harden this endpoint | 313 | 24,128 | 77x |
+| I keep getting distracted | 117 | 8,582 | 73x |
+| a code review came back harsh | 141 | 22,859 | 162x |
+| **total** | **1,264** | **77,810** | **62x** |
+
+Approximate tokens at 4 chars/token. The win is ranking and extraction, not
+recall: same answers, 62x less context, and an agent that can afford to ask.
+
+## Using it from an agent
+
+`ask.py --json` is the portable integration and needs nothing installed.
+
+For MCP, the graph is also served by [Graphify](https://pypi.org/project/graphifyy/)
+(`pip install graphifyy`). Register it against **your own** clone path:
+
+```bash
+claude mcp add --scope user philosophical-brain -- \
+    graphify-mcp "$(pwd)/graphify-out/graph.json"
+```
+
+Graphify's own CLI works against the same file:
 
 ```bash
 graphify query "how should I approach a bug I can't reproduce?"
 graphify path "Simplicity" "Reliability"
 graphify explain "YAGNI"
-graphify --mcp        # Full MCP stdio server for agent access
 ```
+
+Note that generic graph traversal ranks by connectivity, and the best-connected
+nodes here are documents — so a raw BFS query tends to answer with filenames.
+`ask.py` exists because it walks the other way: query → moment → document →
+down to the quotes and directives that are the actual answer.
 
 ## Vault Anatomy
 
@@ -127,6 +197,27 @@ attribution), `moment`, `directive` — over relations `cites`, `quotes`,
 **situation → moment → document → quote** is a real graph path. Rerun it after
 editing any `.md` file; it refuses to overwrite a graph it did not generate
 unless given `--force`.
+
+## Provenance tooling
+
+```bash
+python3 lint_attributions.py --stats   # class histogram, always exits 0
+python3 lint_attributions.py           # list defects
+python3 lint_attributions.py --gate    # pre-commit mode: fail on NEW defects
+```
+
+`hooks/pre-commit` rebuilds the graph when markdown changes and runs the gate.
+Install it with:
+
+```bash
+ln -s ../../hooks/pre-commit .git/hooks/pre-commit
+```
+
+## License
+
+MIT — see [LICENSE](LICENSE). The quotations themselves are historical texts
+and traditional sayings; the curation, principles, directives and tooling are
+what this license covers.
 
 ## Index
 
