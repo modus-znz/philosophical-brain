@@ -29,6 +29,7 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 
 DEFAULT_GRAPH = os.path.join(
@@ -230,6 +231,52 @@ def render(r):
     return "\n".join(lines).rstrip()
 
 
+def record(query, result, outcome, note=None, graph=DEFAULT_GRAPH):
+    """Log how an answer actually landed, into graphify's memory dir.
+
+    A wisdom vault has no test suite: nothing fails when a question gets a
+    mediocre answer, so nothing tells the curator what to write next. This is
+    the substitute. Marking an answer `dead_end` records that the vault was
+    asked something it could not answer well, and `graphify reflect` aggregates
+    those into graphify-out/reflections/LESSONS.md -- a standing list of the
+    gaps, ordered by how often they were hit.
+
+    Best-effort by design: graphify is optional for querying this vault, so a
+    missing binary degrades to a note on stderr rather than failing the query
+    the user actually asked for.
+    """
+    answer = "\n".join(
+        "%s — %s [%s]" % (q["quote"], q.get("attribution") or "?", q["source"])
+        for q in result.get("quotes", []))
+    # Cite the documents the answer came from. build_graph.py derives a
+    # document id from its path, so "quotes/refactoring.md" -> quotes_refactoring.
+    nodes = sorted({
+        re.sub(r"\.md$", "", d["source"]).replace("/", "_").replace("-", "_")
+        for d in result.get("quotes", []) + result.get("directives", [])
+        if d.get("source")})
+    cmd = ["graphify", "save-result",
+           "--question", query,
+           "--answer", answer or "(no match)",
+           "--type", "wisdom-retrieval",
+           "--outcome", outcome,
+           "--memory-dir", os.path.join(os.path.dirname(graph), "memory")]
+    if nodes:
+        cmd += ["--nodes"] + nodes
+    if note:
+        cmd += ["--correction", note]
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True)
+    except FileNotFoundError:
+        print("note: graphify not installed; outcome not recorded",
+              file=sys.stderr)
+        return
+    if r.returncode:
+        print("note: could not record outcome: %s"
+              % (r.stderr or r.stdout).strip()[:200], file=sys.stderr)
+    else:
+        print("recorded: %s" % outcome, file=sys.stderr)
+
+
 def main():
     ap = argparse.ArgumentParser(
         description="Retrieve wisdom matching a working situation.")
@@ -242,6 +289,9 @@ def main():
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--moments", action="store_true",
                     help="list every session moment the vault indexes")
+    ap.add_argument("--record", choices=("useful", "dead_end", "corrected"),
+                    help="log how this answer landed, for `graphify reflect`")
+    ap.add_argument("--note", help="with --record corrected: what was wrong")
     a = ap.parse_args()
 
     if not os.path.exists(a.graph):
@@ -254,8 +304,11 @@ def main():
     if not a.query:
         ap.error("give me a situation, or pass --moments")
 
-    r = brain.ask(" ".join(a.query), n=a.n, want_directives=a.directives)
+    q = " ".join(a.query)
+    r = brain.ask(q, n=a.n, want_directives=a.directives)
     print(json.dumps(r, ensure_ascii=False, indent=2) if a.json else render(r))
+    if a.record:
+        record(q, r, a.record, a.note, a.graph)
     return 0 if r["quotes"] else 1
 
 

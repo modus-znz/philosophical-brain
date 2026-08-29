@@ -198,6 +198,29 @@ attribution), `moment`, `directive` — over relations `cites`, `quotes`,
 editing any `.md` file; it refuses to overwrite a graph it did not generate
 unless given `--force`.
 
+## Closing the loop
+
+A wisdom vault has no test suite. Nothing fails when a question gets a
+mediocre answer, so nothing tells the curator what to write next. `--record`
+is the substitute:
+
+```bash
+python3 ask.py "the tests are failing" --record useful
+python3 ask.py "how do I handle a bad review" --record dead_end
+python3 ask.py "..." --record corrected --note "returned Stoic quotes; wanted craft"
+
+graphify reflect --graph graphify-out/graph.json
+```
+
+`reflect` aggregates the outcomes into `graphify-out/reflections/LESSONS.md`,
+grouped by graph community: which documents keep answering well, and — the
+useful half — which questions the vault could not answer. That dead-end list is
+the curation backlog, ordered by how often each gap was actually hit.
+
+Recording is optional and best-effort; without `graphify` installed the query
+still answers and prints a note. Outcomes are local session state and are not
+committed.
+
 ## Provenance tooling
 
 ```bash
