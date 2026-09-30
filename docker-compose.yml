@@ -1,0 +1,19 @@
+services:
+  philosophical_brain:
+    build: .
+    image: philosophical-brain:latest
+    container_name: philosophical-brain
+    ports:
+      - "8080:8080"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      APP_ENV: demo
+      DB_PATH: /app/data/app.db
+    volumes:
+      - demo-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  demo-data:

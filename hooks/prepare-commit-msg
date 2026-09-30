@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# Stamp a commit with the vault domain its changed files belong to.
+#
+# Installed by `git config core.hooksPath hooks`, the same opt-in the
+# pre-commit hook uses -- so this covers commits made outside Claude Code too,
+# which a model-written trailer never could.
+#
+# WHAT THIS TRAILER CLAIMS, AND WHAT IT REFUSES TO
+#
+# The plan wanted `Principle: prudence` on a commit -- an assertion that a
+# principle guided the change. A git hook cannot know that. It sees paths, not
+# intent, and a trailer saying a principle guided a change because a filename
+# matched a regex would be a small falsification printed into permanent
+# history, by the engine whose flagship check exists to catch falsified status
+# reports.
+#
+# So it stamps only what it can prove:
+#
+#     Brain-Domain: security-hardening (tech-mappings/security-hardening.md)
+#
+# "these paths belong to this domain" -- checkable by rerunning the matcher.
+# The *why* stays the author's to write, and is worth more precisely because
+# nothing generates it automatically.
+set -euo pipefail
+
+MSG_FILE="${1:-}"
+SOURCE="${2:-}"
+[ -n "$MSG_FILE" ] || exit 0
+
+# Leave rewrites alone. A merge, a squash, an amend or a -m reuse already has
+# whatever trailers it is going to have, and appending on every rewrite is how
+# a trailer ends up in a commit four times.
+case "$SOURCE" in
+    merge|squash|commit) exit 0 ;;
+esac
+
+cd "$(git rev-parse --show-toplevel)"
+[ -f policy/domains.json ] || exit 0
+
+# Idempotent by inspection, not by faith.
+grep -q '^Brain-Domain:' "$MSG_FILE" && exit 0
+
+DOMAINS="$(git diff --cached --name-only --diff-filter=ACMR \
+    | python3 engine/stamp_domains.py 2>/dev/null || true)"
+[ -n "$DOMAINS" ] || exit 0
+
+# A trailer block needs a blank line before it, and exactly one.
+if [ -s "$MSG_FILE" ] && [ -n "$(tail -c 1 "$MSG_FILE")" ]; then
+    printf '\n' >> "$MSG_FILE"
+fi
+printf '\n%s\n' "$DOMAINS" >> "$MSG_FILE"
